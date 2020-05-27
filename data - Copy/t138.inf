@@ -1,0 +1,11 @@
+[t138]
+FileName1=t138_jquery.dataTables.yadcf-a13c93c305588bd0340c6a9901cd3492.html
+URL1=http://10.100.22.24:8181/signal/assets/yadcf/jquery.dataTables.yadcf-a13c93c305588bd0340c6a9901cd3492.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_132.xml
+RequestHeaderFile=t138_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t138_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

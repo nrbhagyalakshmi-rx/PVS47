@@ -1,0 +1,981 @@
+// New Theme
+//= require_self
+//= require app/pvs/common/rx_common.js
+
+var DEFAULT_DATE_TIME_DISPLAY_FORMAT = "DD-MMM-YYYY hh:mm A";
+var DEFAULT_DATE_DISPLAY_FORMAT = "DD-MMM-YYYY";
+var DEFAULT_DATE_FORMAT = "DD-MMM-YYYY";
+var DEFAULT_DATA_ANALYSIS_DATE_FORMAT = "MM/DD/YYYY";
+var SESSION_TIME_OUT = "sessionTimeOut";
+var MULTIPLE_AJAX_SEPARATOR="@!";
+var JAPANESE_LOCALE='ja';
+var CUMMULATIVE_START_DATE = '01/01/1900';
+var DEFAULT_AUTO_HIDE_DELAY_TIME = 10000;
+var ANALYSIS_REPORT_GENERATED = 'Analysis File Generated';
+var REPORT_GENERATED = 'Report Generated';
+var PR_Calendar = "PR_Calendar";
+var REPOERT_REQUEST= "REPOERT_REQUEST";
+var PERIODIC_REPORT= "PERIODIC_REPORT";
+var NOTIFICATION_QUEUE = "/topic/";
+var DEFAULT_DELIMITER = ";";
+
+var EVDAS_BUSNSINESS_RULE_ENUM ={
+    RELTV_ROR_PAED_VS_OTHR: "RELTV_ROR_PAED_VS_OTHR",
+    EVDAS_SDR_PAED: "EVDAS_SDR_PAED",
+    RELTV_ROR_GERTR_VS_OTHR: "RELTV_ROR_GERTR_VS_OTHR",
+    EVDAS_SDR_GERTR: "EVDAS_SDR_GERTR",
+    TOTAL_SPON_EUROPE: "TOTAL_SPON_EUROPE",
+    TOTAL_SPON_N_AMERICA: "TOTAL_SPON_N_AMERICA",
+    TOTAL_SPON_JAPAN: "TOTAL_SPON_JAPAN",
+    TOTAL_SPON_ASIA: "TOTAL_SPON_ASIA",
+    TOTAL_SPON_REST: "TOTAL_SPON_REST",
+    EVDAS_IME_DME: "EVDAS_IME_DME"
+};
+
+var BUSINESS_RULE_ENUM = {
+    COUNTS  : "COUNTS"
+};
+
+var BUSINESS_RULE_FORMAT_CLASS = {
+    NEW_COUNT_AGG  : "NEW_COUNT",
+    CUMM_COUNT_AGG  : "CUMM_COUNT"
+};
+
+var ATTACHMENT_TYPE_ENUM = {
+    ATTACHMENT : "Attachment",
+    REFERENCE  : "Reference"
+}
+
+var STATUS_ENUM = {
+    OPEN: "OPEN",
+    IN_PROGRESS: "IN_PROGRESS",
+    NEED_CLARIFICATION: "NEED_CLARIFICATION",
+    CLOSED: "CLOSED"
+};
+
+var EXECUTION_STATUS_ENUM = {
+    SCHEDULED: 'Scheduled',
+    GENERATING: 'Generating',
+    DELIVERING: 'Delivering',
+    COMPLETED: 'Completed',
+    ERROR: 'Error',
+    WARN: 'Warn'
+};
+
+var ALERT_CONFIG_TYPE = {
+    SINGLE_CASE_ALERT: 'Single Case Alert',
+    SINGLE_CASE_ALERT_DASHBOARD: 'Single Case Alert - Dashboard',
+    SINGLE_CASE_ALERT_DRILL_DOWN: 'Single Case Alert - DrillDown',
+    AGGREGATE_CASE_ALERT: 'Aggregate Case Alert',
+    AGGREGATE_CASE_ALERT_DASHBOARD: 'Aggregate Case Alert - Dashboard',
+    SIGNAL_MANAGEMENT:'Signal Management',
+    ADHOC_ALERT:'Ad-Hoc Alert',
+    LITERATURE_SEARCH_ALERT: 'Literature Search Alert',
+    EVDAS_ALERT:'EVDAS Alert',
+    EVDAS_ALERT_DASHBOARD:'EVDAS Alert - Dashboard',
+    TRIGGERED_ALERT:'Triggered Alerts',
+    STATISTICAL_COMPARISON : 'Statistical Comparison',
+    EVENT_DETAIL : 'Event Detail',
+    QUALTITATIVE_ALERT : 'Qualitative Alert',
+    QUANTITATIVE_ALERT : 'Quantitative Alert',
+    LITERATURE_ALERT : 'Literature Alert'
+};
+
+var SIGNAL_CHARTS = {
+  AGE_GROUP:'age-grp-over-time-chart',
+  SERIOUSNESS : 'seriousness-over-time-chart',
+  COUNTRY : 'country-over-time-chart',
+  GENDER : 'gender-over-time-chart',
+  OUTCOME : 'outcome-over-time-chart',
+  SERIOUS_PIE_CHART : 'seriousness-count-pie-chart',
+  HEAT_MAP : 'system-organ-heat-map',
+  ASSESSMENT_DETAILS : 'assessmentDetails'
+};
+
+var ALERT_CONFIG_TYPE_SHORT = {
+    QUALTITATIVE_ALERT: 'Qualitative',
+    QUANTITATIVE_ALERT: 'Quantitative',
+    LITERATURE_ALERT: 'Literature',
+    EVDAS_ALERT: 'Evdas',
+    ADHOC_ALERT: 'Ad-Hoc'
+};
+
+var ALERTS_PREFIX = {
+    AGG : 'aca_',
+    SCA : 'sca_',
+    EV  : 'eca_',
+    ADHOC  : 'adhoc_'
+};
+
+var ALERT_PREFIX_FILTER = {
+    AGG : 'aca_filterMap_'
+};
+
+var APPLICATION_NAME = {
+    SIGNAL_MANAGEMENT: 'Signal Management',
+    CASE_DETAIL: 'Case Detail',
+    EVENT_DETAIL: 'Event Detail'
+};
+
+var APPLICATION_LABEL = {
+    SIGNAL_MANAGEMENT: 'Signal Management',
+    EVENT_DETAIL: 'Event Detail',
+    CASE_DETAIL: 'Case Detail'
+
+};
+
+var ALERT_PREFIX_VIEW = {
+    AGG : 'aca_viewName_'
+};
+
+var CALLING_SCREEN = {
+    DASHBOARD       : "dashboard",
+    REVIEW          : "review",
+    TRIGGERED_ALERTS: "Triggered Alerts",
+    TAGS            : "tags"
+};
+
+var COUNTS = {
+    NEW: "NEW",
+    CUMM: "CUMM"
+};
+
+var FLAGS = {
+    CUMM_FLAG: "CUMM_FLAG",
+    PEDI_FLAG: "PEDI_FLAG",
+    INTERACTING_FLAG: "INTERACTING_FLAG"
+};
+
+var STRATIFICATION_FIELDS = {
+    PRR: "PRR",
+    ROR: "ROR",
+    PRR05: "PRR05",
+    PRR95: "PRR95",
+    ROR05: "ROR05",
+    ROR95: "ROR95",
+    EBGM: "EBGM",
+    EB05: "EB05",
+    EB95: "EB95"
+};
+
+var ALERT_TYPE = {
+    SINGLE_CASE_ALERT_FAERS : "Single Case Alert - Faers"
+};
+
+var RULE_FLAGS = {
+  PVA:  "PVA",
+    FAERS : "FAERS",
+    QUALITATIVE: "Qualitative",
+    QUANTITATIVE: "Quantitative",
+    EVDAS: "EVDAS"
+};
+
+ACTION_ITEM_FILTER_ENUM = {
+    MY_OPEN: "My Open Action Items",
+    MY_ALL: "My All Action Items",
+    ALL: "All Action Items"
+};
+
+var ADVANCED_FILTER_FIELDS = {
+    ASSIGNED_TO_USER_ID : "assignedTo.id",
+    ASSIGNED_TO_GROUP_ID : "assignedToGroup.id",
+
+};
+
+var BADGES = {
+    NEW : "New",
+    PENDING_REVIEW : "Due from Previous Period",
+    AUTO_FLAGGED : "Auto Flagged"
+};
+
+
+var UNDEFINED = 'undefined';
+var ALL ='-- All --';
+var PRODUCT_LIST='productList'
+var TOMORROW = new Date(new Date().setDate(new Date().getDate() + 1));
+var prodDicLevelList = [];
+var prodDicLevelListEvdas = [];
+
+
+$(document).ready(function () {
+    addCountBoxToInputField(4000, $('textarea'));
+
+});
+
+if (typeof jQuery !== 'undefined') {
+    (function ($) {
+        $('#spinner').ajaxStart(function () {
+            $(this).fadeIn();
+        }).ajaxStop(function () {
+            $(this).fadeOut();
+        });
+    })(jQuery);
+}
+
+function addCountBoxToInputField(maxLength, dataField) {
+    var tareaMaxLength = maxLength;
+    var inputField = dataField;
+    inputField.attr('maxlength', tareaMaxLength);
+    inputField.parent().append('<div class="countBox"></div>');
+    inputField.on('focus', function () {
+        var ibox = $(this);
+        var countBox = ibox.parent().find('.countBox');
+        ibox.parent().css('position', 'relative');
+        var lineBreaksCount = 0;
+        ibox.keyup(function () {
+            var text = ibox.val();
+            if (text.match(/\n/g)) {
+                lineBreaksCount = text.match(/\n/g).length;
+            }
+            var length = text.length;
+            var left = tareaMaxLength - (length + lineBreaksCount);
+            if (left < 0) {
+                length = length + left;
+                var txt = text.substring(0, length);
+                ibox.val(txt);
+                left = 0;
+            }
+            var counterText = (length + lineBreaksCount) + ' / ' + tareaMaxLength;
+            countBox.text(counterText);
+        });
+        countBox.show();
+        ibox.focusout(function () {
+            countBox.hide();
+        });
+    });
+}
+
+function clearFormInputsChangeFlag(formSelector){
+    if($(formSelector).find('.changed-input').length) {
+        $.each($(formSelector).find('.changed-input'), function(){
+            $(this).removeClass('changed-input');
+        })
+    }
+}
+
+function checkUserNavigation() {
+    $('form').submit(function () {
+        clearFormInputsChangeFlag($('form'));
+    });
+
+    $('#mainContent form').not('#userSearchForm').not('#auditLogSearchForm').on('change keyup keydown keypress', 'input, textarea, select, checkbox, radio', function (e) {
+        if(!$(this).hasClass('changed-input')) {
+            $(this).addClass('changed-input');
+        }
+    });
+
+    $(window).on('beforeunload', function (event) {
+        if ($('form .changed-input:visible').length || ($('.studyRadio').length && $('.productRadio').length && $('form .changed-input').length)) {
+            return $.i18n._('navigateAwayErrorMessage');
+        }
+    });
+}
+
+function showSpinnerMessage(id) {
+    if (id) {
+        $("#" + id).css("display", "inline");
+    } else {
+        $("#spinnerMessage").css("display", "inline");
+    }
+
+}
+
+function clearSpinnerMessage() {
+    $("#spinnerMessage").css("display", "none");
+}
+
+//Client side sorting of the entries of a dropdown
+$.fn.sort_select_box = function(){
+    // Get options from select box
+    var my_options = $("#" + this.attr('id') + ' option');
+    // sort alphabetically
+    my_options.sort(function(a,b) {
+        if (a.text > b.text) return 1;
+        else if (a.text < b.text) return -1;
+        else return 0
+    });
+    //replace with sorted my_options;
+    $(this).empty().append( my_options );
+
+    // clearing any selections
+    $("#"+this.attr('id')+" option").attr('selected', false);
+};
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function resetForm(container){
+    container.find('input:text, input:password, input:file, select, textarea').val('');
+    container.find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
+}
+
+function closeAllCopyPasteModals() {
+    $("div[id^='copyAndPaste']").modal('hide');
+    resetForm($('#importValueSection'));
+    $('#validate-values').attr('disabled', 'disabled');
+    $('#fileFormatError').hide();
+}
+
+function closeAllImportValueModal() {
+    var importModal=$("div[id^='importValueModal'].in");
+    importModal.modal('hide');
+    var importValueSection=importModal.parent().prev('.copyAndPasteModal').find('#importValueSection');
+    resetForm(importValueSection);
+    importValueSection.find('#validate-values').attr('disabled', 'disabled');
+}
+
+function closeJustificationModal() {
+    $("div[id^='workflowStatusJustification']").modal('hide');
+    $('#workflowSelect').html('');
+}
+
+function successNotification(message) {
+    $(".alert-success").alert('close');
+    if (message != undefined && message != "")
+        $("div.rxmain-container-content").prepend(
+            '<div class="alert alert-success alert-dismissable">' +
+            '<button type="button" class="close" ' +
+            'data-dismiss="alert" aria-hidden="true">' +
+            '&times;' +
+            '</button>' +
+            message +
+            '</div>'
+        );
+}
+
+function errorNotification(message) {
+    $(".alert-danger").alert('close');
+    if (message != undefined && message != "")
+        $("div.rxmain-container-content").prepend(
+            '<div class="alert alert-danger alert-dismissable">' +
+            '<button type="button" class="close" ' +
+            'data-dismiss="alert" aria-hidden="true">' +
+            '&times;' +
+            '</button>' +
+            message +
+            '</div>'
+        );
+}
+
+function warningNotification(message) {
+    $(".alert-warning").alert('close');
+    if (message != undefined && message != "")
+        $("div.rxmain-container-content").prepend(
+            '<div class="alert alert-warning alert-dismissable">' +
+            '<button type="button" class="close" ' +
+            'data-dismiss="alert" aria-hidden="true">' +
+            '&times;' +
+            '</button>' +
+            message +
+            '</div>'
+        );
+}
+
+function bindSelect2WithUrl(selector, queryUrl, data) {
+    var select2Element =  selector.select2({
+        minimumInputLength: 0,
+        multiple: false,
+        placeholder: $.i18n._('selectOne'),
+        allowClear: true,
+        width: "100%",
+        ajax: {
+            quietMillis: 250,
+            dataType: "json",
+            url: queryUrl,
+            data: function (params) {
+                return {
+                    dataSource:($('#selectedDatasource')?$('#selectedDatasource').val():''),
+                    term: params.term || "",  //search term
+                    page: params.page || 1,  //page number
+                    max: 30
+                };
+            },
+            processResults: function (data, params) {
+                params.page = params.page || 1;
+                return {
+                    results: data.list,
+                    pagination: {
+                        more: (params.page * 30) < data.totalCount
+                    }
+                };
+            }
+        }
+    });
+    if (data) {
+        var option = new Option(data.text, data.id, true, true);
+        selector.append(option).trigger('change.select2');
+    }
+    return select2Element
+}
+
+function bindMultipleSelect2WithUrl(selector, optionsDataUrl, allowClear) {
+    return selector.select2({
+        minimumInputLength: 0,
+        allowClear: allowClear,
+        multiple: true,
+        separator: MULTIPLE_AJAX_SEPARATOR,
+        closeOnSelect: false,
+        ajax: {
+            url: optionsDataUrl,
+            dataType: 'json',
+            quietMillis: 250,
+            data: function (term, page) { // page is the one-based page number tracked by Select2
+                return {
+                    term: term, //search term
+                    page: page, // page number
+                    max: 30 //max
+                };
+            },
+            results: function (data, page) {
+                var more = (page * 30) < data.total_count; // whether or not there are more results available
+
+                // notice we return the value of more so Select2 knows if more results can be loaded
+                return {results: data.items, more: more};
+            }
+        },
+        escapeMarkup: function (m) {
+            return m;
+        } // we do not want to escape markup since we are displaying html in results
+        ,
+        initSelection: function (element, callback) {
+            var value = $(element).val();
+            var selectedValues = [];
+            if (value) {
+                $.each(value.split(MULTIPLE_AJAX_SEPARATOR), function (index, value) {
+                    selectedValues.push({id: value, text: value});
+                });
+                callback(selectedValues);
+
+            }
+        }
+    });
+}
+
+function checkIfSessionTimeOutThenReload(event, json) {
+    if (json && json[SESSION_TIME_OUT]) {
+        event ? event.stopPropagation() : "";
+        alert($.i18n._('sessionTimeOut'));
+        window.location.reload();
+        return false
+    }
+}
+
+/**
+ * Determines whether a value is a positive integer or not
+ * @param n
+ * @returns {boolean}
+ */
+function isPositiveInteger(n) {
+    return n % 1 === 0 && n > 0;
+}
+
+function isEmpty(str) {
+    return (!str || 0 === str.length);
+}
+
+function isBlank(str) {
+    return (!str || /^\s*$/.test(str));
+}
+
+function getReloader(toolbar, tableName) {
+    var reloader = '<span title="Refresh" class="glyphicon reloaderBtn glyphicon-refresh"></span>';
+    reloader = $(reloader);
+    $(toolbar).append(reloader);
+    if (tableName != undefined) {
+        $('.reloaderBtn').click(function () {
+            $('.reloaderBtn').addClass('glyphicon-refresh-animate');
+            $(tableName).DataTable().draw();
+        });
+    }
+}
+
+function setDefaultDisplayDateFormat(date) {
+    return moment(date).utc(date).format(DEFAULT_DATE_DISPLAY_FORMAT);
+}
+
+function buildReportingDestinationsSelectBox(destinationsSelectBox, url, primaryDestinationField, isPrimarySelectable) {
+    var selectReportings = bindMultipleSelect2WithUrl(destinationsSelectBox, url, true);
+    selectReportings.select2('container').on("mousedown", "li.select2-search-choice span", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }).on("click", "li.select2-search-choice span", function () {
+        if(isPrimarySelectable != false){
+            $(this).parent().parent().find("li.select2-search-choice span").removeClass("primary");
+            $(this).addClass("primary");
+            primaryDestinationField.val($(this).parent().find('div').text());
+        }
+    });
+    selectReportings.on("select2-removed", function (e) {
+        if(isPrimarySelectable != false) {
+            var primaryDestination = primaryDestinationField.val();
+            if (e.val == primaryDestination) {
+                primaryDestinationField.val("");
+            }
+        }
+    }).on("change", function (e) {
+        var primaryDestination = primaryDestinationField.val();
+        $(this).select2('container').find("li.select2-search-choice span").removeClass('primary');
+        $(this).select2('container').find("li.select2-search-choice").each(function () {
+            if ($(this).find("span").size() == 0) {
+                $(this).append("<span>P</span>")
+            }
+            if (primaryDestination && $(this).find('div').text() == primaryDestination) {
+                $(this).find("span").addClass("primary")
+            }
+
+        });
+    }).trigger('change');
+    return selectReportings
+}
+
+//Email configuration for Adhoc/Periodic Report create and edit page and also for Dashboard and Generated Adhoc Reports page.
+function emailConfig(editable){
+
+    var emailConfiguration = $('#emailConfiguration');
+    var noEmailOnNoData = $("#noEmailOnNoData");
+    var subject = $("#subject");
+    var body = $("#body");
+    var noEmailOnNoDataValue = $("#noEmailOnNoDataValue");
+    var bodyValue = $("#bodyValue");
+    var subjectValue = $("#subjectValue");
+    if((subject.val() && body.val())){
+        $('.showEmailConfiguration img').attr({src:'/reports/assets/icons/email-secure.png',title:"Email configuration edited"});
+    } else {
+        $('.showEmailConfiguration img').attr({src:'/reports/assets/icons/email.png',title:"Add email configuration"});
+    }
+
+    $(emailConfiguration).on('show.bs.modal', function (e) {
+        subjectValue.parent().removeClass('has-error');
+        bodyValue.parent().removeClass('has-error');
+        if ((subject.val() && body.val())) {
+            (noEmailOnNoData.val() === "true") ? noEmailOnNoDataValue.prop('checked', true) : noEmailOnNoDataValue.prop('checked', false);
+            subjectValue.val(subject.val());
+            bodyValue.val(body.val());
+        }
+    });
+
+    $(emailConfiguration).find('#saveEmailConfiguration').on('click', function (e) {
+        if (!validateModalOnSubmit()) {
+            return false;
+        }
+        noEmailOnNoData.val(noEmailOnNoDataValue.is(':checked'));
+        subject.val(subjectValue.val().trim());
+        body.val(bodyValue.val().trim());
+
+        if((subject.val() && body.val())){
+            $('.showEmailConfiguration img').attr({src:'/reports/assets/icons/email-secure.png',title:"Email configuration edited"});
+        } else {
+            $('.showEmailConfiguration img').attr({src:'/reports/assets/icons/email.png',title:"Add email configuration"});
+        }
+
+        $(this).attr('data-dismiss', 'modal');
+    });
+
+    $(emailConfiguration).find('#resetEmailConfiguration').on('click', function (e) {
+        noEmailOnNoDataValue.prop('checked', false);
+        subjectValue.val('');
+        bodyValue.val('');
+    });
+
+    function validateModalOnSubmit() {
+        var validate;
+        var isFormReset = !(subjectValue.val().trim() || bodyValue.val().trim() || noEmailOnNoDataValue.is(':checked'));
+
+        if( isFormReset || (subjectValue.val().trim() && bodyValue.val().trim())){
+            validate = true;
+            noEmailOnNoDataValue.parent().removeClass('has-error');
+        }
+        else{
+            if(noEmailOnNoDataValue.is(':checked')){
+                noEmailOnNoDataValue.parent().addClass('has-error');
+            }
+            if (!subjectValue.val().trim()) {
+                subjectValue.parent().addClass('has-error');
+            } else {
+                subjectValue.parent().removeClass('has-error')
+            }
+            if (!bodyValue.val().trim()) {
+                bodyValue.parent().addClass('has-error');
+            } else {
+                bodyValue.parent().removeClass('has-error');
+            }
+            validate = false;
+        }
+
+        return validate;
+    }
+}
+
+if (!String.prototype.includes) {
+    String.prototype.includes = function(search, start) {
+        'use strict';
+        if (typeof start !== 'number') {
+            start = 0;
+        }
+
+        if (start + search.length > this.length) {
+            return false;
+        } else {
+            return this.indexOf(search, start) !== -1;
+        }
+    };
+}
+
+$(function () {
+    var token = $("meta[name='_csrf']").attr("content");
+    var header = $("meta[name='_csrf_header']").attr("content");
+    var parameter = $("meta[name='_csrf_parameter']").attr("content");
+
+    if(header && token){
+        $(document).ajaxSend(function(e, xhr, options) {
+            if(options.type !== "GET") {
+                xhr.setRequestHeader(header, token);
+            }
+        });
+    }
+
+    if(parameter && token){
+        $("form").submit(function () {
+            var hiddenField = $("<input>").attr("type", "hidden").attr("name", parameter).val(token);
+            $(hiddenField).appendTo(this);
+        });
+    }
+});
+
+
+function escapeHTML(unesacpedHtml) {
+    return unesacpedHtml != undefined ?
+        unesacpedHtml.toString().replace(/&/g, "&amp;")
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;") : ""
+}
+
+var convertAlertTypeName = function (alertType) {
+    switch (alertType) {
+        case ALERT_CONFIG_TYPE.SINGLE_CASE_ALERT:
+            return ALERT_CONFIG_TYPE_SHORT.QUALTITATIVE_ALERT;
+        case ALERT_CONFIG_TYPE.AGGREGATE_CASE_ALERT:
+            return ALERT_CONFIG_TYPE_SHORT.QUANTITATIVE_ALERT;
+        case ALERT_CONFIG_TYPE.LITERATURE_SEARCH_ALERT:
+            return ALERT_CONFIG_TYPE_SHORT.LITERATURE_ALERT;
+        case ALERT_CONFIG_TYPE.EVDAS_ALERT:
+            return ALERT_CONFIG_TYPE_SHORT.EVDAS_ALERT;
+        case ALERT_CONFIG_TYPE.ADHOC_ALERT:
+            return ALERT_CONFIG_TYPE_SHORT.ADHOC_ALERT;
+        default:
+            return alertType
+    }
+};
+
+var preventEnterKeySubmit = function (e) {
+    if (e.keyCode === 13) {
+        e.stopPropagation();
+        e.preventDefault();
+        return false;
+    }
+};
+
+var showSuccessNotification = function (successMessage, autoHideDelay) {
+    autoHideDelay = autoHideDelay || DEFAULT_AUTO_HIDE_DELAY_TIME;
+    $.Notification.notify('success', 'top right', "Success", successMessage, {autoHideDelay: autoHideDelay});
+};
+
+var showErrorNotification = function (errorMessage, autoHideDelay) {
+    autoHideDelay = autoHideDelay || DEFAULT_AUTO_HIDE_DELAY_TIME;
+    $.Notification.notify('error', 'top right', "Error", errorMessage, {autoHideDelay: autoHideDelay});
+};
+
+function disableDictionaryValues(productGroup, ingredient, family, productName, trade) {
+    $(".prodDictFilterColCalc label:contains('Family')").next("input").prop("disabled", family)
+    $(".prodDictFilterColCalc label:contains('Trade Name')").next("input").prop("disabled", trade)
+    $(".prodDictFilterColCalc label:contains('Product Group')").next("input").prop("disabled", productGroup)
+    $(".prodDictFilterColCalc label:contains('Product Name')").next("input").prop("disabled", productName)
+    $(".prodDictFilterColCalc label:contains('Ingredient')").next("input").prop("disabled", ingredient)
+};
+function checkDictLevelMap (index , dataSource) {
+    if (dataSource == "eudra") {
+        if (signal.utils.localStorageUtil.getProp("dictionaryMapEvdas") == null) {
+            $.ajax({
+                type: "GET",
+                url: '/signal/pvsProductDictionary/fetchDictionaryListEvdas',
+                async: false,
+                success: function (result) {
+                    signal.utils.localStorageUtil.setJSON("dictionaryMapEvdas", result.dictMap);
+                    prodDicLevelListEvdas = result.dictMap;
+                }
+            });
+        } else {
+            prodDicLevelListEvdas = signal.utils.localStorageUtil.getJSON("dictionaryMapEvdas");
+
+        }
+        return prodDicLevelListEvdas[index-1]
+
+    }
+    else {
+        if (signal.utils.localStorageUtil.getProp("dictionaryMap") == null) {
+            $.ajax({
+                type: "GET",
+                url: '/signal/pvsProductDictionary/fetchDictionaryList',
+                async: false,
+                success: function (result) {
+                    signal.utils.localStorageUtil.setJSON("dictionaryMap", result.dictMap);
+                    prodDicLevelList = result.dictMap;
+                }
+            });
+        } else {
+            prodDicLevelList = signal.utils.localStorageUtil.getJSON("dictionaryMap");
+
+        }
+        return prodDicLevelList[index - 1]
+    }
+}
+
+var signal = signal || {};
+
+// a convenience function for parsing string namespaces and
+// automatically generating nested namespaces
+function extend( ns, ns_string ) {
+    var parts = ns_string.split('.'),
+        parent = ns,
+        pl, i;
+    if (parts[0] == "signal") {
+        parts = parts.slice(1);
+    }
+    pl = parts.length;
+    for (i = 0; i < pl; i++) {
+        //create a property if it doesnt exist
+        if (typeof parent[parts[i]] == 'undefined') {
+            parent[parts[i]] = {};
+        }
+        parent = parent[parts[i]];
+    }
+    return parent;
+}
+
+//Prototype methods
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+};
+
+Array.prototype.remove = function (value) {
+    return this.filter(function(f){f != value});
+};
+
+SCA_WORKFLOW_STATUS_ENUM = { NEW: 'New',
+    ASSOCIATE_REVIEWED: 'AssociateReviewed',
+    PHYSICIAN_REVIEWED: 'PhysicianReviewed',
+    REQUIRED_EVALUATION: 'RequiredEvaluation',
+    CONTINUED_MONITORING: 'ContinuedMonitoring'
+};
+
+SCA_DISPOSITION_ENUM = {
+    VALIDATED_SIGNAL : 'ValidatedSignal',
+    VALIDATED_NON_CONFIRMED_SIGNAL : 'ValidatedNonConfirmedSignal',
+    VALIDATED_UNDER_INVESTIGATION : 'ValidatedUnderInvestigation',
+    COMMUNICATED_SIGNAL : 'CommunicatedSignal',
+    NON_VALID: 'NonValid'
+};
+
+SCA_PRIORITY_ENUM = {
+    HIGH: "High",
+    MEDIUM: "Medium",
+    LOW: "LOW"
+};
+
+DATE_FMT_TZ = "YYYY-MM-DD";
+
+signal.utils = (function() {
+
+    var stacked = function(topValue, bottomValue) {
+        var topComp = "";
+        var bottomComp = "";
+
+        if(_.isFunction(topValue)) {
+            topComp = topValue()
+        } else {
+            topComp = '<div class="stacked-cell-center-top">' + topValue + '</div>'
+        }
+
+        if (_.isFunction(bottomValue)) {
+            bottomComp = bottomValue()
+        } else {
+            bottomComp = '<div class="stacked-cell-center-bottom">' + bottomValue + '</div>'
+        }
+
+        return topComp + bottomComp
+    };
+
+    // And this is the definition of the custom function ​
+    var render = function(tmpl_name, tmpl_data) {
+
+        if ( !render.tmpl_cache ) {
+
+
+
+            render.tmpl_cache = {};
+        }
+        if (!render.tmpl_cache[tmpl_name]) {
+            var tmpl_dir = '/signal/assets/app/pvs/hbs-templates';
+            var tmpl_url = tmpl_dir + '/' + tmpl_name + '.hbs';
+
+            var tmpl_string = "";
+            $.ajax({
+                url: tmpl_url,
+                method: 'GET',
+                async: false,
+                success: function(data) {
+                    tmpl_string = data
+                }
+            });
+
+            render.tmpl_cache[tmpl_name] = Handlebars.compile(tmpl_string);
+        }
+
+        return render.tmpl_cache[tmpl_name](tmpl_data)
+    };
+
+    var hbs_partial = function(tmpl_name) {
+        if (!hbs_partial.tmpl_cache) {
+            hbs_partial.tmpl_cache = {}
+        }
+
+        if (!hbs_partial.tmpl_cache[tmpl_name]) {
+             var tmpl_dir = '/signal/assets/app/pvs/hbs-templates';
+            var tmpl_url = tmpl_dir + '/' + tmpl_name + '.hbs';
+
+            var tmpl_string = "";
+            $.ajax({
+                url: tmpl_url,
+                method: 'GET',
+                async: false,
+                success: function(data) {
+                    tmpl_string = data
+                }
+            });
+
+            hbs_partial.tmpl_cache[tmpl_name] = tmpl_string
+        }
+
+        return hbs_partial.tmpl_cache[tmpl_name]
+    };
+
+    var composeUrl = function(controller, action, params) {
+        var url = "/signal/" + controller + "/" + action + (_.isNull(params) ? '' : '?' + composeParams(params));
+
+        return url
+    };
+
+    //TODO : Need to change this to handlebar form, Will be done later
+    var postUrl = function (path, params, newWindow) {
+
+        const form = document.createElement('form');
+        form.method = "post";
+        form.action = path;
+        form.enctype = "application/x-www-form-urlencoded";
+        if (newWindow) form.target = "_blank";
+
+        var token = $("meta[name='_csrf']").attr("content");
+        var parameter = $("meta[name='_csrf_parameter']").attr("content");
+        params[parameter] = token;
+        for (let key in params) {
+            if (params.hasOwnProperty(key)) {
+                const hiddenField = document.createElement('input');
+                hiddenField.type = 'hidden';
+                hiddenField.name = key;
+                hiddenField.value = params[key];
+                form.appendChild(hiddenField);
+            }
+        }
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    var composeParams = function(o) {
+        return _.map(_.pairs(o), function(p){return p.join('=')} ).join('&')
+    };
+
+    var capitalIt = function(s) {
+        return s && s[0].toUpperCase() + s.slice(1);
+    };
+
+    var breakIt = function(s) {
+        return s ? s.split(/(?=[A-Z])/).join(' ') : s
+    };
+
+    var enable_load_button = function(ele, enabled) {
+        return function(evt) {
+            var targetEle = ele.find('.glyphicon');
+            if (enabled) {
+                $(targetEle).addClass('refresh-animate');
+            } else {
+                $(targetEle).removeClass('refresh-animate');
+            }
+        }
+    };
+    var setInLocalStorage = function(prop, data) {
+        localStorage.setItem(prop, data);
+    };
+
+    var getFromLocalStorage = function(prop) {
+        return localStorage.getItem(prop);
+    };
+
+    var setJSONInLocalStorage = function(prop, data) {
+        localStorage.setItem(prop, JSON.stringify(data));
+    };
+
+    var getJSONFromLocalStorage = function (prop) {
+        return JSON.parse(localStorage.getItem(prop));
+    };
+
+    var localStorageUtil = {
+        setProp : setInLocalStorage,
+        getProp : getFromLocalStorage,
+        setJSON : setJSONInLocalStorage,
+        getJSON : getJSONFromLocalStorage
+    };
+
+    var getQueryString = function() {
+        var key = false, res = {}, itm = null;
+        // get the query string without the ?
+        var qs = location.search.substring(1);
+        // check for the key as an argument
+        if (arguments.length > 0 && arguments[0].length > 1)
+            key = arguments[0];
+        // make a regex pattern to grab key/value
+        var pattern = /([^&=]+)=([^&]*)/g;
+        // loop the items in the query string, either
+        // find a match to the argument, or build an object
+        // with key/value pairs
+        while (itm = pattern.exec(qs)) {
+            if (key !== false && decodeURIComponent(itm[1]) === key)
+                return decodeURIComponent(itm[2]);
+            else if (key === false)
+                res[decodeURIComponent(itm[1])] = decodeURIComponent(itm[2]);
+        }
+
+        return key === false ? res : null;
+    };
+
+    return {
+        render : render,
+        stacked: stacked,
+        composeUrl: composeUrl,
+        postUrl: postUrl,
+        composeParams: composeParams,
+        capitalIt: capitalIt,
+        breakIt: breakIt,
+        hbs_partial: hbs_partial,
+        enable_load_button: enable_load_button,
+        localStorageUtil: localStorageUtil,
+        getQueryString: getQueryString
+    }
+})();
+
+
+

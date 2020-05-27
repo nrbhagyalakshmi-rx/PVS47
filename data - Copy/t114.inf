@@ -1,0 +1,11 @@
+[t114]
+FileName1=t114.html
+URL1=http://10.100.22.24:8181/signal/singleCaseAlert/review
+Total=1
+RequestHeaderFile=t114_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t114_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_109.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

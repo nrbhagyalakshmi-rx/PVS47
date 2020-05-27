@@ -1,0 +1,11 @@
+[t142]
+FileName1=t142_similarCases-313f82b9b82d3ae5fbaf40bbf9e37f17.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/similarCases/similarCases-313f82b9b82d3ae5fbaf40bbf9e37f17.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_136.xml
+RequestHeaderFile=t142_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t142_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

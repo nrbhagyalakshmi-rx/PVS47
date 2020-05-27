@@ -1,0 +1,11 @@
+[t21]
+FileName1=t21_fullcalendar.min-537e31219634a1a50bfc6c265c08a05f.css
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/fullcalendar.min-537e31219634a1a50bfc6c265c08a05f.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_19.xml
+RequestHeaderFile=t21_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t21_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

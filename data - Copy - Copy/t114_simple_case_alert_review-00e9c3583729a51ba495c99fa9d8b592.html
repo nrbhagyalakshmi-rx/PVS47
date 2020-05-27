@@ -1,0 +1,1091 @@
+var signal = signal || {};
+
+// a convenience function for parsing string namespaces and
+// automatically generating nested namespaces
+function extend( ns, ns_string ) {
+    var parts = ns_string.split('.'),
+        parent = ns,
+        pl, i;
+    if (parts[0] == "signal") {
+        parts = parts.slice(1);
+    }
+    pl = parts.length;
+    for (i = 0; i < pl; i++) {
+        //create a property if it doesnt exist
+        if (typeof parent[parts[i]] == 'undefined') {
+            parent[parts[i]] = {};
+        }
+        parent = parent[parts[i]];
+    }
+    return parent;
+}
+
+//Prototype methods
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+};
+
+Array.prototype.remove = function (value) {
+    return this.filter(function(f){f != value});
+};
+
+SCA_WORKFLOW_STATUS_ENUM = { NEW: 'New',
+    ASSOCIATE_REVIEWED: 'AssociateReviewed',
+    PHYSICIAN_REVIEWED: 'PhysicianReviewed',
+    REQUIRED_EVALUATION: 'RequiredEvaluation',
+    CONTINUED_MONITORING: 'ContinuedMonitoring'
+};
+
+SCA_DISPOSITION_ENUM = {
+    VALIDATED_SIGNAL : 'ValidatedSignal',
+    VALIDATED_NON_CONFIRMED_SIGNAL : 'ValidatedNonConfirmedSignal',
+    VALIDATED_UNDER_INVESTIGATION : 'ValidatedUnderInvestigation',
+    COMMUNICATED_SIGNAL : 'CommunicatedSignal',
+    NON_VALID: 'NonValid'
+};
+
+SCA_PRIORITY_ENUM = {
+    HIGH: "High",
+    MEDIUM: "Medium",
+    LOW: "LOW"
+};
+
+DATE_FMT_TZ = "YYYY-MM-DD";
+
+signal.utils = (function() {
+
+    var stacked = function(topValue, bottomValue) {
+        var topComp = "";
+        var bottomComp = "";
+
+        if(_.isFunction(topValue)) {
+            topComp = topValue()
+        } else {
+            topComp = '<div class="stacked-cell-center-top">' + topValue + '</div>'
+        }
+
+        if (_.isFunction(bottomValue)) {
+            bottomComp = bottomValue()
+        } else {
+            bottomComp = '<div class="stacked-cell-center-bottom">' + bottomValue + '</div>'
+        }
+
+        return topComp + bottomComp
+    };
+
+    // And this is the definition of the custom function ​
+    var render = function(tmpl_name, tmpl_data) {
+
+        if ( !render.tmpl_cache ) {
+
+
+
+            render.tmpl_cache = {};
+        }
+        if (!render.tmpl_cache[tmpl_name]) {
+            var tmpl_dir = '/signal/assets/app/pvs/hbs-templates';
+            var tmpl_url = tmpl_dir + '/' + tmpl_name + '.hbs';
+
+            var tmpl_string = "";
+            $.ajax({
+                url: tmpl_url,
+                method: 'GET',
+                async: false,
+                success: function(data) {
+                    tmpl_string = data
+                }
+            });
+
+            render.tmpl_cache[tmpl_name] = Handlebars.compile(tmpl_string);
+        }
+
+        return render.tmpl_cache[tmpl_name](tmpl_data)
+    };
+
+    var hbs_partial = function(tmpl_name) {
+        if (!hbs_partial.tmpl_cache) {
+            hbs_partial.tmpl_cache = {}
+        }
+
+        if (!hbs_partial.tmpl_cache[tmpl_name]) {
+             var tmpl_dir = '/signal/assets/app/pvs/hbs-templates';
+            var tmpl_url = tmpl_dir + '/' + tmpl_name + '.hbs';
+
+            var tmpl_string = "";
+            $.ajax({
+                url: tmpl_url,
+                method: 'GET',
+                async: false,
+                success: function(data) {
+                    tmpl_string = data
+                }
+            });
+
+            hbs_partial.tmpl_cache[tmpl_name] = tmpl_string
+        }
+
+        return hbs_partial.tmpl_cache[tmpl_name]
+    };
+
+    var composeUrl = function(controller, action, params) {
+        var url = "/signal/" + controller + "/" + action + (_.isNull(params) ? '' : '?' + composeParams(params));
+
+        return url
+    };
+
+    //TODO : Need to change this to handlebar form, Will be done later
+    var postUrl = function (path, params, newWindow) {
+
+        const form = document.createElement('form');
+        form.method = "post";
+        form.action = path;
+        form.enctype = "application/x-www-form-urlencoded";
+        if (newWindow) form.target = "_blank";
+
+        var token = $("meta[name='_csrf']").attr("content");
+        var parameter = $("meta[name='_csrf_parameter']").attr("content");
+        params[parameter] = token;
+        for (let key in params) {
+            if (params.hasOwnProperty(key)) {
+                const hiddenField = document.createElement('input');
+                hiddenField.type = 'hidden';
+                hiddenField.name = key;
+                hiddenField.value = params[key];
+                form.appendChild(hiddenField);
+            }
+        }
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    var composeParams = function(o) {
+        return _.map(_.pairs(o), function(p){return p.join('=')} ).join('&')
+    };
+
+    var capitalIt = function(s) {
+        return s && s[0].toUpperCase() + s.slice(1);
+    };
+
+    var breakIt = function(s) {
+        return s ? s.split(/(?=[A-Z])/).join(' ') : s
+    };
+
+    var enable_load_button = function(ele, enabled) {
+        return function(evt) {
+            var targetEle = ele.find('.glyphicon');
+            if (enabled) {
+                $(targetEle).addClass('refresh-animate');
+            } else {
+                $(targetEle).removeClass('refresh-animate');
+            }
+        }
+    };
+    var setInLocalStorage = function(prop, data) {
+        localStorage.setItem(prop, data);
+    };
+
+    var getFromLocalStorage = function(prop) {
+        return localStorage.getItem(prop);
+    };
+
+    var setJSONInLocalStorage = function(prop, data) {
+        localStorage.setItem(prop, JSON.stringify(data));
+    };
+
+    var getJSONFromLocalStorage = function (prop) {
+        return JSON.parse(localStorage.getItem(prop));
+    };
+
+    var localStorageUtil = {
+        setProp : setInLocalStorage,
+        getProp : getFromLocalStorage,
+        setJSON : setJSONInLocalStorage,
+        getJSON : getJSONFromLocalStorage
+    };
+
+    var getQueryString = function() {
+        var key = false, res = {}, itm = null;
+        // get the query string without the ?
+        var qs = location.search.substring(1);
+        // check for the key as an argument
+        if (arguments.length > 0 && arguments[0].length > 1)
+            key = arguments[0];
+        // make a regex pattern to grab key/value
+        var pattern = /([^&=]+)=([^&]*)/g;
+        // loop the items in the query string, either
+        // find a match to the argument, or build an object
+        // with key/value pairs
+        while (itm = pattern.exec(qs)) {
+            if (key !== false && decodeURIComponent(itm[1]) === key)
+                return decodeURIComponent(itm[2]);
+            else if (key === false)
+                res[decodeURIComponent(itm[1])] = decodeURIComponent(itm[2]);
+        }
+
+        return key === false ? res : null;
+    };
+
+    return {
+        render : render,
+        stacked: stacked,
+        composeUrl: composeUrl,
+        postUrl: postUrl,
+        composeParams: composeParams,
+        capitalIt: capitalIt,
+        breakIt: breakIt,
+        hbs_partial: hbs_partial,
+        enable_load_button: enable_load_button,
+        localStorageUtil: localStorageUtil,
+        getQueryString: getQueryString
+    }
+})();
+
+
+
+Handlebars.registerHelper('i18n',
+    function(str){
+        return ( (typeof i18n) !== 'undefined' ? str : str)
+    }
+);
+
+Handlebars.registerHelper('select', function(name, selectedValue, options, disp_field, value_field) {
+    var out = "<select class='form-control selectBox' id=\'" + name + "\' name=" + name + ">\n";
+    _.each(options, function(v) {
+        out += "<option value='" + v[value_field] + "'" +
+            (v[value_field] == selectedValue[value_field] ? " selected " : "") + " >" +
+            escapeHTML(v[disp_field]) + "</option>\n"
+    });
+    out += "</select>";
+
+    return new Handlebars.SafeString(out)
+});
+
+Handlebars.registerPartial('date_picker_template', signal.utils.hbs_partial('date_picker_template'));
+
+//Handlebar helper to imitate the if conditions
+Handlebars.registerHelper('if_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    }
+});
+
+//Handlebar helper to imitate the if..else conditions
+Handlebars.registerHelper('if_else_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
+
+Handlebars.registerHelper('if_tag_exist', function(key, value,tags, opts) {
+    if(value.tagText == tags[key-1].tagText && value.subTagText!=null && value.subTagText != tags[key-1].subTagText){
+        return opts.fn(this);
+    } else{
+        return opts.inverse(this);
+    }
+});
+
+Handlebars.registerHelper('if_else_neq', function(a, b, opts) {
+    if (a != b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
+
+//= require app/pvs/common/rx_handlebar_ext.js
+
+var signal = signal || {};
+
+signal.alerts_utils = (function() {
+    var priorities;
+    var workflowStates;
+
+    var get_priorities = function() {
+        $.ajax({
+            url: "/signal/workflow/priorities",
+            async: false,
+            success: function(result) {
+                priorities = result
+            }
+        });
+
+        return priorities
+    };
+
+    var get_workflowStates = function(initData) {
+        $.ajax({
+            url: "/signal/workflow/workflowState",
+            async: false,
+            data: initData,
+            success: function(result) {
+                workflowStates = result
+            }
+        });
+
+        return workflowStates
+    };
+
+    var priorities_selections = function(data, type, row) {
+        var new_select = '<div><select class="form-control add-cursor" ' +
+            'style="height: 30px;" onchange="updatePriority(this.value,' + row.id + ')">';
+        var priority = row.priority;
+
+        var the_select = _.reduce(priorities, function(m, p){
+            if (p.value == priority)
+                return m + '<option value="' + p.value + '" selected> ' + p.displayName + '</option>';
+            else
+                return m + '<option value="' + p.value + '">' + p.displayName + '</option>'
+        }, new_select);
+        the_select = the_select + '</select></div>';
+        return the_select;
+    };
+
+    var workflow_selections = function(data, type, row) {
+        var new_select = '<div><select class="form-control add-cursor" style="height: 30px;" onchange="updateStatus(this.value,' + row.id + ')">';
+        var workflowState = row.workflowState;
+
+        var the_select = _.reduce(workflowStates, function(m, ws){
+            if (ws.value == workflowState)
+                return m + '<option value="' + ws.value + '" selected> ' + ws.displayName + '</option>';
+            else
+                return m + '<option value="' + ws.value + '">' + ws.displayName + '</option>'
+        }, new_select);
+        the_select = the_select + '</select></div>';
+        return the_select;
+    };
+
+    var compose_edit_state_link = function(value, rowId, filedName) {
+        return "<span>" + value + "</span>" + "<a href='#' class='edit-state' >" +
+            "<i class='fa fa-share-alt pull-right' data-field='"  + filedName +
+            "' data-id='" + rowId + "'/></a>"
+    };
+
+    var state_changed = function(extra_values) {
+        $("#valueSelect").change(function(evt) {
+            var available_extra_values = extra_values[$(valueSelect).val()]
+        })
+    };
+
+    //TODO this is a temp solution for the JSON format. It should come from server side
+    //Function that converts the json innerhtml to the csv values.
+    //It converts the properties which are not id.
+    var show_json_as_csv = function (elementClass) {
+        $("." + elementClass).each(function () {
+           try {
+              if (isNaN($(this).html())) {
+                  var modifiedVal = "";
+                  var jsonVal = JSON.parse($(this).html());
+                  for (var obj in jsonVal) {
+                     if (jsonVal.hasOwnProperty(obj)) {
+                        for (var prop in jsonVal[obj]) {
+                           if (jsonVal[obj].hasOwnProperty(prop)) {
+                              if (prop != 'id') {
+                                 modifiedVal = modifiedVal + jsonVal[obj][prop] + ","
+                              }
+                           }
+                        }
+                     }
+                  }
+                  $(this).html(modifiedVal.slice(0, -1))
+              }
+           } catch (err) {
+              //Do nothing
+              //console.log(err)
+           }
+           $(this).html()
+        })
+    };
+
+    var init_matched_alerts_table = function(tableEle, url) {
+        var table = tableEle.DataTable({
+            "language": {
+                "url": "/signal/assets/i18n/dataTables_" + userLocale + ".json"
+            },
+
+            ajax: {
+                url: url,
+                dataSrc: '',
+                error: function(xhr,status,error){}
+            },
+
+            aoColumns:[
+                {
+                    mData: 'name'
+                },
+                {
+                    mData: 'productSelection'
+                },
+                {
+                    mData: 'topic'
+                },
+                {
+                    mData: 'detectedDate'
+                },
+                {
+                    mData: 'disposition'
+                }
+            ],
+            dom: ''
+        });
+
+        return table
+    };
+
+    var getSignalNameList = function(signalsAndTopics) {
+        var signalAndTopics = '';
+        $.each(signalsAndTopics, function(i, obj){
+            var url = signalDetailUrl + '?id=' + obj['signalId'];
+            signalAndTopics = signalAndTopics + '<span class="click"><a href="' + url + '">' + obj['name'] + '</a></span>&nbsp;'
+            signalAndTopics = signalAndTopics + ","
+        });
+        if(signalAndTopics.length > 1)
+            return '<div>' + signalAndTopics.substring(0, signalAndTopics.length - 1) + '</div>';
+        else
+            return '-';
+    };
+
+    // For shared with modal
+    var initializeShareWithSelect2 = function(){
+        $('#shareWith').select2().on("change", function (e) {
+            $('#shareWith').parent().removeClass('has-error');
+        });
+    };
+
+    var initializeShareWithValues = function(){
+        $('#sharedWithModal').on('show.bs.modal', function(e) {
+            var executedConfigId = e.relatedTarget.id;
+            $('#executedConfigId').val(executedConfigId);
+            $('#sharedWith').parent().removeClass('has-error');
+
+            $.ajax({
+                cache: false,
+                type: 'GET',
+                url: getSharedWith + '?id=' + executedConfigId,
+                success: function(result) {
+                    var users = '';
+                    $.each(result.users, function() {
+                        users += this.name + '<br />'
+                    });
+                    $('#sharedWithUserList').html(users);
+                    var groups = '';
+                    $.each(result.groups, function() {
+                        groups +=  this.name + ' <br />'
+                    });
+                    $('#sharedWithGroupList').html(groups);
+
+                    $.each(result.all, function(i, data){
+                        var option = new Option(data.name, data.id, true, true);
+                        $('#sharedWith').append(option).trigger('change');
+                    });
+                }
+            });
+
+            sharedWithModalShow = true;
+
+        }).on('hidden.bs.modal', function(e) {
+            sharedWithModalShow = false;
+            $('#sharedWith').val(null).trigger('change');
+            $('#sharedWith').find('option').remove();
+        });
+    };
+
+    var getTagsElement = function(tags) {
+        var tagsElement = '<div class="tag-container block-ellipsis"><div class="tag-length">';
+        var globalTagsArray = [];
+        var alertTagsrray = [];
+        var privateTagsArray = [];
+        $.each(tags, function (key, value) {
+            if (value.privateUser == '(P)') {
+                privateTagsArray.push(value)
+            } else if (value.tagType == '(A)') {
+                alertTagsrray.push(value)
+            } else {
+                globalTagsArray.push(value);
+            }
+            tagsElement += signal.utils.render('tags_details', {
+                key: key,
+                value: value,
+                tags:tags,
+            });
+        });
+        var viewAllElements = fetchViewAllTags(globalTagsArray , alertTagsrray , privateTagsArray);
+
+        tagsElement += '<a tabindex="0" title="Add/Edit Categories" class="editAlertTags btn-edit-tag mid"><i class="mdi mdi-pencil-box font-20 blue-1"> </i></a>';
+        tagsElement += '<a tabindex="0" title="' + $.i18n._('appLabel.viewAll') + '" class="ico-dots view-all" more-data="'+viewAllElements+'"><i class="mdi mdi-dots-horizontal font-20 blue-1"> </i></a>';
+        tagsElement += '</div></div>';
+        return tagsElement
+    };
+
+    var fetchViewAllTags = function(globalTagsArray , alertTagsArray , privateTagsArray) {
+        var returnElement = "";
+        if (globalTagsArray.length > 0) {
+            returnElement = "<p class='pbr' style='margin-top:7px'><b>Global Category</b><hr class='tagehr'>";
+            returnElement += signal.utils.render('tags_details_view_all', {tags: globalTagsArray}) + "</p>"  ;
+        }
+        if (alertTagsArray.length > 0) {
+            returnElement += "<p class='pbr' style='margin-top:7px'><b>Alert Specific Category</b><hr class='tagehr'>";
+            returnElement += signal.utils.render('tags_details_view_all', {
+                tags: alertTagsArray,
+            })  + "</p>" ;
+        }
+        if (privateTagsArray.length > 0) {
+            returnElement += "<p class='pbr' style='margin-top:7px'><b>Private Category</b><hr class='tagehr'>";
+            returnElement += signal.utils.render('tags_details_view_all', {tags: privateTagsArray})  + "</p>" ;
+        }
+        return returnElement
+    };
+    return {
+        get_priorities: get_priorities,
+        priorities_selections: priorities_selections,
+        get_workflowStates: get_workflowStates,
+        workflow_selections: workflow_selections,
+        compose_edit_state_link: compose_edit_state_link,
+        state_change: state_changed,
+        show_json_as_csv: show_json_as_csv,
+        init_matched_alerts_table: init_matched_alerts_table,
+        getSignalNameList: getSignalNameList,
+        initializeShareWithSelect2 : initializeShareWithSelect2,
+        initializeShareWithValues:initializeShareWithValues,
+        get_tags_element : getTagsElement
+    }
+})();
+
+var signal = signal || {};
+
+signal.list_utils = (function () {
+    var flag_it = function (flag, id) {
+        var theHtml = '<i class="fa fa-flag-o text-muted rx-list-flag" data-id="' + id + '"></i>'
+        if (flag) {
+            theHtml = '<i class="fa fa-flag text-primary rx-list-flag" data-id="' + id + '"></i>'
+        }
+        return theHtml
+    };
+
+    var flag_handler = function (controller, action) {
+        $(document).on('click', '.rx-list-flag', function (e) {
+            var ele = e.target;
+            var id = $(ele).attr('data-id');
+
+            $.ajax({
+                url: "/signal/" + controller + "/" + action + "?id=" + id,
+                success: function (result) {
+                    if (result.flagged) {
+                        $(ele).removeClass('fa-flag-o').removeClass('text-muted');
+                        $(ele).addClass('fa-flag').addClass('text-primary');
+                    } else {
+                        $(ele).addClass('fa-flag-o').addClass('text-muted');
+                        $(ele).removeClass('fa-flag').removeClass('text-primary')
+                    }
+                }
+            })
+        })
+    };
+
+    var priority_link = function (priority, id) {
+        var icon_url = compose_priority_icon(priority);
+        return '<a href="#" class="change-priority"><img data-field="priority" data-info="row" data-id="' +
+            id + '" data-value="' + priority + '" src="' + icon_url + '"/></a>'
+    };
+
+    var compose_priority_icon = function (priority) {
+        var icon_url = "/signal/assets/icons/default_priority.png";
+
+        if (_.contains(['high', 'low', 'medium'], priority.toLowerCase())) {
+            icon_url = "/signal/assets/icons/" + priority.toLowerCase() + "_priority.png";
+        }
+        return icon_url;
+    };
+
+    var change_priority = function (priorityEle, priority) {
+        var icon_url = compose_priority_icon(priority);
+        $(priorityEle).attr("src", icon_url);
+        $(priorityEle).attr("data-value", priority);
+    };
+
+    var change_priorityTest = function (priorityEle, priority) {
+        $(priorityEle).attr("data-value", priority);
+    };
+
+    change_priorityTest
+
+    var find_field = function (table_row_ele, attr_name) {
+        return $(table_row_ele).find("[data-attribute-name='" + attr_name + "']")
+    };
+
+    var set_value = function (table_row_ele, attr_name, id, data_fun, app_name) {
+        var ele = find_field(table_row_ele, attr_name);
+        ele.html(data_fun(id, app_name));
+    };
+
+    var get_due_in = function (id, app_name) {
+        var dueIn = 0;
+        $.ajax({
+            url: "/signal/alert/dueIn?alertId=" + id + "&appName=" + app_name,
+            async: false,
+            success: function (data) {
+                dueIn = data.result;
+            }
+        });
+        return dueIn
+    };
+
+    var due_in_comp = function (value) {
+        if (value <= 0) {
+            return "<div data-attribute-name='dueIn' style = 'color:red'>" + value + "</div>";
+        } else {
+            return "<div data-attribute-name='dueIn'>" + value + "</div>";
+        }
+    };
+
+    var assigned_to_comp = function (id, assignedTo) {
+        var html = '<div class="assignedToContainer"><select class="assignedToSelect form-control select2"></select><i class="mdi mdi-spin mdi-loading assignToProcessing" style="display: none"></i></div>';
+        return html
+    };
+
+    var truncateTextAndShowTooltip = function (cutoff, wordbreak, escapeHtml) {
+        var esc = function (t) {
+            return t
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        };
+
+        return function (d, type, row) {
+            // Order, search and type get the original data
+            if (type !== 'display') {
+                return d;
+            }
+
+            if (typeof d !== 'number' && typeof d !== 'string') {
+                return d;
+            }
+
+            d = d.toString(); // cast numbers
+
+            if (d.length <= cutoff) {
+                return esc(d);
+            }
+
+            var shortened = d.substr(0, cutoff - 1);
+
+            // Find the last white space character in the string
+            if (wordbreak) {
+                shortened = shortened.replace(/\s([^\s]*)$/, '');
+            }
+
+            // Protect against uncontrolled HTML input
+            if (escapeHtml) {
+                shortened = esc(shortened);
+            }
+
+            return '<span class="ellipsis" title="' + esc(d) + '">' + shortened + '&#8230;</span>';
+        };
+    };
+
+    var add_filters = function (table, filters, filter_toggle_bt_container) {
+
+        var yadcf_filters = _.filter(filters, function (f) {
+            if (f[1] != 'customized') {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        var cust_filters = _.difference(filters, yadcf_filters);
+
+        yadcf.init(table, _.map(yadcf_filters, function (item) {
+            if (item[2] == true)
+                return {column_number: item[0], filter_type: item[1], filter_reset_button_text: 'x'};
+            else
+                return {column_number: item[0], filter_type: item[1], filter_reset_button_text: false};
+        }));
+
+        if (filter_toggle_bt_container) {
+            add_filter_toggle_button('idxxxxxx', filter_toggle_bt_container);
+        }
+
+        if (cust_filters) {
+            _.each(cust_filters, function (f) {
+                $(table.column(f[0]).header()).append(create_stacked_filter(f[0]));
+            });
+        }
+    };
+
+    var create_stacked_filter = function (idx) {
+        return $("<input type='text' data-index='" + idx + "' class='column-filter' placeholder='Type to filter'>" +
+            "<input type='text' data-index='" + idx + "' class='column-filter' placeholder='Type to filter'>");
+    };
+
+    var add_filter_toggle_button = function (table_id, container) {
+        $('.yadcf-filter-wrapper, .column-filter').hide();
+        $('.column-filter').click(function (evt) {
+            evt.preventDefault();
+            return false;
+        });
+        $('.column-filter').on('keyup', function (evt) {
+            // Perform search
+            var index = $(this).data('index');
+            $(table_id).DataTable().column(index).search($(this).val()).draw();
+        });
+        var filterToggle = "<i class='table-filter-toggle glyphicon glyphicon-filter' data-table='" + table_id +
+            "' onclick='signal.list_utils.handle_filter_toggle' data-show-filter='true'></i>";
+        var toggle_button = $.parseHTML(filterToggle);
+        if (!(_.isUndefined(container) && _.isNull(container))) {
+            container.append(toggle_button);
+        }
+
+        $(document).on('filter-toggle-init', function (evt) {
+            $('.table-filter-toggle').click(function (evt) {
+                var hide_show_fitler = function (tableId, hideOrShow) {
+                    if (hideOrShow === false) {
+                        $(tableId + '_wrapper .yadcf-filter-wrapper,.column-filter').hide();
+                    } else {
+                        $(tableId + '_wrapper .yadcf-filter-wrapper,.column-filter').show();
+                    }
+                };
+
+                var targetFilterToggle = $(evt.target);
+                var tableId = targetFilterToggle.data('table');
+                var showFilter = targetFilterToggle.data('show-filter');
+                if (showFilter === 'true') {
+                    targetFilterToggle.data('showFilter', 'false');
+                    hide_show_fitler(tableId, false);
+                } else {
+                    targetFilterToggle.data('showFilter', 'true');
+                    hide_show_fitler(tableId, true);
+                }
+            });
+        });
+
+        $(document).trigger('filter-toggle-init');
+        return $(toggle_button);
+    };
+
+    var handle_filter_toggle = function (evt) {
+        $(this).attr('target-table');
+    };
+
+    return {
+        flag_it: flag_it,
+        flag_handler: flag_handler,
+        priority_link: priority_link,
+        change_priority: change_priority,
+        find_field: find_field,
+        set_value: set_value,
+        get_due_in: get_due_in,
+        due_in_comp: due_in_comp,
+        assigned_to_comp: assigned_to_comp,
+        truncateTextAndShowTooltip: truncateTextAndShowTooltip,
+        add_filters: add_filters,
+        handle_filter_toggle: handle_filter_toggle,
+        add_filter_toggle_button: add_filter_toggle_button
+    }
+})();
+//= require app/pvs/common/rx_common.js
+//= require app/pvs/common/rx_alert_utils.js
+//= require app/pvs/common/rx_list_utils.js
+
+var sharedWithModalShow = false;
+var emailToModalShow = false;
+
+$(document).ready(function () {
+
+    var genAlertNameLink = function (value, id) {
+        return function () {
+            return '<a href="' + (detailsUrl + '?' + 'callingScreen=review&' +
+                    signal.utils.composeParams({configId: id})) + '">' + escapeHTML(value) + '</a>'
+        }
+    };
+
+    var initTable = function (table_rest_url) {
+        signal.alerts_utils.get_priorities();
+        signal.alerts_utils.get_workflowStates();
+
+        var table = $('.simple-alert-table').DataTable({
+            "sPaginationType": "bootstrap",
+            "language": {
+                "url": "/assets/i18n/dataTables_" + userLocale + ".json"
+            },
+            fnDrawCallback: function (){
+                colEllipsis();
+                webUiPopInit();
+            },
+            fnInitComplete: function () {
+
+                $(".generate-case-series").unbind().click(function () {
+                    var id = $(this).attr("data-id");
+                    var name = $(this).attr("data-name");
+                    var caseSeriesModal = $("#case-series-modal");
+                    caseSeriesModal.modal("show");
+                    caseSeriesModal.find("#case-series-name").val(name + id);
+                    caseSeriesModal.find(".save-case-series").unbind().click(function () {
+                        var seriesName = caseSeriesModal.find("#case-series-name").val();
+                        $.ajax({
+                            url: generateCaseSeriesUrl + "?id=" + id + "&seriesName=" + seriesName,
+                            success: function (result) {
+                                caseSeriesModal.modal("hide");
+                            },
+                            error: function (err) {
+                                alert("Case Series Saving Failed.");
+                                caseSeriesModal.modal("hide");
+                            }
+                        })
+                    })
+                });
+                addGridShortcuts('#simpleCaseAlerts');
+            },
+
+            ajax: {
+                "url": table_rest_url,
+                cache: false,
+                "dataSrc": "aaData"
+            },
+            "aaSorting": [[9, "desc"]],
+            "processing": true,
+            "oLanguage": {
+                "sProcessing": '<div class="grid-loading"><img src="/signal/assets/spinner.gif" width="30" align="middle" /></div>',
+                "sZeroRecords": "No data available in table", "sEmptyTable": "No data available in table"
+            },
+            "bServerSide":true,
+            "bLengthChange": true,
+            "iDisplayLength": 25,
+            "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+            columns: alert_review_column_data(),
+            scrollX: true,
+            columnDefs: [{
+                "targets": '_all',
+                "render": $.fn.dataTable.render.text()
+            }]
+        });
+
+        return table
+    };
+
+    var alert_review_column_data = function () {
+        var aoColumns = [
+            {
+                "mData": "name",
+                "mRender": function (data, type, row) {
+                    return genAlertNameLink(row.name, row.id)
+                },
+                "className": 'col-min-300 col-max-650 cell-break'
+            },
+            {
+                "mData": "productSelection",
+                "className": 'col-min-150 col-max-300 cell-break',
+                "bSortable" : false,
+                "mRender": function (data, type, row) {
+                    var colElement = '<div class="col-container"><div class="col-height">';
+                    colElement+=row.productSelection;
+                    colElement += '<a tabindex="0" title="' + $.i18n._('appLabel.viewAll') + '" class="ico-dots view-all" more-data="'+row.productSelection+'"><i class="mdi mdi-dots-horizontal font-20 blue-1"> </i></a>';
+                    colElement += '</div></div>';
+                    return colElement
+                }
+            },
+            {
+                "mData": "description",
+                "mRender": function (data, type, row) {
+                    if (row.description) {
+                        var colElement = '<div class="col-container"><div class="col-height">';
+                        colElement+=escapeHTML(row.description);
+                        colElement += '<a tabindex="0" title="' + $.i18n._('appLabel.viewAll') + '" class="ico-dots view-all" more-data="'+escapeHTML(row.description)+'"><i class="mdi mdi-dots-horizontal font-20 blue-1"> </i></a>';
+                        colElement += '</div></div>';
+                        return colElement
+                    } else {
+                        return "-"
+                    }
+                },
+                "className": 'col-min-250 col-max-300 cell-break'
+            },
+            {
+                "mData": "",
+                "mRender": function (data, type, row) {
+                    return "<span>" + row.dataSource.toUpperCase() + "</span>"
+                },
+                "className": 'col-min-100'
+            }
+        ];
+        if (appType === ALERT_CONFIG_TYPE.SINGLE_CASE_ALERT) {
+            aoColumns.push({
+                "mData": "caseCount",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+            aoColumns.push({
+                "mData": "newCases",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+            aoColumns.push({
+                "mData": "closedCaseCount",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+            aoColumns.push({
+                "mData": "alertPriority",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+        } else if (appType === ALERT_CONFIG_TYPE.AGGREGATE_CASE_ALERT) {
+            aoColumns.push({
+                "mData": "pecCount",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+            aoColumns.push({
+                "mData": "closedPecCount",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+            aoColumns.push({
+                "mData": "alertPriority",
+                "className": 'col-min-100',
+                "bSortable" : false
+            });
+            aoColumns.push({
+                "mData": "dateRagne",
+                "className": "col-min-150",
+                "bSortable" : false
+            });
+
+        }
+        aoColumns.push({
+            "mData": "lastModified",
+            "className": 'col-min-100'
+        });
+
+        aoColumns.push({
+            "mData": "lastExecuted",
+            "className": 'col-min-100'
+        });
+        if (appType === ALERT_CONFIG_TYPE.SINGLE_CASE_ALERT) {
+            aoColumns.push({
+                "mData": null,
+                "bSortable": false,
+                "aTargets": ["id"],
+                "className": 'col-min-150',
+                "mRender": function (data, type, row) {
+                    var type = row.type;
+                    if (pvrIntegrate == "true") {
+                         var actionButton = '<div class="hidden-btn btn-group hidden-btn dropdown dataTableHideCellContent" align="center"> \
+                            <a class="btn btn-success btn-xs" href="' + template_list_url + '?' + signal.utils.composeParams({
+                                    configId: data["id"],
+                                    type: null,
+                                    alertId: null
+                                }) + ' ">' + $.i18n._('Report') + '</a> \
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown"> \
+                                <span class="caret"></span> \
+                                <span class="sr-only">Toggle Dropdown</span> \
+                            </button> \
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu" style="min-width: 80px !important; font-size: 12px;"> \
+                             <li role="presentation"><a class="" data-name="' + row.name + '"  data-version="' + row.version + '" data-id="' + row.id + '" ' +
+                                'role="menuitem" href="/signal/dataAnalysis/index" >' + 'View All Analysis' + '</a></li> \
+                               <li role="presentation"><a class="" data-name="' + row.name + '"  data-version="' + row.version + '" data-id="' + row.id + '" ' +
+                                'role="menuitem" href="/signal/dataAnalysis/create?alertId=' + row.id + '">' + 'New Analysis' + '</a></li> ';
+                            if (row.sporfireRangeUrl)
+                                actionButton += '<li role = "presentation" ><a   role="menuitem" onclick=\'checkAndLoad("' + row.sporfireRangeUrl + '")\' href="javascript:void(0)">' + $.i18n._('interval') + '</a></li> ';
+                            if (row.sporfireCumulativeUrl)
+                                actionButton += '<li role = "presentation" ><a   role="menuitem" onclick=\'checkAndLoad("' + row.sporfireCumulativeUrl + '")\' href="javascript:void(0)">' + $.i18n._('cumulative') + '</a></li> ';
+                            if (row.IsShareWithAccess)
+                                actionButton += '<li role="presentation"><a role="menuitem" href="" id="' + row.id + '" data-toggle="modal" data-target="#sharedWithModal">' + $.i18n._('labelShare') + '</a></li>';
+
+                            actionButton += '</ul></div>';
+                            return actionButton;
+                    } else {
+                        if (row.IsShareWithAccess) {
+                            var actionButton = '<div class="hidden-btn btn-group hidden-btn dropdown dataTableHideCellContent" align="center"> \
+                            <a class="btn btn-success btn-xs" href="" id="' + row.id + '" data-toggle="modal" data-target="#sharedWithModal">' + $.i18n._('labelShare') + '</a> \
+                            </div>'
+                            return actionButton;
+                        }
+                    }
+                    return ""
+                }
+            });
+        }
+        if(appType === ALERT_CONFIG_TYPE.AGGREGATE_CASE_ALERT){
+            aoColumns.push({
+                "mData": null,
+                "bSortable": false,
+                "aTargets": ["id"],
+                "className": 'col-min-150',
+                "mRender": function (data, type, row) {
+                    if (row.IsShareWithAccess) {
+                        var actionButton = '<div class="hidden-btn btn-group hidden-btn dropdown dataTableHideCellContent" align="center"> \
+                            <a class="btn btn-success btn-xs" href="" id="' + row.id + '" data-toggle="modal" data-target="#sharedWithModal">' + $.i18n._('labelShare') + '</a> \
+                            </div>'
+                        return actionButton;
+                    }
+                    return ""
+                }
+            });
+        }
+        return aoColumns
+    };
+
+
+    var table = initTable(listConfigUrl);
+    actionButton('#simpleCaseAlerts');
+
+    loadTableOption('#simpleCaseAlerts');
+
+    $('.outside').hide();
+
+    signal.alerts_utils.initializeShareWithSelect2();
+    signal.alerts_utils.initializeShareWithValues();
+
+    });
+
+var filters = [
+    function (data) {
+        var alertName = data[1]
+        var filterValue = $('#alertNameFilter').val()
+        if (filterValue) {
+            var regx = new RegExp('.*' + filterValue + '.*', 'i')
+            return regx.test(alertName)
+        }
+
+        return true
+    },
+
+    function (data) {
+        return true
+    }
+]
+
+
+$.fn.dataTable.ext.search.push(
+    function (settings, data, dataIndex) {
+        var fv = true
+
+        for (var i = 0; i < filters.length; i++) {
+            var nextFv = filters[i](data)
+            fv &= nextFv
+        }
+        return fv
+    }
+)
+
+Handlebars.registerHelper('option', function (value, label, selectedValue) {
+    var selectedProperty = value == selectedValue ? 'selected="selected"' : '';
+    return new Handlebars.SafeString(
+        '<option value="' + value + '"' + selectedProperty + '>' + label + "</option>");
+});
+
+function checkAndLoad(name) {
+    $.ajax({
+        url: sporfireValidationUrl + "?name=" + name,
+        success: function (result) {
+            window.open(result.url, '_blank');
+        },
+        error: function (err) {
+            $("#spotfireNotReady").modal("show");
+        }
+    })
+}

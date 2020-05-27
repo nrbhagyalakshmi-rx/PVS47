@@ -1,0 +1,11 @@
+[t166]
+FileName1=t166.json
+URL1=http://10.100.22.24:8181/signal/singleCaseAlert/listByExecutedConfig/15?cumulative=false&adhocRun=false&dashboardFilter=&tagName=&isFilterRequest=false&filters=[]
+Total=1
+RequestHeaderFile=t166_RequestHeader.txt
+RequestBodyFile=t166_RequestBody.txt
+ResponseHeaderFile=t166_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_159.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

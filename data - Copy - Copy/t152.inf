@@ -1,0 +1,11 @@
+[t152]
+FileName1=t152_advancedFilterQueryBuilder-6a50d7065df84d243f869aadaf8c60eb.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/advancedFilter/advancedFilterQueryBuilder-6a50d7065df84d243f869aadaf8c60eb.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_145.xml
+RequestHeaderFile=t152_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t152_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

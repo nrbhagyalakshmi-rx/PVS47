@@ -1,0 +1,11 @@
+[t8]
+FileName1=t8_login-23162286b278bf1e48cb0201c9e9a644.css
+URL1=http://10.100.22.24:8181/signal/assets/login-23162286b278bf1e48cb0201c9e9a644.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_6.xml
+RequestHeaderFile=t8_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t8_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

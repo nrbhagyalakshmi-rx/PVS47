@@ -1,0 +1,3 @@
+var signal=signal||{};
+window.actionButton=function(b){b=$(b).find("tbody");$(b).on("mouseover","td",function(){$(this).find(".default-value").addClass("dataTableHideCellContent");var a=$(this).find("div.btn-group");a.parent().addClass("no-padding");a.removeClass("dataTableHideCellContent")}).on("mouseleave","td",function(){var a=$(this).find("div.btn-group");a.hasClass("open")||(a.addClass("dataTableHideCellContent"),$(this).find(".default-value").removeClass("dataTableHideCellContent"))}).on("click","td",function(){$(this).find("div").hasClass("open");
+$(this);$(this).focusout(function(){})})};

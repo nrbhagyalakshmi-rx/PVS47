@@ -1,0 +1,11 @@
+[t73]
+FileName1=t73_bootstrap-datetimepicker-5aa81b54c1dd973165b56d66567b57d6.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/date-time/bootstrap-datetimepicker-5aa81b54c1dd973165b56d66567b57d6.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_71.xml
+RequestHeaderFile=t73_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t73_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

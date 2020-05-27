@@ -1,0 +1,11 @@
+[t140]
+FileName1=t140_caseHistoryTable-1e0741698f7b28dcc84eeaa5e97bc3db.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/caseHistory/caseHistoryTable-1e0741698f7b28dcc84eeaa5e97bc3db.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_134.xml
+RequestHeaderFile=t140_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t140_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

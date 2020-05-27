@@ -1,0 +1,36 @@
+<div class="disposition">
+    <ul class="list-inline icon-list txt-ellipsis" data-is-reviewed="{{isReviewed}}" data-current-disposition="{{currentDisposition}}">
+        {{#if isValidationStateAchieved}}
+            <li><a data-target="#dispositionSignalPopover" role="button" class="changeDisposition"
+                   data-validated-confirmed="{{isValidationStateAchieved}}"
+                   data-disposition-id="{{id}}" data-disposition-closed="{{dispositionClosedStatus}}" data-toggle="modal-popover"
+                   data-placement="bottom" title="{{displayName}}" tabindex="0"><span>Add Signal</span></a></li>
+        {{else}}
+            {{#each allowedDisposition}}
+                {{#if validatedConfirmed}}
+                    <li>
+                        <a tabindex="0" data-target="#dispositionSignalPopover" role="button" class="changeDisposition"
+                           data-validated-confirmed="{{validatedConfirmed}}" data-auth-required="{{isApprovalRequired}}" data-is-reviewed="{{isReviewed}}"
+                           data-disposition-id="{{id}}" data-disposition-closed="{{dispositionClosedStatus}}" data-toggle="modal-popover"
+                           data-placement="bottom" title="{{displayName}}"><i class="ico-circle" style="background:{{colorCode}}">{{abbreviation}}</i></a>
+                    </li>
+                {{else}}
+                    {{#if ../forceJustification}}
+                        <li>
+                            <a tabindex="0" data-target="#dispositionJustificationPopover" role="button" class="changeDisposition"
+                               data-validated-confirmed="{{validatedConfirmed}}" data-auth-required="{{isApprovalRequired}}" data-is-reviewed="{{isReviewed}}"
+                               data-disposition-id="{{id}}" data-disposition-closed="{{dispositionClosedStatus}}" data-toggle="modal-popover"
+                               data-placement="bottom" title="{{displayName}}"><i class="ico-circle" style="background:{{colorCode}}">{{abbreviation}}</i></a>
+                        </li>
+                    {{else}}
+                        <li>
+                            <a tabindex="0" href="javascript:void(0);" role="button" class="changeDisposition"
+                               data-validated-confirmed="{{validatedConfirmed}}" data-auth-required="{{isApprovalRequired}}" data-is-reviewed="{{isReviewed}}"
+                               data-disposition-id="{{id}}" data-disposition-closed="{{dispositionClosedStatus}}" title="{{displayName}}"><i class="ico-circle" style="background:{{colorCode}}">{{abbreviation}}</i></a>
+                        </li>
+                    {{/if}}
+                {{/if}}
+            {{/each}}
+        {{/if}}
+    </ul>
+</div>

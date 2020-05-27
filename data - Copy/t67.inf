@@ -1,0 +1,11 @@
+[t67]
+FileName1=t67_userGroupSelect-7f7d244cad34902e9681267c696c1bed.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/userGroupSelect-7f7d244cad34902e9681267c696c1bed.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_65.xml
+RequestHeaderFile=t67_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t67_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

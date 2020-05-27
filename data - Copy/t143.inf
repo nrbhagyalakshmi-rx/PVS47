@@ -1,0 +1,11 @@
+[t143]
+FileName1=t143_fieldConfigurationManagement-e1a802ff9b5cad88989e761d50770b53.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/alerts_review/fieldConfigurationManagement-e1a802ff9b5cad88989e761d50770b53.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_137.xml
+RequestHeaderFile=t143_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t143_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

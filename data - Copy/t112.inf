@@ -1,0 +1,11 @@
+[t112]
+FileName1=t112.json
+URL1=https://update.googleapis.com/service/update2/json
+Total=1
+RequestHeaderFile=t112_RequestHeader.txt
+RequestBodyFile=t112_RequestBody.txt
+ResponseHeaderFile=t112_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_107.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

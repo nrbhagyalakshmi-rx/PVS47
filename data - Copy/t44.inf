@@ -1,0 +1,11 @@
+[t44]
+FileName1=t44_jquery.slimscroll-6a314b5f0344bf7ef8e1e0c948bb75f9.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/jquery/jquery.slimscroll-6a314b5f0344bf7ef8e1e0c948bb75f9.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_42.xml
+RequestHeaderFile=t44_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t44_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

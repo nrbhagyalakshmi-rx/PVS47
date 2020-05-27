@@ -1,0 +1,11 @@
+[t153]
+FileName1=t153_single_case_alert_details-50076305d9a840e6a3de6bf721a5516a.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/alerts_review/single_case_alert_details-50076305d9a840e6a3de6bf721a5516a.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_146.xml
+RequestHeaderFile=t153_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t153_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t130]
+FileName1=t130_grid-rx-b439bf122addf135d43063a53d34f9d7.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/highcharts/themes/grid-rx-b439bf122addf135d43063a53d34f9d7.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_124.xml
+RequestHeaderFile=t130_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t130_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

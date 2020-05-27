@@ -1,0 +1,11 @@
+[t54]
+FileName1=t54_jquery.counterup.min-86f52f47d4c325261bf7d36b09dcf216.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/counterup/jquery.counterup.min-86f52f47d4c325261bf7d36b09dcf216.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_52.xml
+RequestHeaderFile=t54_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t54_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

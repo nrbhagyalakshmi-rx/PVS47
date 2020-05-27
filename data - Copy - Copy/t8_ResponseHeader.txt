@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:16:24 GMT
+ETag: "login-23162286b278bf1e48cb0201c9e9a644.css"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: text/css;charset=UTF-8
+Content-Length: 924
+Date: Fri, 22 May 2020 05:36:40 GMT
+

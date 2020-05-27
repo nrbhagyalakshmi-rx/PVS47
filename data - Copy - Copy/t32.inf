@@ -1,0 +1,11 @@
+[t32]
+FileName1=t32_select2-911832dffdffb9e7bafb38412a68f445.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/select2/select2-911832dffdffb9e7bafb38412a68f445.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_30.xml
+RequestHeaderFile=t32_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t32_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

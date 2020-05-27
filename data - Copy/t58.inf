@@ -1,0 +1,11 @@
+[t58]
+FileName1=t58_jquery.core-2f63ea2ce21973031b9685e36eba0731.html
+URL1=http://10.100.22.24:8181/signal/assets/common/jquery.core-2f63ea2ce21973031b9685e36eba0731.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_56.xml
+RequestHeaderFile=t58_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t58_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

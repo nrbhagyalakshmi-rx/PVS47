@@ -1,0 +1,3585 @@
+2000
+<!doctype html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Qualitative Alert Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/signal/assets/favicon-2ba00fd40faca3ac3c2e810a7412bceb.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/signal/assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/signal/assets/apple-touch-icon-retina.png">
+<link rel="stylesheet" href="/signal/assets/application-20282e3e3fad9c329f1728b037973a74.css"/>
+<link rel="stylesheet" href="/signal/assets/theme_gradient_blue-82b8663def72c9ceff32d61e0b4a5253.css"/>
+<link rel="stylesheet" href="/signal/assets/app/pvs/pvs_app_css-794a4a77a2a4bcc45fa913cd043a5ab3.css"/>
+<link rel="stylesheet" href="/signal/assets/app/pvs/pvs_508c-fd4a301235dfeff417d96bed64e8429d.css"/>
+<link rel="stylesheet" href="/signal/assets/mdi-fonts/css/materialdesignicons-2f254cfdb2b23bcf596ab766574b3675.css"/>
+
+<script type="text/javascript" src="/signal/assets/vendorUi/modernizr.min-23fa28ce275880746945a2305077eebc.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery-2.2.4-986b7af813adeaf9e589ef20bcc97bb0.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery.i18n-61406922e05804e4abe8c8360ec862fa.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/underscore/underscore.min-e6d41cd714673035a7f8a65c30f3dcb1.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery-ui/jquery-ui.min-b0582f2d27fdc676c34681e0c96aac0c.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bootstrap/bootstrap.min-3f6aa77f4768de267c35a96028599ce3.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/moment/moment-434aaa1704890766125108c94efbb50c.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/moment/momentlocales-bd0407faadf015b0c0b0d49b831aeb7b.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/moment/momentTimezones-with-data-c15ec3e27a3263556fdbb96b61f9206f.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/popover/popover.min-a48d28e289c6932042ffa0ab05e7bf68.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/fuelux/fuelux.min-d30fb133a2493fadc38faabf3f226bc4.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/select2/select2-911832dffdffb9e7bafb38412a68f445.js" ></script>
+<script type="text/javascript" src="/signal/assets/datatables/jquery.dataTables_custom-8dad82f79087bc7c28eeb9b403e756b8.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/dataTables.bootstrap-93e0b2f3576484b422f6e4a29b3e6037.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/dataTables.bootstrapPagination-d133da3f3570036f8532207affa78bd9.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/datetime-moment-3fa3fc8eaf60abe3fae2bae2fb4328b0.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/dataTables.fixedColumns.min-acc90a700b69150380759567188a8cd0.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/spinner/spinner.min-6f6eab72fd2531bea7514cc0d9830665.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/multiselect/jquery.multi-select2.0-c2649a518d094dac8d3e66aaba1e4501.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/wow/wow.min-237e66d720861f3cc99ee444887b7c32.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/mobile/fastclick-c74606809464116f3413064b0e200023.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/mobile/detect-fd56173b9f1574612026ca4bd0f9ce20.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.nicescroll-09e3ca9889499cfb15271ad8dc51f842.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.slimscroll-6a314b5f0344bf7ef8e1e0c948bb75f9.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.blockUI-7aa9ac8e34d97a945dbf467d99fda834.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.scrollTo.min-240b8d54661c5e0500b96b9594d60b62.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/notifyjs/dist/notify.min-1dba61fec15a5d71814b2c2cb69f65bf.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/notifications/notify-metro-9a1cf25a956b601aedd486c779986df7.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/sweet-alert/sweet-alert.min-792598f1e6bac9b4f7cc6f060ae6b454.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/sweet-alert/rx-notify-db0528274130516c271389cccac65e17.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bootstrapUploader/bootstrap-uploader-265e387a3ec58973abdfae04a79862b2.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/waypoints/lib/jquery.waypoints.min-4471999ef1b83a94d41d3cebb887c349.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/counterup/jquery.counterup.min-86f52f47d4c325261bf7d36b09dcf216.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/handlebar/handlebars-v4.0.5-8ad4263f81c714ada4985affb687f12b.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bootstrap-switch/bootstrap-switch-732d14990dba7f4fff6b5b441177c905.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery.ba-throttle-debounce-876f6988f0a240fd9c49f09c5d71b994.js" ></script>
+<script type="text/javascript" src="/signal/assets/common/jquery.core-2f63ea2ce21973031b9685e36eba0731.js" ></script>
+<script type="text/javascript" src="/signal/assets/application-b6b2fa3a918957eb49ac1c12c36b30ec.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bower_components/webcomponentsjs/webcomponents-lite-c806470ac3182eedbb9de677fde922de.js" ></script>
+<script type="text/javascript" src="/signal/assets/bootstrap-multiselect/bootstrap-multiselect-7b500966794478e2792eea0659e0aa96.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatable/dataTables.buttons.min-99ef2a29fc5b51a6f8f392977c2e34b1.js" ></script>
+<script type="text/javascript" src="/signal/assets/datatables/buttons.bootstrap-acac51d5cf162bd14f44ad66a6f275f5.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/waves/waves-2d20efe8b7228bbc963944ac22c9667c.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/rxTitleOptions-1279146f661735d9e94cde274342b25c.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/menu-e9f9c79de11e89cfb0d2f7ae1cd80554.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/pvs_app_widget-ec77f7e909db8bab59e572285b1c3389.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/userGroupSelect-7f7d244cad34902e9681267c696c1bed.js" ></script>
+
+<script>
+    
+    userLocale = "en";
+    moment.locale(userLocale);
+    userTimeZone = "UTC";
+    var loggedInUser =  "bhagya";
+    maxUploadLimit = "50000000";
+    userId = "7435"
+    
+</script>
+
+    <meta name="_csrf" content="72780e22-ffb7-4da0-bf90-01a65c33bfc7"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+    <meta name="_csrf_parameter" content="_csrf"/>
+
+    
+    <meta name="layout" content="main"/>
+    
+
+    <script type="text/javascript" src="/signal/assets/vendorUi/highcharts/highcharts-de65192df8733b7a60482497a875df4c.js" ></script>
+    <script type="text/javascript" src="/signal/assets/vendorUi/highcharts/highcharts-3d-65774008a3b78b30a394568a24c6af09.js" ></script>
+    <script type="text/javascript" src="/signal/assets/vendorUi/highcharts/highcharts-more-f214354c75a376fd86847242d26a1023.js" ></script>
+    <script type="text/javasc
+2000
+ript" src="/signal/assets/vendorUi/highcharts/themes/grid-rx-b439bf122addf135d43063a53d34f9d7.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/bootbox.min-05d23d3920015845ca00414081fd0ec6.js" ></script>
+
+    <script type="text/javascript" src="/signal/assets/yadcf/jquery.dataTables.yadcf-a13c93c305588bd0340c6a9901cd3492.js" ></script>
+    <script type="text/javascript" src="/signal/assets/vendorUi/datatables/datatable.colsReorder.min-f60fbf698f1fa675a29d5b361968020a.js" ></script>
+
+    <script type="text/javascript" src="/signal/assets/app/pvs/alerts_review/single_case_alert_details-50076305d9a840e6a3de6bf721a5516a.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/caseHistory/caseHistoryTable-1e0741698f7b28dcc84eeaa5e97bc3db.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/similarCases/similarCases-313f82b9b82d3ae5fbaf40bbf9e37f17.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/dataTablesActionButtons-50a104b30cb3aa5d21eb1f1f33f1d835.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/alerts_review/fieldConfigurationManagement-e1a802ff9b5cad88989e761d50770b53.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/bootstrap-modal-popover/bootstrap-modal-popover-13efefa1c00b94cc73690eb7d64a74c4.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/disposition/disposition-change-90ca5b153d45318b5626d8de75310b64.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/priority/priority-change-aab9e07e8f32d3a525b119f57b621288.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/caseHistory/caseHistoryJustification-e00adcb2bfe499584728ed2595e37611.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/alert_utils/common_key_prevent-ef5634527119e90cc2576f0ef956085c.js" ></script>
+
+
+    <script type="text/javascript" src="/signal/assets/backbone/underscore-98afbb17ea5a38bed2d9dd4c03c3c624.js" ></script>
+    <script type="text/javascript" src="/signal/assets/backbone/backbone-fb26971962c1315514c8ede192bc0252.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/advancedFilter/advancedFilterQueryBuilder-6a50d7065df84d243f869aadaf8c60eb.js" ></script>
+    <link rel="stylesheet" href="/signal/assets/query-b27835585fd1b7c5ffd2e2c29a5ff2d7.css"/>
+    <link rel="stylesheet" href="/signal/assets/app/pvs/businessConfiguration-731e96c2d56f6817b3602b4a92b3886f.css"/>
+
+    <link rel="stylesheet" href="/signal/assets/app/pvs/pvs_list-642eea288b57d537ccfdff6c8e0e7c6b.css"/>
+    <link rel="stylesheet" href="/signal/assets/yadcf/jquery.dataTables.yadcf-926e48d7fd2745f397358930a160f1e9.css"/>
+    <link rel="stylesheet" href="/signal/assets/app/pvs/updatedFixedColumn-4180034da606560f8555366463a750ac.css"/>
+    <link rel="stylesheet" href="/signal/assets/colReorder.dataTables.min-6c9c3520f346057281532b7b491bad4b.css"/>
+    <script type="text/javascript" src="/signal/assets/app/pvs/userGroupSelect-7f7d244cad34902e9681267c696c1bed.js" ></script>
+
+    <script type="text/javascript">
+
+        var userLocale = 'en';
+        var apptype = "Single Case Alert";
+        var callingScreen = "review";
+        var executedConfigId = "15";
+        var dashboardFilter = "";
+        var viewId = "6559";
+        var justificationObj = JSON.parse("\u005b\u007b\u0022id\u0022:6765\u002c\u0022name\u0022:\u0022Cases Added\u0022\u002c\u0022text\u0022:\u0022Cases added for data evaluation\u0022\u007d\u005d");
+        var listConfigUrl = "\u002fsignal\u002fsingleCaseAlert\u002flistByExecutedConfig\u002f15?cumulative=false\u0026adhocRun=false\u0026dashboardFilter=\u0026tagName=";
+        var caseHistoryUrl = "\u002fsignal\u002fcaseHistory\u002flistCaseHistory";
+        var updateJustificationUrl = "\u002fsignal\u002fcaseHistory\u002fupdateJustification";
+        var caseReviewPreviousUrl = "\u002fsignal\u002fsingleCaseAlert\u002fpreviousCaseState\u002f15";
+        var caseInfoUrl = "\u002fsignal\u002fsingleCaseAlert\u002flistCaseInfo?cumulative=false";
+        var caseDetailUrl = "\u002fsignal\u002fcaseInfo\u002fcaseDetail";
+        var getPriorityUrl = "\u002fsignal\u002fworkflow\u002fgetPriority";
+        var changePriorityUrl = "\u002fsignal\u002fsingleCaseAlert\u002fchangePriorityOfAlert";
+        var exportSignalSummary = "\u002fsignal\u002fsingleCaseAlert\u002fexportSignalSummaryReport\u002f15";
+        var topicUrl = "\u002fsignal\u002ftopic\u002faddAlertToTopic\u002f15";
+        var searchStrategyProducts = "\u002fsignal\u002fvalidatedSignal\u002fsearchStrategyProducts";
+        var fetchTopicsUrl = "\u002fsignal\u002ftopic\u002ffetchTopicNames";
+        var caseHistorySuspectUrl = "\u002fsignal\u002fcaseHistory\u002flistSuspectProdCaseHistory";
+        var singleCaseDetailsUrl = "\u002fsignal\u002fsingleCaseAlert\u002fdetails";
+        var saveViewUrl = "\u002fsignal\u002fviewInstance\u002fsaveView";
+        var updateViewUrl = "\u002fsignal\u002fviewInstance\u002fupdateView";
+        var deleteViewUrl = "\u002fsignal\u002fviewInstance\u002fdeleteView";
+        var fetchTagsUrl = "\u002fsignal\u002fsingleCaseAlert\u002fsearchTagsList";
+        var fetchUsersUrl = "\u002fsignal\u002fadvancedFilter\u002ffetchAjaxUserSearch";
+        var saveTagUrl = "\u002fsignal\u002fsingleCaseAlert\u002fsaveAlertTags";
+        var fillCommonTagUrl = "\u002fsignal\u002fcommonTag\u002fgetQualAlertCategories";
+        var saveCommonTagsUrl = "\u002fsignal\u002fcommonTag\u002fsaveAlertCategories";
+        var fetchCommonTagsUrl = "\u002fsignal\u002fcommonTag\u002fcommonTagDetails";
+        var privateEnabled = "true"
+        var nonConfiguredEnabled = "false"
+        var tagDetailsUrl = "\u002fsignal\u002fsingleCaseAlert\u002fdetails";
+        var saveCasesUrl = "\u002fsignal\u002fsingleCaseAlert\u002fsaveCaseSeries?executedConfigId=15";
+        var isCaseDetailView = "";
+        var searchUserGroupListUrl = "\u002fsignal\u002fuser\u002fsearchUserGroupList";
+        var assignToGroupUrl = "\u002fsignal\u002fsingleCaseAlert\u002fchangeAssignedToGroup";
+        var discardTempChangesUrl = "\u002fsignal\u002fviewInstance\u002fdiscardTempChanges?viewInstance.id=6559";
+        var dispositionIncomingOutgoingMap = JSON.parse('\u007b\u0022New\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Review Required\u0022\u002c\u0022abbreviation\u0022:\u0022RR\u0022\u002c\u0022colorCode\u0022:\u0022#5cb85c\u0022\u002c\u0022id\u0022:13\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u002c\u007b\u0022displayName\u0022:\u0022Validated Observation\u0022\u002c\u0022abbreviation\u0022:\u0022VO\u0022\u002c\u0022colorCode\u0022:\u0022#d9534f\u0022\u002c\u0022id\u0022:25\u002c\u0022validatedConfirmed\u0022:true\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:true\u007d\u002c\u007b\u0022displayName\u0022:\u0022Non-Validated Observation\u0022\u002c\u0022abbreviation\u0022:\u0022NVO\u0022\u002c\u0022colorCode\u0022:\u0022#5cb85c\u0022\u002c\u0022id\u0022:37\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:true\u002c\u0022isReviewed\u0022:true\u007d\u005d\u002c\u0022Review Required\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Validated Observation\u0022\u002c\u0022abbreviation\u0022:\u0022VO\u0022\u002c\u0022colorCode\u0022:\u0022#d9534f\u0022\u002c\u0022id\u0022:25\u002c\u0022validatedConfirmed\u0022:true\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:true\u007d\u002c\u007b\u0022displayName\u0022:\u0022Non-Validated Observation\u0022\u002c\u0022abbreviation\u0022:\u0022NVO\u0022\u002c\u0022colorCode\u0022:\u0022#5cb85c\u0022\u002c\u0022id\u0022:37\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:true\u002c\u0022isReviewed\u0022:true\u007d\u005d\u
+2000
+002c\u0022Validated Observation\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Confirmed Signal\u0022\u002c\u0022abbreviation\u0022:\u0022CS\u0022\u002c\u0022colorCode\u0022:\u0022#d9534f\u0022\u002c\u0022id\u0022:49\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u002c\u007b\u0022displayName\u0022:\u0022Refuted Signal\u0022\u002c\u0022abbreviation\u0022:\u0022RS\u0022\u002c\u0022colorCode\u0022:\u0022#5cb85c\u0022\u002c\u0022id\u0022:61\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u002c\u007b\u0022displayName\u0022:\u0022Continued Monitoring\u0022\u002c\u0022abbreviation\u0022:\u0022CM\u0022\u002c\u0022colorCode\u0022:\u0022#337ab7\u0022\u002c\u0022id\u0022:73\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u005d\u002c\u0022Continued Monitoring\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Confirmed Signal\u0022\u002c\u0022abbreviation\u0022:\u0022CS\u0022\u002c\u0022colorCode\u0022:\u0022#d9534f\u0022\u002c\u0022id\u0022:49\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u002c\u007b\u0022displayName\u0022:\u0022Refuted Signal\u0022\u002c\u0022abbreviation\u0022:\u0022RS\u0022\u002c\u0022colorCode\u0022:\u0022#5cb85c\u0022\u002c\u0022id\u0022:61\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u005d\u002c\u0022Confirmed Signal\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Communicated Potential Risk\u0028s\u0029 and Risk Minimization Actions\u0022\u002c\u0022abbreviation\u0022:\u0022CPR\u0022\u002c\u0022colorCode\u0022:\u0022#337ab7\u0022\u002c\u0022id\u0022:85\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:false\u002c\u0022isReviewed\u0022:false\u007d\u005d\u002c\u0022Refuted Signal\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Closed - Refuted Signal\u0022\u002c\u0022abbreviation\u0022:\u0022CRS\u0022\u002c\u0022colorCode\u0022:\u0022#7b7f8e\u0022\u002c\u0022id\u0022:97\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:true\u002c\u0022isReviewed\u0022:true\u007d\u005d\u002c\u0022Communicated Potential Risk\u0028s\u0029 and Risk Minimization Actions\u0022:\u005b\u007b\u0022displayName\u0022:\u0022Closed - Confirmed Signal\u0022\u002c\u0022abbreviation\u0022:\u0022CCS\u0022\u002c\u0022colorCode\u0022:\u0022#7b7f8e\u0022\u002c\u0022id\u0022:109\u002c\u0022validatedConfirmed\u0022:false\u002c\u0022isApprovalRequired\u0022:false\u002c\u0022dispositionClosedStatus\u0022:true\u002c\u0022isReviewed\u0022:true\u007d\u005d\u007d');
+        var forceJustification = true;
+        var changeDispositionUrl = "\u002fsignal\u002fsingleCaseAlert\u002fchangeDisposition";
+        var allowedProductsAsSafetyLead = "".split(",");
+        var gridColumnsViewUrl = "\u002fsignal\u002fviewInstance\u002fviewColumnInfo?viewInstance.id=6559";
+        var gridColumnsViewUpdateUrl = "\u002fsignal\u002fviewInstance\u002fupdateViewColumnInfo?viewInstance.id=6559";
+        var signalDetailUrl = "\u002fsignal\u002fvalidatedSignal\u002fdetails";
+        var archivedAlertUrl = "\u002fsignal\u002fsingleCaseAlert\u002farchivedAlert\u002f15";
+        var isProductSecurity = "false";
+        var availableSignalNameList = JSON.parse('\u005b\u0022PerfSignal1\u0022\u005d');
+        var stringOperatorsUrl =  "\u002fsignal\u002fquery\u002fgetStringOperators";
+        var numOperatorsUrl =  "\u002fsignal\u002fquery\u002fgetNumOperators";
+        var dateOperatorsUrl =  "\u002fsignal\u002fquery\u002fgetDateOperators";
+        var valuelessOperatorsUrl = "\u002fsignal\u002fquery\u002fgetValuelessOperators";
+        var keywordsUrl =  "\u002fsignal\u002fquery\u002fgetAllKeywords";
+        var possibleValuesUrl = "\u002fsignal\u002fsingleCaseAlert\u002ffetchPossibleValues?executedConfigId=15";
+        var allFieldsUrl = "\u002fsignal\u002fsingleCaseAlert\u002ffetchAllFieldValues?isFaers=";
+        var selectAutoUrl = "\u002fsignal\u002fadvancedFilter\u002ffetchAjaxAdvancedFilterSearch?executedConfigId=15";
+        var fetchAdvFilterUrl = "\u002fsignal\u002fadvancedFilter\u002ffetchAdvancedFilterNameAjax";
+        var fetchAdvancedFilterInfoUrl = "\u002fsignal\u002fadvancedFilter\u002ffetchAdvancedFilterInfo";
+        var authUrl = "\u002fsignal\u002fuser\u002feAuthenticate";
+        var changeAlertLevelDispositionUrl = "\u002fsignal\u002fsingleCaseAlert\u002fchangeAlertLevelDisposition";
+        var updateAutoRouteDispositionUrl = "\u002fsignal\u002fsingleCaseAlert\u002fupdateAutoRouteDisposition";
+        var alertActivitiesUrl = "\u002fsignal\u002factivity\u002flistByExeConfig";
+        var reviewCompletedDispostionList = JSON.parse('\u005b\u0022Validated Observation\u0022\u002c\u0022Non-Validated Observation\u0022\u002c\u0022Closed - Refuted Signal\u0022\u002c\u0022Closed - Confirmed Signal\u0022\u005d')
+    
+</script>
+
+    
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                var leftFixedColumns = 6;
+                if(callingScreen == CALLING_SCREEN.TRIGGERED_ALERTS || callingScreen == CALLING_SCREEN.DASHBOARD) {
+                    leftFixedColumns = leftFixedColumns + 1; //plus 1 for name
+                }
+                if($("#isFaers").val() == "true"){
+                    leftFixedColumns = leftFixedColumns - 3; //minus 2 for priority, actions
+                } else if($("#isCaseSeries").val() == "true"){
+                    leftFixedColumns = leftFixedColumns - 1; //minus 2 for priority, actions
+                }
+                window.sca_data_table.fixedColumns = new $.fn.dataTable.FixedColumns(window.sca_data_table, {
+                    iLeftColumns: leftFixedColumns
+                });
+            });
+
+        
+</script>
+
+    
+    <script type="text/javascript">
+
+    window.action_select_values = JSON.parse("\u007b\u0022types\u0022:\u005b\u007b\u0022id\u0022:6766\u002c\u0022value\u0022:\u0022AESM\u0022\u002c\u0022text\u0022:\u0022AESM\u0022\u007d\u002c\u007b\u0022id\u0022:7109\u002c\u0022value\u0022:\u0022Auto Alert\u0022\u002c\u0022text\u0022:\u0022Auto Alert\u0022\u007d\u002c\u007b\u0022id\u0022:7116\u002c\u0022value\u0022:\u0022Further Review\u0022\u002c\u0022text\u0022:\u0022Further Review\u0022\u007d\u005d\u002c\u0022configs\u0022:\u005b\u007b\u0022id\u0022:7123\u002c\u0022value\u0022:\u0022Meeting\u0022\u007d\u002c\u007b\u0022id\u0022:7132\u002c\u0022value\u0022:\u0022Additional investigations\u0022\u007d\u002c\u007b\u0022id\u0022:7141\u002c\u0022value\u0022:\u0022Change to RMP\u0022\u007d\u002c\u007b\u0022id\u0022:7150\u002c\u0022value\u0022:\u0022Changes to REMS\u0022\u007d\u002c\u007b\u0022id\u0022:7159\u002c\u0022value\u0022:\u0022Communication\u0022\u007d\u002c\u007b\u0022id\u0022:7168\u002c\u0022value\u0022:\u0022Exchange of Information\u0022\u007d\u002c\u007b\u0022id\u0022:7177\u002c\u0022value\u0022:\u0022Informed consent modification\u0022\u007d\u002c\u007b\u0022id\u0022:7186\u002c\u0022value\u0022:\u0022Migrated Action\u0022\u007d\u002c\u007b\u0022id\u0022:7195\u002c\u0022value\u0022:\u0022Other\u0022\u007d\u002c\u007b\u0022id\u0022:7204\u002c\u0022value\u0022:\u0022Periodic Review\u0022\u007d\u002c\u007b\u0022id\u0022:7213\u002c\u0022value\u0022:\u0022Post-Authorization study\u0022\u007d\u002c\u007b\u0022id\u0022:7222\u002c\u0022value\u0022:\u0022Proposition of Labeling update\u0022\u007d\u002c\u007b\u0022id\u0022:7231\u002c\u0022value\u0022:\u0022Reassessment\u0022\u007d\u002c\u007b\u0022id\u0022:7240\u002c\u0022value\u0022:\u0022Recall\u0022\u007d\u002c\u007b\u0022id\u0022:7249\u002c\u0022value\u0022:\u0022Review ICSRs\u0022\u007d\
+2000
+u002c\u007b\u0022id\u0022:7258\u002c\u0022value\u0022:\u0022Review literature\u0022\u007d\u002c\u007b\u0022id\u0022:7267\u002c\u0022value\u0022:\u0022Risk minimization measures\u0022\u007d\u002c\u007b\u0022id\u0022:7276\u002c\u0022value\u0022:\u0022Technical Evaluation\u0022\u007d\u005d\u002c\u0022allStatus\u0022:\u005b\u007b\u0022name\u0022:\u0022InProcess\u0022\u002c\u0022value\u0022:\u0022In Progress\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022Deleted\u0022\u002c\u0022value\u0022:\u0022Deleted\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022New\u0022\u002c\u0022value\u0022:\u0022New\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022Closed\u0022\u002c\u0022value\u0022:\u0022Closed\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022ReOpened\u0022\u002c\u0022value\u0022:\u0022Re-opened\u0022\u007d\u005d\u007d")
+
+</script>
+
+
+    <r:layoutResources/>
+    
+    <script>
+        $.getJSON('/signal/assets/i18n/' + userLocale + '.json', function (data) {
+            $.i18n.load(data);
+
+        });
+        var resizefunc = [];
+        var lastVisitedUrl = localStorage.getItem('lastVisitedURL');
+        localStorage.setItem('lastVisitedURL', document.URL.split('?')[0]);
+    </script>
+
+</head>
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div id="wrapper" class="enlarged forced">
+    <!-- Top Bar Start -->
+    
+
+
+
+
+
+    <script type="text/javascript" src="/signal/assets/spring-websocket-867783f03d5a8005372950a4b8cac2a4.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/pushNotification-308cfd70b62333c52f5193fb7eaaafe6.js" ></script>
+
+<script type="text/javascript">
+
+    var notificationURL = "\u002fsignal\u002finboxLog\u002fforUser\u002f7435";
+    var notificationDeleteURL = "\u002fsignal\u002finboxLog\u002fdeleteNotificationById";
+    var notificationMarkAsReadURL = "\u002fsignal\u002finboxLog\u002fmarkAsRead";
+    var notificationDeleteByUserURL = "\u002fsignal\u002finboxLog\u002fdeleteNotificationsForUserId";
+    var notificationMarkAsReadByUserURL = "\u002fsignal\u002finboxLog\u002fmarkAsReadNotificationsForUserId";
+    var notificationDashboardURL = "\u002fsignal\u002finboxLog\u002findex";
+    var notificationChannel ="";
+    var notificationWSURL = "\u002fsignalnull";
+    var reportRedirectURL = "\u002fsignal\u002freport\u002fcriteria";
+    var filterDeleteUrl = "\u002fsignal\u002fadvancedFilter\u002fdelete";
+
+    var detailUrls = {};
+    detailUrls["sca_reportRedirectURL"] =  "\u002fsignal\u002fsingleCaseAlert\u002fdetails";
+    detailUrls["sca_adhoc_reportRedirectURL"] =  "\u002fsignal\u002fsingleCaseAlert\u002fadhocDetails";
+    detailUrls["aga_reportRedirectURL"] = "\u002fsignal\u002faggregateCaseAlert\u002fdetails";
+    detailUrls["aga_adhoc_reportRedirectURL"] = "\u002fsignal\u002faggregateCaseAlert\u002fadhocDetails";
+    detailUrls["evdas_reportRedirectURL"] = "\u002fsignal\u002fevdasAlert\u002fdetails";
+    detailUrls["evdas_adhoc_reportRedirectURL"] = "\u002fsignal\u002fevdasAlert\u002fadhocDetails";
+    detailUrls["LITERATURE_reportRedirectURL"] = "\u002fsignal\u002fliteratureAlert\u002fdetails";
+    detailUrls["error_url"]  = "\u002fsignal\u002fconfiguration\u002fexecutionStatus";
+
+    var socketURL = "\u002fsignal\u002fstomp";
+
+    $(document).ready(function () {
+        var isAdmin = true;
+        if(!isAdmin) {
+           $('.mega-dropdown-menu').width("100px");
+        }
+
+    });
+
+    $(document).on('click','.temp-redirect',function() {
+        window.location.href = notificationDashboardURL;
+    });
+
+</script>
+
+<div class="topbar">
+    <!-- LOGO -->
+    <div class="pull-left">
+        <button class="button-menu-mobile open-left waves-effect" accesskey="b" data-toggle="tooltip" title="Main Menu">
+            <i class="md md-menu"></i>
+        </button>
+        <span class="clearfix"></span>
+    </div>
+    <div class="left side-menu">
+        <div class="sidebar-inner slimscrollleft">
+            <div id="sidebar-menu">
+                <ul>
+                    <li><a href="/signal/" class="waves-effect waves-primary">
+                        <i class="md md-dashboard"></i><span>Dashboard</span>
+                    </a>
+                    </li>
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-settings-applications"></i><span>Alert Configuration</span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+
+                            <!-- Single Case Creation menu -->
+                                
+                                    
+                                        <li class="divider"></li>
+                                    
+                                    <li><a href="/signal/singleCaseAlert/create">
+                                        Qualitative Configuration</a></li>
+                                
+                            <!-- Aggregate Creation menu -->
+                                
+                                    <li><a href="/signal/aggregateCaseAlert/create">
+                                        Quantitative Configuration</a></li>
+                                
+                            <!-- Evdas Creation menu -->
+                                
+                                    
+
+                                        <li><a href="/signal/evdasAlert/create">
+                                            EVDAS Configuration</a>
+                                        </li>
+                                    
+                                
+                            <!-- Adhoc Creation menu -->
+                                
+                                    <li><a href="/signal/adHocAlert/create">
+                                        Ad-Hoc Configuration</a></li>
+                                
+
+                            <!-- Literature Alert Creation menu -->
+                                    
+                                        <li>
+                                            <a href="/signal/literatureAlert/create">
+                                                Literature Configuration
+                                            </a>
+                                        </li>
+                                    
+
+                            <!-- View alert menu option -->
+                                
+                                    <li><a href="/signal/configuration/index">
+                                        View Alerts</a></li>
+                                
+
+                            <!-- View execution status menu option -->
+                                
+                                    <li><a href="/signal/configuration/executionStatus">
+                                        View Execution Status</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-report-problem"></i><span>Triggered Alerts</span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                
+                                    <li><a href="/signal/singleCaseAlert/review">Qualitative Review</a></li>
+                                
+                                
+                                    <li><a href="/signal/aggregateCaseAlert/review">Quantitative Review</a></li>
+                                
+
+                                
+                                    
+                                        <li><a href="/signal/evdasAlert/review">EVDAS Review</a></li>
+                                    
+                                
+                                
+                                    <li><a href="/signal/adHocAlert/index">Ad-Hoc Review</a></li>
+                                
+                                
+            
+2000
+                        <li>
+                                        <a href="/signal/literatureAlert/details">
+                                            Literature Review
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
+                    
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-call-merge"></i><span>Signal Management<span class="menu-arrow"></span></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/signal/validatedSignal/index" class="waves-effect waves-primary">
+                                        Signal Summary
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/signal/productSummary/index">
+                                        Product Summary
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+
+                    
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-filter-list"></i>
+                                <span>Queries</span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                
+                                    <li>
+                                        <a href="https://pvr-perf.rxlogix.com/reports/query/load">
+                                            Load Queries
+                                        </a>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <a href="https://pvr-perf.rxlogix.com/reports/query/index">
+                                            Query Library
+                                        </a>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <a href="https://pvr-perf.rxlogix.com/reports/query/create">
+                                            New Query
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
+                    
+
+                    
+                        
+                            <li class="has_sub">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="md md-trending-up"></i><span>Data Analysis</span> <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="/signal/dataAnalysis/index">Analysis File Library</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/signal/dataAnalysis/create">New Analysis File</a></li>
+                                    <li class="divider"></li>
+                                    
+                                    
+                                        
+                                            <li><a href="/signal/dataAnalysis/view?fileName=PVA Code/PVA Reports/CASE REVIEW COMPLIANCE">
+                                            Productivity and Compliance</a></li>
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                    
+
+                    <li><a href="/signal/report/index" class="waves-effect waves-primary">
+                        <i class="md md-insert-chart"></i><span>Reporting</span>
+                    </a>
+                    </li>
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-grid-on"></i><span>On Demand Run
+                            </span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                
+                                    <li><a href="/signal/singleOnDemandAlert/adhocReview">Qualitative Review</a></li>
+                                
+                                
+                                    <li><a href="/signal/aggregateOnDemandAlert/adhocReview">Quantitative Review</a></li>
+                                
+                                
+                                    
+                                        <li>
+                                            <a href="/signal/evdasOnDemandAlert/adhocReview">
+                                                EVDAS Review
+                                            </a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    
+
+                    <li class="has_sub">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="md md-event"></i><span>Tasks & Calendar<span class="menu-arrow"></span></span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/signal/action/index" class="waves-effect waves-primary">
+                                    Action Items
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/signal/calendar/index" class="waves-effect waves-primary">
+                                    Calendar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="topbar-left">
+        <div class="pull-left logo">
+            <a href="/signal/"><img src="/signal/assets/pv-signal-logo-61161afba9a8a8e20ebe65b7f0973c2a.png" class="pvLogo"/></a>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="">
+                <ul class="nav navbar-nav hidden-xs pull-left">
+                    <li><a href="https://pvr-perf.rxlogix.com/reports" target="_blank" class="waves-effect">PV Reports</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    
+                        <li class="hidden-xs">
+                            <span>Welcome bhagya!</span>
+                        </li>
+                        <li id="menuNotification" class="hidden-xs dropdown mega-dropdown">
+
+                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light pv-head-noti-icon" data-toggle="dropdown" aria-expanded="true" accesskey="i">
+                                 <i class="glyphicon glyphicon-inbox" style="font-size: 24px; margin-top:19px;padding-top: 1px"></i>
+                            </a>
+                            <ul id="notificationContainer" class="dropdown-menu dropdown-menu-lg notification-menu">
+                                <li id="notificationHeader" class="notifi-title"></li>
+                                <li id="n
+2000
+otificationRows" class="ajax"></li>
+                                <div class="text-right m-t-10">
+                                    <a href="/signal/inboxLog/index" class="btn btn-primary temp-redirect dpv-head-noti-icon box-inline" tabindex="0" accesskey="m" title="Open Inbox">Inbox</a>
+                                    <a href="javascript:void(0);" id="clearNotifications" class="btn btn-default box-inline" userId="7435" tabindex="0" title="Clear All" accesskey="e">Clear all</a>
+                                </div>
+                            </ul>
+
+                        </li>
+
+                        <li class="hidden-xs dropdown mega-dropdown">
+                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                               data-toggle="dropdown" aria-expanded="true" accesskey="t">
+                                <i class="md md-settings"></i></a>
+                            <ul class="dropdown-menu mega-dropdown-menu" role="menu">
+                                
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header"><i class="fa fa-user-circle fa-fw"></i> User Management</li>
+                                            <li id="userManagement"><a href="/signal/user/index">User Management</a></li>
+                                            <li id="roleManagement"><a href="/signal/role/index">Role Management</a></li>
+                                            <li id="groupManagement"><a href="/signal/group/index">Group Management</a></li>
+                                
+                                            <li id="menuPreference"><a href="/signal/preference/index">User Preferences</a></li>
+                                
+                                            <li class="dropdown-header"><i class="fa fa-sliders fa-fw"></i> Workflow Management</li>
+                                            <li id="menuWorkflowRule"><a href="/signal/workflowRule/index">Workflow Rule</a></li>
+                                            <li id="menuDisposition"><a href="/signal/disposition/list">Disposition</a></li>
+                                            <li id="menuPriority"><a href="/signal/priority/list">Priority</a> </li>
+                                            <li id="menuPriority"><a href="/signal/justification/index">Justification</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header"><i class="fa fa-tasks fa-fw"></i> Business Configuration</li>
+                                            <li id="menuBusinessConfig">
+                                                <a href="/signal/businessConfiguration/index">
+                                                    Business Rule
+                                                </a>
+                                            </li>
+                                            <li id="safetyGroupManagement">
+                                                <a href="/signal/safetyGroup/index">
+                                                    Safety Lead Config
+                                                </a>
+                                            </li>
+                                            <li id="alertStopList">
+                                                <a href="/signal/alertStopList/index">
+                                                    Alert Stop List
+                                                </a>
+                                            </li>
+                                            <li id="emergingSafetyIssues">
+                                                <a href="/signal/emergingIssue/index">
+                                                    Important Events
+                                                </a>
+                                            </li>
+                                            
+                                            <li id="productGrouping">
+                                                <a href="/signal/productGroup/index">
+                                                    Product Grouping
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-header"><i class="fa fa-file-text-o fa-fw"></i> Action Template</li>
+                                            <li id="menuActionTemplate">
+                                                <a href="/signal/actionTemplate/index">
+                                                    Action Template
+                                                </a>
+                                            </li>
+                                            <li id="menuActionType">
+                                                <a href="/signal/actionType/list">
+                                                    Action Type
+                                                </a>
+                                            </li>
+                                            <li id="menuActionConfig">
+                                                <a href="/signal/actionConfiguration/list">
+                                                    Action Configuration
+                                                </a>
+                                            </li>
+                                            <li id="productIngredientsMapping">
+                                                <a href="/signal/productIngredientsMapping/index">
+                                                    Product/Ingredients Mapping
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header"><i class="fa fa-gear fa-fw"></i> System Configuration</li>
+                                            
+                                            <li id="auditLog">
+                                                <a href="/signal/auditLogEvent/index">
+                                                    Audit Log
+                                                </a>
+                                            </li>
+                                            
+                                                
+                                                    <li id="evdasDataUpload">
+                                                        <a href="/signal/evdasData/index">EVDAS Data Upload</a>
+                                                    </li>
+                                                
+                                            
+                                            <li id="dmsConfigurationLink">
+                                                <a href="/signal/controlPanel/index">DMS Configuration</a>
+                                            </li>
+                                            
+                                            
+                                                <li id="substanceFrequencyViewer">
+                                                    <a href="/signal/substanceFrequency/index">Substance Frequency Viewer</a>
+                                                </li>
+                                            
+
+
+                                            
+
+                                            
+                                            
+                                                    <li id="mailNotifiaction">
+                                                        <a href="/signal/emailNotification/edit">Email Configuration</a>
+                                                    </li>
+                                            
+        
+2000
+                                    
+                                                <li class="dropdown-header"><i class="fa fa-wrench fa-fw"></i> System Management</li>
+                                                <li><a href="/signal/monitoring">Monitoring</a></li>
+                                                <li><a href="/signal/quartz">Jobs Monitoring</a></li>
+                                            
+                                            
+                                                <a href="/signal/logout/index" id="MI-logout" title="Logout" tabindex="0" accesskey="q">
+                                                    <div tabindex="0" class="logout">
+                                                        <i class="fa fa-power-off fa-fw"></i>
+                                                        Logout
+                                                    </div>
+                                                </a>
+                                            
+                                        </ul>
+                                    </li>
+                            </ul>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .mega-dropdown-menu{
+        width:650px;
+        padding: 5px 0px;
+        box-shadow: darkcyan;
+        border-bottom : 4px solid #ccc;
+        border-radius: 2px;
+    }
+    .mega-dropdown-menu > li > ul {
+        padding: 0px;
+        margin: 0;
+    }
+
+    .mega-dropdown-menu > li > ul > li {
+        list-style: none;
+        padding-left: 8px;
+        border-bottom: 1px dotted #eee;
+    }
+    .mega-dropdown-menu > li > ul > li:last-child {
+        list-style: none;
+        padding-left: 8px;
+        border-bottom: 0px dotted #eee;
+    }
+    .mega-dropdown-menu > li > ul > li > a,
+    .mega-dropdown-menu > li > ul > li > span {
+        display: block;
+        padding: 7px 10px;
+        clear: both;
+        font-weight: 500;
+        line-height: 1.428571429;
+        color: #656565;
+        white-space: normal;
+        font-size: 13px;
+    }
+    .mega-dropdown-menu > li ul > li > a:hover,
+    .mega-dropdown-menu > li ul > li > a:focus{
+        text-decoration: none;
+        color: #444;
+        background-color: #eee;
+    }
+    .mega-dropdown-menu .dropdown-header{
+        color: #099ddd;
+        font-size: 13.5px;
+        font-weight: bold;
+    }
+    .mega-dropdown-menu .logout{
+        color: #428bca;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+</style>
+
+    
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    
+    <!-- Top Bar End -->
+
+    <!-- Left Sidebar Start -->
+    
+
+
+
+
+
+
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div id="mainContent" class="content">
+            <div class="container">
+                
+
+
+
+
+
+
+
+
+
+
+    <div class="pv-tab" id="detailsTab">
+        
+        <!-- Nav tabs -->
+    <ul id="detail-tabs" class="nav nav-tabs rxmain-container-header-label" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#details" aria-controls="details" role="tab" data-toggle="tab" accesskey="1">Alert Details</a>
+        </li>
+        <li role="presentation">
+            <a href="#activities"  id ="activity_tab" aria-controls="activities" role="tab" data-toggle="tab" accesskey="2">Activities</a>
+        </li>
+        
+            <li role="presentation">
+                <a href="#archivedAlerts" aria-controls="archivedAlerts" role="tab" data-toggle="tab" accesskey="3">Archived Alerts</a>
+            </li>
+        
+    </ul>
+        
+
+
+
+
+
+
+
+
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="details">
+            
+
+<style>
+table.dataTable thead > tr > th {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.yadcf-filter {
+    width: 100px;
+}
+
+div.dataTables_wrapper {
+    margin: 0 auto;
+}
+</style>
+<script>
+    $(document).ready(function () {
+        $('.search-box').show();
+    });
+</script>
+
+<div class="row">
+
+    <div class="panel-heading pv-sec-heading m-b-10">
+        <div class="row">
+
+            <div class="col-md-5">
+                
+                    <span class="panel-title cell-break">Case Series : Perf_Qual_6TRAMADOL HYDROCHLORIDE Capsule (Product Name) (01-Jan-1900 - 21-May-2020)</span>
+                    <span><a
+                            href="/signal/singleCaseAlert/viewExecutedConfig/15"
+                            target="_blank" class="glyphicon glyphicon-info-sign"></a></span>
+                
+            </div>
+
+            <div class="col-md-offset-3 col-md-4 ico-menu">
+                <span tabindex="0" id="configureQualitativeFields" data-fieldconfigurationbarid="qualitativeFields" class="pull-right field-config-bar-toggle"
+                      data-backdrop="true" data-container="columnList-container" accesskey="c" title="Choose Fields">
+                      <i class="mdi mdi-settings blue-1 font-24"></i>
+                </span>
+                
+
+<span class="pull-right m-r-10 pos-rel" style="cursor: pointer">
+    <span class="dropdown-toggle exportPanel grid-menu-tooltip" data-toggle="dropdown" tabindex="0" role="button" accesskey="x" title="Export to">
+        <i class="mdi mdi-export blue-1 font-24 "></i>
+        <span class="caret hidden"></span>
+    </span>
+    <ul class="dropdown-menu export-type-list" id="exportTypes">
+        <strong class="font-12">Export</strong>
+        
+            <li><a href="/signal/singleCaseAlert/exportReport/15?outputFormat=XLSX&amp;alertName=singleCaseAlert&amp;callingScreen=review&amp;length=-1&amp;start=0&amp;adhocRun=false&amp;cumulativeExport=true" class="m-r-30">
+                <img src="/signal/assets/excel.gif" class="m-r-10" height="16" width="16" />Cumulative Export
+            </a></li>
+        
+        <li><a href="/signal/singleCaseAlert/exportReport/15?outputFormat=DOCX&amp;alertName=singleCaseAlert&amp;callingScreen=review&amp;length=-1&amp;start=0&amp;adhocRun=false" class="m-r-30">
+            <img src="/signal/assets/word-icon.png" class="m-r-10" height="16" width="16" />Save as Word
+        </a>
+        </li>
+        <li><a href="/signal/singleCaseAlert/exportReport/15?outputFormat=XLSX&amp;alertName=singleCaseAlert&amp;callingScreen=review&amp;length=-1&amp;start=0&amp;adhocRun=false" class="m-r-30">
+            <img src="/signal/assets/excel.gif" class="m-r-10" height="16" width="16" />Save as Excel
+        </a></li>
+        <li><a href="/signal/singleCaseAlert/exportReport/15?outputFormat=PDF&amp;alertName=singleCaseAlert&amp;callingScreen=review&amp;length=-1&amp;start=0&amp;adhocRun=false" class="m-r-30">
+            <img src="/signal/assets/pdf-icon.jpg" class="m-r-10" height="16" width="16" />Save as PDF
+        </a></li>
+        
+        
+            <STRONG class="font-12">Detection Summary</STRONG>
+            <li>
+                <a target="_blank"
+                   href="exportSignalSummaryReport?outputFormat=DOCX&id=15&cumulative=false"><img
+                        src="/signal/assets/word-icon.png" class="m-r-10" height="16" width="16"/>Save as Word</a>
+            </li>
+            <li>
+                <a target="_blank"
+                   href="exportSignalSummaryReport?outputFormat=XLSX&id=15&cumulative=false"><img
+                        src="/signal/assets/excel.gif" class="m-r-10" height="16" width="16"/>Save as Excel</a>
+            </li>
+            <li>
+                <a target="_blank"
+                   href="exportSignalSummaryReport?outputFormat=PDF&id=15&cumulative=false"><img
+                        src="/signal/assets/pdf-icon.jpg" class="m-r-10" height="16" width="16"/>Save as PDF</a>
+            </li>
+        
+    </ul>
+</span>
+                
+                    <span class="pull-right m-r-10 pos-rel">
+                        <span  tabindex="0" class="dropdown-toggle sa
+2000
+veViewPanel grid-menu-tooltip" data-title="Save View" data-toggle="dropdown" accesskey="s">
+                            <i class="mdi mdi-content-save font-24 blue-1"></i>
+                            <span class="caret hidden"></span>
+                        </span>
+                        <ul class="dropdown-menu save-list col-min-200" id="saveViewTypes">
+                            <strong class="font-12">Save Options</strong>
+                            <li><a href="#" tabindex="0" class="updateView"><i class="fa fa-save m-r-10"></i><span>Save</span></a></li>
+                            <li><a href="#" tabindex="0"  class="saveView"><i class="fa fa-save m-r-10"></i><span>Save As</span></a></li>
+                        </ul>
+                    </span>
+                
+
+                <div class="pull-right dropdown-menu menu-large" aria-labelledby="dropdownMenu1">
+                    <div class="rxmain-container-dropdown">
+                        <div>
+                            <table id="tableColumns" class="table no-border">
+                                <thead><tr><th>Name</th><th>Show</th>
+                                </tr></thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                    <span id="addCase" tabindex="0" class="pull-right m-r-10 grid-menu-tooltip" data-title="Add Case" accesskey="a">
+                        <i class="mdi mdi-plus-box blue-1 font-24"></i>
+                    </span>
+                
+
+            <!-- Alert Level Bulk Update -->
+
+                
+                <span id="toggle-column-filters" data-title="Filters"
+                      class="pull-right grid-menu-tooltip  m-r-10"
+                      tabindex="0" role="button" accesskey="y">
+                    <i class="mdi mdi-filter-outline blue-1 font-24"></i>
+                </span>
+
+
+                
+
+
+                
+
+                
+
+                <!-- Export menu -->
+                <div class="pull-right m-r-10 m-t-2">
+                    <label for="detailed-view-checkbox" class="valign-sub">
+                        <input type="hidden" name="_detailed-view-checkbox" /><input type="checkbox" name="detailed-view-checkbox" data-is-case-detail-view="true" data-calling-screen="review" data-config-id="15" data-url="/signal/singleCaseAlert/details" accesskey="v" id="detailed-view-checkbox"  />
+                        Detailed View</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pos-rel">
+        <div class="pos-ab form-inline filter-box">
+            <div class="form-group">
+                <label id="filter-label">Advanced Filter</label>
+                <select id="advanced-filter" class="form-control advanced-filter-dropdown"></select>
+                <a href="#" class="edit-filter" title="Edit Filter" tabindex="0" id="editAdvancedFilter"><i
+                        class="mdi mdi-pencil-circle font-20 blue-1"></i></a>
+                <a href="#" class="add-filter" title="Add Filter" tabindex="0" id="addAdvancedFilter"><i
+                        class="mdi  mdi-plus-circle font-20 blue-1"></i></a>
+            </div>
+        </div>
+        
+            <div class="pos-ab form-inline search-box">
+                <div class="form-group ">
+                    <label>View</label>
+                    <select class="form-control viewSelect" accesskey="j">
+                        
+                            
+                                <option value="6559" selected="selected">System View</option>
+                            
+                        
+                    </select>
+                    <a href="#" class="editView m-l-5" title="Edit view" tabindex="0"><i
+                            class="mdi mdi-pencil-box font-24"></i></a>
+                </div>
+            </div>
+        
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <table id="alertsDetailsTable" class="auto-scale row-border no-shadow hover">
+                <thead>
+                <tr id="alertsDetailsTableRow" class="single-header-row">
+                    <th data-idx="0" data-field="checkbox">
+                        <input id="select-all" type="checkbox"/>
+                    </th>
+                    <th data-idx="3" data-field="dropdown">
+                        <div class="th-label"></div>
+                    </th>
+                    
+                        <th data-idx="2" data-field="badge">
+                            <i class="glyphicon glyphicon-tag m-r-5"
+                               style="color: black"></i>
+
+                            <div class="th-label" data-field="badge"></div>
+                        </th>
+                    
+                    
+                        <th data-idx="1" data-field="priority">P</th>
+                        <th data-idx="2" data-field="actions">A</th>
+                    
+
+                    
+                    <th data-idx="6" data-field="caseNumber" class="reportDescriptionColumn">
+                        <div class="th-label" data-field="caseNumber">Case(f/u#)</div>
+                    </th>
+                    <th data-idx="4" data-field="alertTags">
+                        <div class="th-label" data-field="alertTags">Categories</div>
+                    </th>
+                    <th data-idx="7" data-field="caseInitReceiptDate">
+                        <div class="th-label" data-field="caseInitReceiptDate">Receipt Date</div>
+                    </th>
+                    <th data-idx="8" data-field="productName">
+                        <div class="th-label" data-field="productName">Product Name</div>
+                    </th>
+                    <th data-idx="9" data-field="pt">
+                        <div class="th-label" data-field="pt">PT</div>
+                    </th>
+                    <th data-idx="10" data-field="assessListedness">
+                        <div class="th-label" data-field="assessListedness">Listedness</div>
+                    </th>
+                    <th data-idx="11" data-field="outcome">
+                        <div class="th-label" data-field="outcome">Outcome</div>
+                    </th>
+                    <th data-idx="14" data-field="signalsAndTopics" align="center">
+                        <div class="th-label" data-field="signalsAndTopics">Signal</div>
+                    </th>
+                    
+                        <th data-idx="32" data-field="currentDisposition" align="center">
+                            <div class="th-label" data-field="currentDisposition">Disposition</div>
+                        </th>
+                    
+
+                    <th data-idx="15" data-field="disposition" align="center">
+                        <div class="th-label" data-field="disposition">Current Disposition</div>
+                    </th>
+
+                    
+                        <th data-idx="16" data-field="assignedToUser">
+                            <div class="th-label" data-field="assignedToUser">Assigned To</div>
+                        </th>
+                        <th data-idx="18" data-field="dueDate">
+                            <div class="th-label" data-field="dueDate">Due In</div>
+                        </th>
+                    
+                    <th data-idx="19" data-field="suspProd">
+                        <div class="th-label" data-field="suspProd">Suspect Products</div>
+                    </th>
+                    <th data-idx="20" data-field="conComit">
+                        <div class="th-label" data-field="conComit">Con Med</div>
+                    </th>
+                    <th data-idx="21" data-field="masterPrefTermAll">
+                        <div class="th-label" data-field="masterPrefTermAll">PT List</div>
+                    </th>
+                    <th data-idx="22" data-field="assessSeriousness">
+                        <div class="th-label" data-field="assessSeriousness">Serious</div>
+                    </th>
+                    <th data-idx="23" data-field="caseReportType">
+                        <div class="th-label" data-field="caseReportType"
+2000
+>Report Type</div>
+                    </th>
+                    <th data-idx="24" data-field="reportersHcpFlag">
+                        <div class="th-label" data-field="reportersHcpFlag">HCP</div>
+                    </th>
+                    <th data-idx="25" data-field="country">
+                        <div class="th-label" data-field="country">Country</div>
+                    </th>
+                    <th data-idx="26" data-field="age">
+                        <div class="th-label" data-field="age">Age Group</div>
+                    </th>
+                    <th data-idx="27" data-field="gender">
+                        <div class="th-label" data-field="gender">Gender</div>
+                    </th>
+                    <th data-idx="28" data-field="rechallenge">
+                        <div class="th-label" data-field="rechallenge">+ve Rechallenge</div>
+                    </th>
+                    <th data-idx="29" data-field="lockedDate">
+                        <div class="th-label" data-field="lockedDate">Locked Date</div>
+                    </th>
+                    <th data-idx="31" data-field="death">
+                        <div class="th-label" data-field="death">Death</div>
+                    </th>
+                    <th data-idx="32" data-field="medErrorsPt">
+                        <div class="th-label" data-field="medErrorsPt">Medication Error PTs</div>
+                    </th>
+                    <th data-idx="33" data-field="patientAge">
+                        <div class="th-label" data-field="patientAge">Age</div>
+                    </th>
+                    
+                        <th data-idx="34" data-field="caseType">
+                            <div class="th-label" data-field="caseType">Case Type</div>
+                        </th>
+                        <th data-idx="35" data-field="completenessScore">
+                            <div class="th-label" data-field="completenessScore">Completeness Score</div>
+                        </th>
+                        <th data-idx="36" data-field="indNumber">
+                            <div class="th-label" data-field="indNumber">Primary IND#</div>
+                        </th>
+                        <th data-idx="37" data-field="appTypeAndNum">
+                            <div class="th-label" data-field="appTypeAndNum">Application#</div>
+                        </th>
+                        <th data-idx="38" data-field="compoundingFlag">
+                            <div class="th-label" data-field="compoundingFlag">Compounding Flag</div>
+                        </th>
+                        <th data-idx="39" data-field="submitter">
+                            <div class="th-label" data-field="submitter">Submitter</div>
+                        </th>
+                    
+                </tr>
+                </thead>
+            </table>
+
+        </div>
+
+        
+            <div class="col-md-12 flags">
+                <div class="box-inline m-r-25"><span class="glyphicon glyphicon-tag m-r-5" style="color: orange"></span>
+                    New
+                </div>
+
+                <div class="box-inline m-r-25"><span class="glyphicon glyphicon-tag m-r-5" style="color: green"></span>
+                    Auto Flagged
+                </div>
+
+                <div class="box-inline m-r-25"><span class="glyphicon glyphicon-tag m-r-5" style="color: purple"></span>
+                    Due from Previous Period
+                </div>
+            </div>
+        
+
+        <form id="">
+            <input type="hidden" id="filterParams"/>
+            <input type="hidden" id="sideParams"/>
+        </form>
+
+    </div>
+</div>
+
+        </div>
+
+        <div id="activities" class="tab-pane fade" role="tabpanel">
+            
+
+<div class="row">
+    <div class="panel-heading pv-sec-heading m-b-10">
+        <div class="row">
+            <div class="col-md-7">
+                
+                    <span class="panel-title cell-break">Perf_Qual_6TRAMADOL HYDROCHLORIDE Capsule (Product Name)</span>
+                
+            </div>
+            <div class="col-md-5 ico-menu">
+                <span class="pull-right pos-rel">
+                    <span tabindex="0" class="dropdown-toggle exportPanel" data-toggle="dropdown" data-title="Export to" data-placement="bottom">
+                        <i class="mdi mdi-export font-24 blue-1 lh-1"></i>
+                        <span class="caret hidden"></span></button>
+
+                    </span>
+                    <ul class="dropdown-menu export-type-list" id="exportTypes">
+                        <strong class="font-12">Export</strong>
+                        <li><a href="/signal/activity/exportActivitiesReport?outputFormat=DOCX&amp;alertId=15&amp;appType=Single+Case+Alert&amp;callingScreen=review" class="m-r-30">
+                            <img src="/signal/assets/word-icon.png" class="m-r-10" height="16" width="16" />Save as Word
+                        </a>
+                        </li>
+                        <li><a href="/signal/activity/exportActivitiesReport?outputFormat=XLSX&amp;alertId=15&amp;appType=Single+Case+Alert&amp;callingScreen=review" class="m-r-30">
+                            <img src="/signal/assets/excel.gif" class="m-r-10" height="16" width="16" />Save as Excel
+                        </a></li>
+                        <li><a href="/signal/activity/exportActivitiesReport?outputFormat=PDF&amp;alertId=15&amp;appType=Single+Case+Alert&amp;callingScreen=review" class="m-r-30">
+                            <img src="/signal/assets/pdf-icon.jpg" class="m-r-10" height="16" width="16" />Save as PDF
+                        </a></li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="activitiesTable" class="row-border hover no-shadow" width="100%">
+                <thead>
+                <tr>
+                    
+                        <th>Case Number</th>
+                    
+                    <th class="">Activity Type</th>
+                    <th>Suspect Product</th>
+                    <th>Event</th>
+                    <th>Description</th>
+                    <th>Current Assignment</th>
+                    <th>Performed By</th>
+                    <th>Timestamp</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="archivedAlerts">
+            
+<div class="row">
+    <div class="panel-heading pv-sec-heading m-b-10">
+        <div class="row">
+            <div class="col-md-7">
+                <span class="panel-title cell-break">Perf_Qual_6TRAMADOL HYDROCHLORIDE Capsule (Product Name)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="archivedAlertsTable" class="dataTable" width="100%">
+    <thead>
+    <tr>
+        <th>Alert Name</th>
+        <th>Version</th>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Case Count</th>
+        <th>Reviewed Cases</th>
+        <th>Date Range</th>
+        <th>Last Modified</th>
+    </tr>
+    </thead>
+</table>
+        </div>
+    </div>
+</div>
+
+<div id="copyCaseNumberModel" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Select Case Numbers</label>
+            </div>
+
+            <div class="modal-body row">
+                <textarea id="caseNumbers" class="form-control input-large" rows='3'></textarea>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="cumulative" value="false"/>
+<input type="hidden" id="filterMap" value="{}"/>
+<input type="hidden" id="columnInde
+2000
+x" value=""/>
+<input type="hidden" id="sortedColumn" value="{}"/>
+<input type="hidden" id="advancedFilterView" value=""/>
+<input type="hidden" id="isFaers" value=""/>
+<input type="hidden" id="isCaseSeries" value="false"/>
+<input type="hidden" id="fullCaseList"/>
+<input type="hidden" id="customFieldsEnabled" name="customFieldsEnabled" value="true" />
+<input type="hidden" id="hasSignalManagementAccess" name="hasSignalManagementAccess" value="true" />
+
+<div class="modal fade" id="createActionModal" role="dialog" aria-labelledby="productDictionaryLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <label class="modal-title" id="createActionLabel">Create Action</label>
+            </div>
+
+            <div class="modal-body clearfix">
+                
+                
+                <form action="/signal/action/save" method="post" name="tempForm" id="tempForm" >
+                    <input type="hidden" name="create-url" value="/signal/action/save" id="create-url" />
+                    <input type="hidden" name="appType" id="appType" value="Single Case Alert" />
+                    <input type="hidden" name="exeConfigId" id="exeConfigId" value="15" />
+                    
+<input type="hidden" name="id" value="" id="actionId" />
+<input type="hidden" name="version" value="" id="version" />
+<input type="hidden" name="alertId" value="" class="alertId" id="alertId" />
+<input type="hidden" name="action-meeting-id" value="7123" class="action-meeting-id" id="action-meeting-id" />
+<input type="hidden" name="fetchMeetingTitleUrl" value="/signal/meeting/fetchMeetingTitles?alertId=&amp;isTopicFlow=" id="fetchMeetingTitleUrl" />
+<script>
+    $(document).ready(function () {
+        var $createActionModal = $("#createActionModal");
+        var $editActionModal = $("#editActionModal");
+        $('.action-value').change(function () {
+            var $modal;
+            var text = $(this).data('text');
+            if(text == 'create'){
+                $modal = $createActionModal;
+            }else{
+                $modal = $editActionModal;
+            }
+            var selectedActionId = $(this).val();
+            var meetingId = $('.action-meeting-id').val();
+            var value = $modal.find("#config").find('option:selected').text();
+            if(value == 'Meeting'){
+                $.ajax({
+                    type: "GET",
+                    url: $("#fetchMeetingTitleUrl").val(),
+                    data:{},
+                    dataType: 'json',
+                    success: function (data) {
+                        var $titleSelect = $modal.find('#meetingElement');
+                        $titleSelect.find('option').remove();
+                        $.each(data, function( index, value ) {
+                            $titleSelect.append("<option value="+value.id+">"+value.title+"</option>");
+                        });
+                        $titleSelect.val($modal.find("#meetingValue").val());
+                    }
+                });
+            }
+            if(meetingId == selectedActionId && meetingId != "") {
+                $('.meeting-decider').val('true');
+                $('.action-type-list').addClass('hidden');
+                $('.meeting-list').removeClass('hidden');
+            } else {
+                $('.meeting-decider').val('false');
+                $('.action-type-list').removeClass('hidden');
+                $('.meeting-list').addClass('hidden');
+            }
+        });
+        $('#due-date-picker').datepicker({
+            date: $("#due-date-picker").val() ? $("#due-date-picker").val() : null,
+            momentConfig: {
+                culture: userLocale,
+                tz: userTimeZone,
+                format: DEFAULT_DATE_DISPLAY_FORMAT
+            }
+        });
+
+        $('#due-date-picker').datepicker({
+            date: $("#due-date-picker").val() ? new Date($("#due-date-picker").val()) : null,
+            momentConfig: {
+                culture: userLocale,
+                tz: userTimeZone,
+                format: DEFAULT_DATE_DISPLAY_FORMAT
+            }
+        });
+    })
+</script>
+<input type="hidden" name="meetingValue" value="" id="meetingValue" />
+<div class="col-lg-12 action">
+    <div class="row">
+        <div class="col-lg-3 action-type-list">
+            <label for="type.id">
+                Action Type
+                <span class="required-indicator">*</span>
+            </label>
+            <select class="form-control " name="type.id" id="type" >
+<option value="null"></option>
+<option value="6766" >AESM</option>
+<option value="7109" >Auto Alert</option>
+<option value="7116" >Further Review</option>
+</select>
+
+            <input type="hidden" class="meeting-decider" name="isMeetingAction" value="false"/>
+        </div>
+
+        <div class="col-lg-3">
+            <label for="config.id">
+                Action
+                <span class="required-indicator">*</span>
+            </label>
+            <select class="form-control action-value" name="config.id" id="config" data-text="create" >
+<option value=""></option>
+<option value="7132" >Additional investigations</option>
+<option value="7141" >Change to RMP</option>
+<option value="7150" >Changes to REMS</option>
+<option value="7159" >Communication</option>
+<option value="7168" >Exchange of Information</option>
+<option value="7177" >Informed consent modification</option>
+<option value="7186" >Migrated Action</option>
+<option value="7195" >Other</option>
+<option value="7204" >Periodic Review</option>
+<option value="7213" >Post-Authorization study</option>
+<option value="7222" >Proposition of Labeling update</option>
+<option value="7231" >Reassessment</option>
+<option value="7240" >Recall</option>
+<option value="7249" >Review ICSRs</option>
+<option value="7258" >Review literature</option>
+<option value="7267" >Risk minimization measures</option>
+<option value="7276" >Technical Evaluation</option>
+</select>
+        </div>
+
+        <div class="col-lg-3 hidden meeting-list">
+            <label for="meeting.id">
+                Meeting Title
+                <span class="required-indicator">*</span>
+            </label>
+            <select class="form-control" name="meeting.id" id="meetingElement" >
+<option value="" selected="selected"></option>
+</select>
+        </div>
+
+        <script type="text/javascript">
+
+    sharedWithListUrl = "\u002fsignal\u002fuser\u002fsearchUserGroupList";
+
+    $(document).ready(function () {
+        bindShareWith($('.action .assignedToValue'), sharedWithListUrl, '', null,true);
+        bindShareWith($('.treeview-content .assignedToValue'), sharedWithListUrl, '', null,false);
+
+    });
+
+</script>
+
+
+<div class="col-lg-3">
+    <label>
+        Assigned To
+        <span class="required-indicator">*</span>
+    </label>
+    <select id="assignedTo" name="assignedToValue" class="form-control select2 assignedToValue"></select>
+</div>
+
+
+        <div class="col-lg-3">
+            <div class="fuelux">
+                <div class="datepicker" id="due-date-picker">
+                    <label>Due Date<span class="required-indicator">*</span></label>
+                    <div class="input-group">
+                        <input placeholder="Due Date" name="dueDate" class="form-control input-sm" id="dueDate" type="text" data-date="" value=""/>
+                        <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previo
+2000
+us Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-6 form-group">
+            <label for="details">
+                Action Details
+                <span class="required-indicator">*</span>
+            </label>
+            <textarea class="form-control tarea-200" name="details" id="details" ></textarea>
+        </div>
+
+        <div class="col-lg-6 form-group">
+            <label for="comments">
+                Comments
+            </label>
+            <textarea class="form-control tarea-200" name="comments" id="comments" ></textarea>
+        </div>
+    </div>
+
+
+        <div class="row status-icon hidden">
+            <div class="col-lg-2 form-group ">
+            <label for="actionStatus">
+                Action Status:</label>
+                <select class="form-control" name="actionStatus" id="actionStatus" >
+<option value="InProcess" >In Progress</option>
+<option value="Deleted" >Deleted</option>
+<option value="New" >New</option>
+<option value="Closed" >Closed</option>
+<option value="ReOpened" >Re-opened</option>
+</select>
+            </div>
+        </div>
+
+    <div>
+        <input type="hidden" name="backUrl" value="http://10.100.22.24:8181/signal/singleCaseAlert/review" id="backUrl" />
+    </div>
+
+    
+
+    <div class="buttons ">
+        
+    </div>
+</div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="buttons ">
+                    
+                        <button type="button" id="create-action-btn" class="btn btn-primary id-element">Create</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addCaseModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+
+        <!-- Modal Dialog starts -->
+        <div class="modal-dialog vertical-align-center">
+
+            <div class="modal-content">
+                <div class="modal-header dropdown">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <label class="modal-title">Add Case</label>
+                </div>
+
+                <div class="modal-body case-list-modal-body">
+                    <div class="alert alert-danger hide">
+                        <span class="errorMessageSpan"></span>
+                    </div>
+
+                    <form action="/signal/singleCaseAlert/index" method="post" name="addNewCase" enctype="multipart/form-data" id="addNewCase" >
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="caseNumber">Case Number<span
+                                        class="required-indicator">*</span></label>
+                                <input type="hidden" name="executedConfigId" value="15" id="executedConfigId" />
+                                <input type="text" id="caseNumber" class="form-control" name="caseNumber" value="" />
+                            </div>
+                        </div><br>
+
+                        <div class="checkbox checkbox-primary">
+                            <input type="hidden" name="_importCasesExcel" /><input type="checkbox" name="importCasesExcel" id="importCasesExcel"  />
+                            <label for="importCasesExcel">
+                                Import Cases From Excel
+                            </label>
+                        </div>
+
+                        <div id="importCasesSection" hidden="hidden">
+                            <div class="row">
+                                <div class="input-group col-xs-10">
+                                    <input type="text" class="form-control" readonly>
+                                    <label class="input-group-btn">
+                                        <span class="btn btn-primary">
+                                            Choose File&hellip; <input type="file" id="file_input"
+                                                                       accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                                                                       style="display: none;">
+                                        </span>
+                                    </label>
+                                </div>
+                    
+2000
+        </div>
+
+                            <div id="fileFormatError" hidden="hidden">
+                                <div class="row">
+                                    <div class="col-xs-12" style="color: #ff0000">
+                                        Invalid file selected, valid files are of "xls, xlsx" types!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="noDataInExcel" hidden="hidden" style="color: #ff0000"></div>
+
+                            <div class="row">
+                                <div class="col-xs-11 bs-callout bs-callout-info">
+                                    <h5>Note</h5>
+
+                                    <div>Import values from a file:</div>
+
+                                    <div>-    Values will only be imported from the first worksheet of excel file</div>
+
+                                    <div>-    Values will be imported from first column of excel file</div>
+
+                                    <div>-    Each value must be in a separate row of the excel file</div>
+
+                                    <div>-    First cell of excel file is the field label</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="justificationListPriority">Justification Template</label>
+                                <select id="justificationListPriority" name="justificationListPriority" class="form-control" >
+<option value="">--Select One--</option>
+<option value="6765" >Cases Added</option>
+</select>
+                              </div>
+                        </div>
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="justification">Justification<span class="required-indicator">*</span>
+                                </label>
+                                <textarea id="justification" class="form-control col-sm-4" style="height: 150px;" name="justification" ></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="buttons creationButtons">
+                        <input id="addCaseButton" type="button" class="btn btn-primary add-case-to-list"
+                               value="Add">
+                        <button type="button" class="btn btn-default close-add-case" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="action-modal" tabindex="-1" role="dialog" aria-labelledby="eventDictionaryLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 70%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <label class="modal-title" id="eventDictionaryLabel">
+                    Action List</label>
+            </div>
+
+            <div class="modal-body">
+                <div id="action-list-conainter" class="list">
+    <table id="action-table" class="row-border hover dataTable no-footer" style="width: 100%">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Action  </th>
+            <th>Details</th>
+            <th>Due Date</th>
+            <th>Assigned To</th>
+            <th>Status</th>
+            <th>Completion Date</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="createActionModal" role="dialog" aria-labelledby="productDictionaryLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <label class="modal-title" id="createActionLabel">Create Action</label>
+            </div>
+
+            <div class="modal-body clearfix">
+                
+                
+                <form action="/signal/action/save" method="post" name="tempForm" id="tempForm" >
+                    <input type="hidden" name="create-url" value="/signal/action/save" id="create-url" />
+                    <input type="hidden" name="appType" id="appType" value="Single Case Alert" />
+                    <input type="hidden" name="exeConfigId" id="exeConfigId" value="" />
+                    
+<input type="hidden" name="id" value="" id="actionId" />
+<input type="hidden" name="version" value="" id="version" />
+<input type="hidden" name="alertId" value="" class="alertId" id="alertId" />
+<input type="hidden" name="action-meeting-id" value="7123" class="action-meeting-id" id="action-meeting-id" />
+<input type="hidden" name="fetchMeetingTitleUrl" value="/signal/meeting/fetchMeetingTitles?alertId=&amp;isTopicFlow=" id="fetchMeetingTitleUrl" />
+<script>
+    $(document).ready(function () {
+        var $createActionModal = $("#createActionModal");
+        var $editActionModal = $("#editActionModal");
+        $('.action-value').change(function () {
+            var $modal;
+            var text = $(this).data('text');
+            if(text == 'create'){
+                $modal = $createActionModal;
+            }else{
+                $modal = $editActionModal;
+            }
+            var selectedActionId = $(this).val();
+            var meetingId = $('.action-meeting-id').val();
+            var value = $modal.find("#config").find('option:selected').text();
+            if(value == 'Meeting'){
+                $.ajax({
+                    type: "GET",
+                    url: $("#fetchMeetingTitleUrl").val(),
+                    data:{},
+                    dataType: 'json',
+                    success: function (data) {
+                        var $titleSelect = $modal.find('#meetingElement');
+                        $titleSelect.find('option').remove();
+                        $.each(data, function( index, value ) {
+                            $titleSelect.append("<option value="+value.id+">"+value.title+"</option>");
+                        });
+                        $titleSelect.val($modal.find("#meetingValue").val());
+                    }
+                });
+            }
+            if(meetingId == selectedActionId && meetingId != "") {
+                $('.meeting-decider').val('true');
+                $('.action-type-list').addClass('hidden');
+                $('.meeting-list').removeClass('hidden');
+            } else {
+                $('.meeting-decider').val('false');
+                $('.action-type-list').removeClass('hidden');
+                $('.meeting-list').addClass('hidden');
+            }
+        });
+        $('#due-date-picker').datepicker({
+            date: $("#due-date-picker").val() ? $("#due-date-picker").val() : null,
+            momentConfig: {
+                culture: userLocale,
+                tz: userTimeZone,
+                format: DEFAULT_DATE_DISPLAY_FORMAT
+            }
+        });
+
+        $('#due-date-picker').datepicker({
+            date: $("#due-date-picker").val() ? new Date($("#due-date-picker").val()) : null,
+            momentConfig: {
+                culture: userLocale,
+                tz: userTimeZone,
+                format: DEFAULT_DATE_DISPLAY_FORMAT
+            }
+        });
+    })
+</script>
+<input type="hidden" name="meetingValue" value="" id="meetingValue" />
+<div class="col-lg-12 action">
+    <div class="row">
+        <div class="col-lg-3 action-type-list">
+            <label for="type.id">
+                Action Type
+                <span class="required-indicator">*</span>
+            </labe
+2000
+l>
+            <select class="form-control " name="type.id" id="type" >
+<option value="null"></option>
+<option value="6766" >AESM</option>
+<option value="7109" >Auto Alert</option>
+<option value="7116" >Further Review</option>
+</select>
+
+            <input type="hidden" class="meeting-decider" name="isMeetingAction" value="false"/>
+        </div>
+
+        <div class="col-lg-3">
+            <label for="config.id">
+                Action
+                <span class="required-indicator">*</span>
+            </label>
+            <select class="form-control action-value" name="config.id" id="config" data-text="create" >
+<option value=""></option>
+<option value="7132" >Additional investigations</option>
+<option value="7141" >Change to RMP</option>
+<option value="7150" >Changes to REMS</option>
+<option value="7159" >Communication</option>
+<option value="7168" >Exchange of Information</option>
+<option value="7177" >Informed consent modification</option>
+<option value="7186" >Migrated Action</option>
+<option value="7195" >Other</option>
+<option value="7204" >Periodic Review</option>
+<option value="7213" >Post-Authorization study</option>
+<option value="7222" >Proposition of Labeling update</option>
+<option value="7231" >Reassessment</option>
+<option value="7240" >Recall</option>
+<option value="7249" >Review ICSRs</option>
+<option value="7258" >Review literature</option>
+<option value="7267" >Risk minimization measures</option>
+<option value="7276" >Technical Evaluation</option>
+</select>
+        </div>
+
+        <div class="col-lg-3 hidden meeting-list">
+            <label for="meeting.id">
+                Meeting Title
+                <span class="required-indicator">*</span>
+            </label>
+            <select class="form-control" name="meeting.id" id="meetingElement" >
+<option value="" selected="selected"></option>
+</select>
+        </div>
+
+        <script type="text/javascript">
+
+    sharedWithListUrl = "\u002fsignal\u002fuser\u002fsearchUserGroupList";
+
+    $(document).ready(function () {
+        bindShareWith($('.action .assignedToValue'), sharedWithListUrl, '', null,true);
+        bindShareWith($('.treeview-content .assignedToValue'), sharedWithListUrl, '', null,false);
+
+    });
+
+</script>
+
+
+<div class="col-lg-3">
+    <label>
+        Assigned To
+        <span class="required-indicator">*</span>
+    </label>
+    <select id="assignedTo" name="assignedToValue" class="form-control select2 assignedToValue"></select>
+</div>
+
+
+        <div class="col-lg-3">
+            <div class="fuelux">
+                <div class="datepicker" id="due-date-picker">
+                    <label>Due Date<span class="required-indicator">*</span></label>
+                    <div class="input-group">
+                        <input placeholder="Due Date" name="dueDate" class="form-control input-sm" id="dueDate" type="text" data-date="" value=""/>
+                        <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-6 form-group">
+            <label for="details">
+                Action Details
+                <span class="required-indicator">*</span>
+            </label>
+            <textarea class="form-control tarea-200" name="details" id="details" ></textarea>
+        </div>
+
+        <div class="col-lg-6 form-group">
+            <label for="comments">
+                Comments
+            </label>
+            <textarea class="form-control tarea-200" name="comments" id="comments" ></textarea>
+        </div>
+    </div>
+
+
+        <div class="row status-icon hidden">
+            <div class="col-lg-2 form-group ">
+            <label for="actionStatus">
+                Action Status:</label>
+                <select class="form-control" name="actionStatus" id="actionStatus" >
+<option value="InProcess" >In Progress</option>
+<option value="Deleted" >Deleted</option>
+<option value="New" >New</option>
+<option value="Closed" >Closed</option>
+<option value="ReOpened" >Re-opened</option>
+</select>
+            </div>
+      
+2000
+  </div>
+
+    <div>
+        <input type="hidden" name="backUrl" value="http://10.100.22.24:8181/signal/singleCaseAlert/review" id="backUrl" />
+    </div>
+
+    
+
+    <div class="buttons ">
+        
+    </div>
+</div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="buttons ">
+                    
+                        <button type="button" id="create-action-btn" class="btn btn-primary id-element">Create</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="action-edit-modal" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="">Edit Action</h4>
+            </div>
+
+            <div class="modal-body clearfix">
+                <div id="action-editor-container">
+                </div>
+            </div>
+            <input type="hidden" id="actionMeetingId" value="7123"
+                   class="action-meeting-id"/>
+            <div class="modal-footer">
+                <div class="buttons ">
+                    <button class="button  btn btn-primary" id="update-bt">Update</button>
+                    <button class="button btn btn-default " id="cancel-bt">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-xlg" id="caseHistoryModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <label class="modal-title">Case History: <span id="caseNumber"></span>-<span id="productFamily"></span>
+                </label>
+                <input type="hidden" id="caseVersion" />
+                <input type="hidden" id="productName" />
+                <input type="hidden" id="alertConfigId" />
+                <input type="hidden" id="pt" />
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                
+
+<span tabindex="0" class="pull-right pos-rel m-r-15" style="cursor: pointer" data-toggle="tooltip" data-title="Export to" data-placement="bottom">
+    <span class="dropdown-toggle exportPanel" data-toggle="dropdown" >
+        <i class="mdi mdi-export blue-1 font-24 lh-1"></i>
+        <span class="caret hidden"></span>
+    </span>
+    <ul class="dropdown-menu export-type-list" id="exportTypesCaseHistory">
+        <li>
+            <a href="/signal/caseHistory/exportReport?outputFormat=PDF&amp;alertName=caseHistory" style="margin-right: 20px" class="exportCaseHistory">
+                <img src="/signal/assets/pdf-icon-a6e7d7d9b9c47fb6cfd5611a914b2db5.jpg" class="pdf-icon" height="16" width="16"/> Save as PDF
+            </a>
+        </li>
+        <li>
+            <a href="/signal/caseHistory/exportReport?outputFormat=XLSX&amp;alertName=caseHistory" style="margin-right: 20px" class="exportCaseHistory">
+                <img src="/signal/assets/excel-a40ce78cdd86cac8004163bf736802da.gif" class="excel-icon" height="16" width="16"/> Save as Excel
+            </a>
+        </li>
+        <li>
+            <a href="/signal/caseHistory/exportReport?outputFormat=DOCX&amp;alertName=caseHistory" class="exportCaseHistory">
+                <img src="/signal/assets/word-icon-d5dad3111daf01520f03d97072fa0247.png" class="word-icon" height="16" width="16"/> Save as Word
+            </a>
+        </li>
+    </ul>
+</span>
+
+
+            </div>
+
+            <div class="modal-body">
+
+                <div id="case-history-container" class="list">
+                    <label class="modal-title m-b-15">Review History for Current Product</label>
+                    <br/>
+                    <table class="table caseHistoryModalTable" id="caseHistoryModalTable" style="width: 100%">
+                        <thead>
+                        <tr>
+                            <th>Alert Name</th>
+                            <th>Disposition</th>
+                            <th>Justification</th>
+                            <th>Priority</th>
+                            <th>Categories</th>
+                            <th>Sub-Category(ies)</th>
+                            <th>Performed By</th>
+                            <th>Date</th>
+                        </tr>
+                        <thead>
+                        <tbody id="caseHistoryModalTableBody" class="tableModalBody"></tbody>
+                    </table>
+                </div>
+                <br/>
+                <div id="case-history-container_suspect" class="list">
+                    <label class="modal-title m-b-15">Review History from Other Alerts</label>
+                    <br/>
+                    <table class="table" id="caseHistoryModalTableSuspect" style="width: 100%">
+                        <thead>
+                        <tr>
+                            <th>Alert Name</th>
+                            <th>Disposition</th>
+                            <th>Justification</th>
+                            <th>Priority</th>
+                            <th>Categories</th>
+                            <th>Sub-Category(ies)</th>
+                            <th>Performed By</th>
+                            <th>Date</th>
+                        </tr>
+                        <thead>
+                        <tbody id="caseHistoryModalTableBody2" class="tableModalBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default case-history-modal-close" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+  #similarCaseModal .modal-content {
+      margin-left: -200px;
+      margin-right: -200px;
+  }
+</style>
+
+<div class="modal fade" id="similarCaseModal" tabindex="-1" role="dialog" aria-hidden="true" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Similar cases based on - <span id="eventType"
+                                                                          style="text-transform:uppercase"></span> : <span
+                        id="eventVal"></span></label>
+            </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="event-outcome-pie"></div>
+                <br/>
+                <div id="similar-case-container" class="list">
+                    <table class="table" id="similarCaseModalTable" style="width: 100%">
+                        <thead>
+                        <tr>
+                            <th class="reportDescriptionColumn">Case(f/u#)</th>
+                            <th>Product</th>
+                            <th>Preferred Term</th>
+                            <th>HCP</th>
+                            <th>
+                                <div class="stacked-cell-center-top">S/U/R</div>
+                                <div class="stacked-cell-center-bottom">Outcome</div>
+                            </th>
+                            <th>Disposition</th>
+                            <th>Priority</th>
+                            <th>Assigned To</th>
+                        </tr>
+                        <thead>
+                        <tbody id="similarCaseModalTableBody" class="tableModalBody"></tbody>
+                    </table>
+                </div>
+                <input type="hidden" id="alertName" />
+                <input type="hidden" id="caseNumberI
+2000
+nfo" />
+                <input type="hidden" id="caseCurrentVersion" />
+                <input type="hidden" id="executedConfigId" />
+                <input type="hidden" id="eventCode" />
+                <input type="hidden" id="eventCodeVal" />
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default similar-case-modal-close" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="margin-left: 0;margin-right: 0">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+                <h4 class="modal-title " style="font-weight: bold"> Comments :
+                    <span id="comment-meta-info"></span>
+                    <i class="isProcessing mdi mdi-spin mdi-loading" style="display: none;"></i>
+                </h4>
+            </button>
+            </div>
+            
+
+
+
+
+
+
+
+
+            <div class="modal-body" style="max-height: 600px; overflow-y: auto;">
+            <div id="no-comments" class="hide">
+                <h4 class="text-center">There are no comments</h4>
+            </div>
+                <div id="alert-comment-container" class="list">
+                    <div class="form-group"><textarea maxlength="4000" name="commentbox" id="commentbox" placeholder="Please enter your comment here." class="form-control height-150" ></textarea>
+                    </div>
+                </div>
+
+                <span class="createdBy"></span>
+
+                <input type="hidden" id="commentId"/>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="bulkOptionsSection pull-left m-l-5" style="display: none;">
+                    <label class="labelBold m-r-15" for="current">
+                        <input class="m-r-5" type="radio" name="bulkOptions" id="current" value="current" checked>
+                        Current <span class="alertTypeText"></span>
+                    </label>
+                    <label class="labelBold" for="allSelected">
+                        <input class="m-r-5" type="radio" name="bulkOptions" id="allSelected" value="allSelected">
+                        Selected <span class="alertTypeText"></span>s (<span class="count"></span>)
+                    </label>
+                </div>
+                <button type="button" class="btn btn-primary add-comments">
+                    Add
+                </button>
+                <button type="button" class="btn btn-default alert-comment-modal-close" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+        <div class="hidden">
+            <span id="application"></span>
+            <span id="validatedSignalId"></span>
+            <span id="assignedTo"></span>
+            <span id="executedConfigId"></span>
+            <span id="configId"></span>
+            <input type="hidden" id="isUpdated" value="false"/>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#commentModal").on('show.bs.modal', function(){
+        $('div.bulkOptionsSection input#current').click();
+    });
+</script>
+<div class="modal fade" id="followUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="margin-left: 50px;margin-right: 50px">
+
+            <div class="modal-body" >
+                <div id="followUp" class="list">
+                    Disposition has been reset due to new significant follow-up. Do you want to restore to previous Disposition?
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary previous-followUp" data-dismiss="modal" style="font-size: inherit">
+                    Yes
+                </button>
+                <button type="button" class="btn btn-default " data-dismiss="modal" style="float: right">
+                    No
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade messagebox" id='messagebox' tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="downloadReportModal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="">Edit Action</h4>
+        </div>
+
+        <form action="/signal/report/download" method="get" >
+            <div class="modal-body" style="height: 100px;">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Report Name<span class="required-indicator">*</span></label>
+                            <input placeholder="Name" name="reportName"
+                                   class="form-control input-sm clear-field" id="reportName" required/>
+                            <input type="hidden" name="productName" value="" id="productName" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label>Start Date<span
+                                    class="required-indicator">*</span></label>
+
+                            <div class="fuelux">
+                                <div class="datepicker form-group"
+                                     id="reportStartDatePicker">
+                                    <div class="input-group">
+                                        <input placeholder="Start Date" name="startDate"
+                                               class="form-control input-sm clear-field" id="startDate"
+                                               value=""/>
+                                        <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+          
+2000
+          <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label>End Date<span
+                                    class="required-indicator">*</span></label>
+
+                            <div class="fuelux">
+                                <div class="datepicker form-group"
+                                     id="reportEndDatePicker">
+                                    <div class="input-group">
+                                        <input placeholder="End Date" name="endDate"
+                                               class="form-control input-sm clear-field" id="endDate"
+                                               value=""/>
+                                        <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="buttons col-md-2 pull-right">
+                    <input type="submit" name="download" value="Download Report" class="form-control btn btn-primary" id="download" />
+                </div>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $("#reportStartDatePicker").datepicker({
+        allowPastDates: true
+    });
+    $("#reportEndDatePicker").datepicker({
+        allowPastDates: true
+    });
+</script>
+<div class="modal fade" id="showAttachmentModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-width-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" cla
+2000
+ss="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Attachments</label>
+            </div>
+
+            <div class="modal-body">
+                <form id="attachmentForm" name="attachmentForm" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+                    <div class="">
+                        <div><input type="hidden" name="source" value="" id="source" /></div>
+                        <input id="attachmentFormId" type="hidden" name="alertId" value=""/>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 col-md-4">
+                            <div class="form-group">
+                                <label>Select file</label>
+                                <input multiple class="multi clearFields attachment-file" type="file" name="attachments"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-6">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input class="form-control clearFields attachment-input" type="input" name="description" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="form-group m-t-20">
+                                <button class="btn btn-primary upload" type="submit">Upload</button>
+                                <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="attachments">
+                    <table id="attachment-table" class="row-border hover  no-footer" width="100%">
+                        <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Description</th>
+                            <th>Timestamp</th>
+                            <th>Performed By</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#showAttachmentModal").on("hidden.bs.modal", function(){
+        $(".clearFields").val("");
+    });
+
+    $(document).ready(function () {
+        addCountBoxToInputField(255, $('.attachment-input'));
+
+    });
+</script>
+
+<div class="modal fade" id="save-view-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Save View</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row" >
+                    <div class="alert alert-danger view-error" style="display: none"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label>View Name<span class="required-indicator">*</span></label>
+                        <input type="text" class="form-control" id="view_name" maxlength="50"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="view_default">
+                        <label class="form-check-label">Default View</label>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="view_filters" value=""/>
+            <input type="hidden" id="view_columnList" value=""/>
+            <input type="hidden" id="view_alertType" value=""/>
+            <input type="hidden" id="view_sorting" value=""/>
+            <input type="hidden" id="view_advanced_filter" value=""/>
+            <input type="hidden" id="view_id" value=""/>
+            <input type="hidden" id="current_view_id" value=""/>
+
+            <div class="modal-footer">
+                <div class="buttons save_buttons" style="display: none;">
+                    <button type="button" class="btn btn-primary save-view">
+                        Save
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Cancel
+                    </button>
+                </div>
+                <div class="buttons edit_buttons" style="display: none;">
+                    <button type="button" class="btn btn-primary edit-view">
+                        Update View
+                    </button>
+                    <button type="button" class="btn btn-primary delete-view" data-dismiss="modal">
+                        Delete View
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Cancel
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="alert-view-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Edit View</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>Default System View cannot be edited.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="buttons">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.save-view').on('click', function () {
+        var request = new Object();
+        request['name'] = $("#view_name").val();
+        request['filterMap'] = $("#view_filters").val();
+        request['columnList'] = $("#view_columnList").val();
+        request['alertType'] = $("#view_alertType").val();
+        request['sorting'] = $("#view_sorting").val();
+        request['advancedFilter'] = $("#view_advanced_filter").val();
+        request['currentViewId'] = $('#current_view_id').val();
+        request['defaultView'] = $('#view_default').prop('checked');
+        $.ajax({
+            url : saveViewUrl,
+            type: "POST",
+            data: request,
+            dataType: "json",
+            success : function (data) {
+                if(data.success){
+                    $('#save-view-modal').modal('hide');
+                    var pageURL = $(location).attr("href");
+                    if(pageURL.indexOf("viewId") != -1){
+                        window.location = pageURL.slice(0, pageURL.indexOf("viewId")+7) + data.viewId
+                    }else{
+                        if(pageURL.indexOf("#") != -1){
+                            pageURL = pageURL.slice(0, pageURL.indexOf("#"))
+                        }
+                        window.location = pageURL+"&viewId="+data.viewId
+                    }
+                    if(data.errorMessage){
+                        showErrorNotification(data.errorMessage);
+                    }
+                }else{
+                    $('#save-view-modal .view-error').html(data.errorMessage);
+                    $('#save-view-modal .view-error').show()
+
+                }
+            }
+    
+2000
+    })
+    });
+    $('.edit-view').on('click', function () {
+        var request = new Object();
+        request['id'] = $('#view_id').val();
+        request['name'] = $("#view_name").val();
+        request['filterMap'] = $("#view_filters").val();
+        request['columnList'] = $("#view_columnList").val();
+        request['alertType'] = $("#view_alertType").val();
+        request['sorting'] = $("#view_sorting").val();
+        request['advancedFilter'] = $("#view_advanced_filter").val();
+        request['defaultView'] = $('#view_default').prop('checked');
+        $.ajax({
+            url : updateViewUrl,
+            type: "POST",
+            data: request,
+            dataType: "json",
+            success : function (data) {
+                if(data.success) {
+                    var pageURL = $(location).attr("href");
+                    if (pageURL.indexOf("viewId") != -1) {
+                        if(data.viewId){
+                            window.location = pageURL.slice(0, pageURL.indexOf("viewId") + 7) + data.viewId
+                        }else{
+                            window.location = pageURL.slice(0, pageURL.indexOf("viewId"))
+                        }
+                    } else {
+                        if(pageURL.indexOf("#") != -1){
+                            pageURL = pageURL.slice(0, pageURL.indexOf("#"))
+                        }
+                        window.location = pageURL + "&viewId=" + data.viewId
+                    }
+                    if(data.errorMessage){
+                        showErrorNotification(data.errorMessage);
+                    }
+                }else{
+                    $('#save-view-modal .view-error').html(data.errorMessage);
+                    $('#save-view-modal .view-error').show()
+                }
+            }
+        })
+    });
+    $('.delete-view').on('click', function () {
+        sessionStorage.setItem('isViewCall', true);
+        var request = new Object();
+        request['id'] = $('#view_id').val();
+        request['alertType'] = $("#view_alertType").val();
+        $.ajax({
+            url : deleteViewUrl,
+            type: "POST",
+            data: request,
+            dataType: "json",
+            success : function (data) {
+                var pageURL = $(location).attr("href");
+                if(pageURL.indexOf("viewId") != -1){
+                    window.location = pageURL.slice(0, pageURL.indexOf("viewId")-1)
+                }else{
+                    window.location = pageURL
+                    location.reload()
+                }
+            }
+        })
+    });
+
+    $('#save-view-modal').on('hidden.bs.modal', function () {
+        $('#save-view-modal .save_buttons').hide();
+        $('#save-view-modal .edit_buttons').hide();
+        $('#save-view-modal .view-error').hide();
+        $('#save-view-modal #view_name').val('');
+    });
+
+</script>
+<div class="modal fade " id="alertTagModal" role="dialog">
+    <div class="modal-dialog modal-md modal-width-sm" role="document">
+
+        <div class="modal-content">
+
+            <div class="rxmain-container-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Annotations/Categories</label>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="singleAlertTags">Alert Specific Category (s)</label>
+                        <select id="singleAlertTags" class="form-control" name="singleAlertTags" multiple="multiple">
+                        </select>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="globalTags">Global Category (s)</label>
+                        <select id="globalTags" class="form-control" name="globalTags" multiple="multiple">
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary addTags" data-dismiss="modal">Update</button>
+                <button type="button" class="btn btn-default closeGenericValues" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.tableModalBody tr.odd {
+    background-color: #ebebeb!important;
+}
+.select2-container--default.select2-container--disabled .select2-selection--single {
+    background-color:#f7f8f7!important;
+    cursor: default;
+}
+.select2-container--default.select2-container--disabled .select2-selection--multiple {
+    background-color: #f7f8f7!important;
+    cursor: default;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    border: 1px solid#ececec;
+}
+.select2-container--default .select2-search--inline .select2-search__field {
+    margin: 8px 0 0 10px !important;
+    font-size: 13px!important;
+}
+.tag-action{font-size: medium; padding: 5px 2px 2px 2px;}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 13px;
+}
+.select2-selection__rendered {
+    border: 1px solid#ececec;!important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+    margin-bottom: 4px!important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    margin: -7px!important;
+}
+/*.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    list-style: none;
+    margin-bottom: -2.4px!important;
+}*/
+.select2-selection__choice{font-size:12px!important;}
+input[type=checkbox], input[type=radio] {
+    margin: 8px 0 0!important;
+}
+.popover {
+    position: fixed !important;
+}
+.dt-center{
+    border-top:1px solid #d4d4d4!important;
+}
+.td{
+    border-top:1px solid #d4d4d4!important;
+}
+.justification-cell{
+    border-top:1px solid #d4d4d4!important;
+}
+.td-action{
+    border-top:1px solid #d4d4d4!important;
+}
+hr{
+    margin-top:4px!important;
+    margin-bottom:2px!important;
+}
+/*.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    margin: -4px!important;
+}*/
+.popover.left>.arrow {
+    display: none!important;
+}
+.popover.top>.arrow, .webui-popover.top>.webui-arrow {
+    display: none!important;
+}
+.modal-dialog .right-top .fa-plus {
+    font-size: 15px!important;background: #69a73c;color: #fff;padding: 3px 7px; border-radius: 7px;margin-bottom: 5px;
+}
+#tag-container div.dataTables_scrollHeadInner{
+    width:auto!important;
+}
+.pbr br{display:none!important}
+</style>
+
+<div class="modal fade " id="commonTagModal" role="dialog">
+    <div class="modal-dialog modal-md modal-width-lg" role="document">
+        <div class="modal-content">
+            <div class="rxmain-container-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Categories</label>
+            </div>
+            <div id="tag-body" class="modal-body">
+                <div id="tag-add" class="right-top">
+                    <i class="fa fa-plus" id="add-row" style="margin-right:1rem"></i>
+                </div>
+                <div id="tag-container" class="list">
+                    <table class="table" id="categoryModalTable" style="width: 100%;">
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Sub-Category(ies)</th>
+                            <th>Alert Specific</th>
+                            <th>Private</th>
+                            <th>Action</th>
+                        </tr>
+                        <thead>
+                        <tbody id="categoryModalTableBody" class="tableModalBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="but
+2000
+ton" id="addTags" class="btn btn-primary addTags" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-default closeGenericValues" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="showConfigNameModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Save Case Series</label>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="alert alert-success alert-dismissible" id="alertMessage" role="alert" hidden>
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        Case Series successfully saved
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" id="errorMessage" role="alert" hidden>
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        Fill in Config Name Correctly
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="configName">Case Series Name</label>
+                            <input type="text" class="form-control" id="configName">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="buttons ">
+                    <button class="button btn btn-primary" id="save-cases-btn">Save</button>
+                    <button class="button btn btn-default" id="cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#cancel-btn").on('click', function () {
+        $("#showConfigNameModal").modal('hide')
+    })
+</script>
+<!-- Right Sidebar -->
+<div class="side-bar right-bar caselist-config-panel" id="qualitativeFields" data-fieldcontainerreference="qualitativeFields" style="right: -350px">
+    <div class="pv-list-config-action">
+        <a class="ic-sm" href="javascript:void(0);" id="btnSaveListConfig" title="Save Changes"><i class="md md-done"></i> </a>
+        <a class="text-danger ic-sm" href="javascript:void(0);" id="btnCloseListConfig" title="Cancel Changes"><i class="md md-close"></i> </a>
+
+    </div>
+    <div style="overflow: hidden" class="pv-grid-setting-box">
+        <div class="col-sm-12 ">
+            <div class="pvi-list-group list-group">
+
+                <div class="inner-shadow-box">
+                    <div class="phead-1 phead">Primary View Fields</div>
+                    <div class="list-group-primary display-config-field short-field" ondragover="event.preventDefault()"></div>
+                </div>
+                <div class="inner-shadow-box">
+                    <div class="phead-3 phead">Optional Fields</div>
+                    <div class="list-group-optional display-config-field3 short-field" ondragover="event.preventDefault()"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Right-bar -->
+
+<div id="bulkDispositionPopover" class="popover priority-icons">
+    <div class="arrow"></div>
+    <div class="popover-content priority-icon-list">
+        
+    </div>
+</div>
+<div id="dispositionJustificationPopover" class="disposition popover justification dyn"> 
+    <div class="arrow"></div>
+    <h3 class="popover-title"></h3>
+
+    <div class="popover-content">
+        <ul class="text-list">
+            
+                <li>
+
+                    <a tabindex="0" href="javascript:void(0);" title="Validation of current case/PEC based on available evidences"
+                       class="selectJustification text">Validation of current case/PEC based on available evidences</a>
+                    <a tabindex="0" href="javascript:void(0);" title="Edit" class="btn-edit"><i class="mdi mdi-pencil editIcon"></i></a>
+                </li>
+            
+                <li>
+
+                    <a tabindex="0" href="javascript:void(0);" title="Further evaluation required for current safety observation/signal"
+                       class="selectJustification text">Further evaluation required for current safety observation/signal</a>
+                    <a tabindex="0" href="javascript:void(0);" title="Edit" class="btn-edit"><i class="mdi mdi-pencil editIcon"></i></a>
+                </li>
+            
+                <li>
+
+                    <a tabindex="0" href="javascript:void(0);" title="Requires further communication and action for current signal/safety observation"
+                       class="selectJustification text">Requires further communication and action for current signal/safety observation</a>
+                    <a tabindex="0" href="javascript:void(0);" title="Edit" class="btn-edit"><i class="mdi mdi-pencil editIcon"></i></a>
+                </li>
+            
+                <li>
+
+                    <a tabindex="0" href="javascript:void(0);" title="Further evaluation for current safety observation/signal is not required"
+                       class="selectJustification text">Further evaluation for current safety observation/signal is not required</a>
+                    <a tabindex="0" href="javascript:void(0);" title="Edit" class="btn-edit"><i class="mdi mdi-pencil editIcon"></i></a>
+                </li>
+            
+            <li>
+                <div id="edit-box">
+                    <textarea class="form-control editedJustification"
+                              title="Edit Justification" maxlength="255"></textarea>
+                    <ol class="confirm-options">
+                        <li><a tabindex="0" href="javascript:void(0);" title="Save"><i class="mdi mdi-checkbox-marked green-1" id="confirmJustification"></i></a></li>
+                        <li><a tabindex="0" href="javascript:void(0);" title="Close"><i class="mdi mdi-close-box red-1" id="cancelJustification"></i></a>
+                        </li>
+                    </ol>
+                </div>
+                <a tabindex="0" href="javascript:void(0);" title="Add new Disposition" class="btn btn-primary addNewJustification" id="addNewJustification">Add New</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="dispositionSignalPopover" class="disposition popover signal">
+    <div class="arrow"></div>
+    <h3 class="popover-title">Associate Signal</h3>
+
+    <div class="popover-content">
+        <div id="signal-search-box" class="pos-ab">
+            <input id="signal-search" type="text" placeholder="Search Signal..." class="form-control">
+        </div>
+        <ul id="signal-list" class="text-list">
+            
+                <li>
+                    
+                        <a tabindex="0" data-target="#dispositionJustificationPopover" role="button" class="selectSignal text"
+                           data-toggle="modal-popover" data-placement="left" title="PerfSignal1">
+                            PerfSignal1
+                        </a>
+                    
+                </li>
+            
+            <li>
+                <div id="new-signal-box">
+                    
+                        <a tabindex="0" data-target="#dispositionJustificationPopover" id="newSignalJustification" class="selectSignal text"
+                           role="button" data-toggle="modal-popover" data-placement="left"></a>
+                    
+                    <input type="text" id="newSignalName" class="form-control" title="New Signal Name"/
+2000
+>
+                    <ol class="confirm-options">
+                        <li><a tabindex="0" href="javascript:void(0);" title="Save"><i class="mdi mdi-checkbox-marked green-1" id="createSignal"></i></a></li>
+                        <li><a tabindex="0" href="javascript:void(0);" title="Close"><i class="mdi mdi-close-box red-1" id="cancelSignal"></i></a>
+                        </li>
+                    </ol>
+                </div>
+                <a tabindex="0" href="javascript:void(0);" title="Add new Signal" class="btn btn-primary" id="addNewSignal">Add New</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="priorityJustificationPopover" class="disposition popover priority">
+    <div class="arrow"></div>
+
+    <h3 class="popover-title"></h3>
+
+    <div class="popover-content">
+        <ul class="text-list">
+            
+                <li>
+
+                    <a tabindex="0" href="javascript:void(0);" title="Priority downgraded based on available evidences"
+                       class="selectJustification text">Priority downgraded based on available evidences</a>
+                    <a tabindex="0" href="javascript:void(0);" title="Edit" class="btn-edit"><i class="mdi mdi-pencil editIcon"></i></a>
+                </li>
+            
+                <li>
+
+                    <a tabindex="0" href="javascript:void(0);" title="Priority upgraded based on available evidences"
+                       class="selectJustification text">Priority upgraded based on available evidences</a>
+                    <a tabindex="0" href="javascript:void(0);" title="Edit" class="btn-edit"><i class="mdi mdi-pencil editIcon"></i></a>
+                </li>
+            
+            <li>
+                <div id="edit-box">
+                    <textarea class="form-control editedJustification"
+                              title="Edit Justification" maxlength="255"></textarea>
+                    <ol class="confirm-options">
+                        <li><a tabindex="0" href="javascript:void(0);" title="Save"><i class="mdi mdi-checkbox-marked green-1" id="confirmJustification"></i></a></li>
+                        <li><a tabindex="0" href="javascript:void(0);" title="Close"><i class="mdi mdi-close-box red-1" id="cancelJustification"></i></a>
+                        </li>
+                    </ol>
+                </div>
+                <a tabindex="0" href="javascript:void(0);" title="Add new Disposition" class="btn btn-primary" id="addNewJustification">Add New</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="priorityPopover" class="popover priority-icons">
+    <div class="arrow"></div>
+    <div class="popover-content priority-icon-list">
+        
+            
+                <a tabindex="0" data-target="#priorityJustificationPopover" data-id="6637" role="button" class="changeToPriority font-24" data-toggle="modal-popover"
+                   data-placement="bottom" data-priority="Urgent" title="Urgent" data-days="15">
+                    <i class="mdi mdi-alpha-u-circle red-1"></i>
+                </a>
+            
+
+        
+            
+                <a tabindex="0" data-target="#priorityJustificationPopover" data-id="6647" role="button" class="changeToPriority font-24" data-toggle="modal-popover"
+                   data-placement="bottom" data-priority="High" title="High" data-days="30">
+                    <i class="mdi mdi-alpha-h-circle yellow-1"></i>
+                </a>
+            
+
+        
+            
+                <a tabindex="0" data-target="#priorityJustificationPopover" data-id="6657" role="button" class="changeToPriority font-24" data-toggle="modal-popover"
+                   data-placement="bottom" data-priority="Medium" title="Medium" data-days="90">
+                    <i class="mdi mdi-alpha-m-circle blue-1"></i>
+                </a>
+            
+
+        
+            
+                <a tabindex="0" data-target="#priorityJustificationPopover" data-id="6667" role="button" class="changeToPriority font-24" data-toggle="modal-popover"
+                   data-placement="bottom" data-priority="Low" title="Low" data-days="135">
+                    <i class="mdi mdi-alpha-l-circle green-1"></i>
+                </a>
+            
+
+        
+            
+                <a tabindex="0" data-target="#priorityJustificationPopover" data-id="6677" role="button" class="changeToPriority font-24" data-toggle="modal-popover"
+                   data-placement="bottom" data-priority="To be Prioritized" title="To be Prioritized" data-days="30">
+                    <i class="mdi mdi-alpha-t-circle grey-1"></i>
+                </a>
+            
+
+        
+    </div>
+</div>
+
+<div id="single-case-alert-spinner" class="hidden">
+    <div class="grid-loading" style="position: fixed;left: 50%;top: 50%;"><img src="/signal/assets/spinner.gif" width="30" align="middle" /></div>
+</div>
+<div class="modal fade" id="createAdvancedFilterModal" role="dialog" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <label class="modal-title">Add New Filter</label>
+            </div>
+
+            <div class="modal-body">
+                <div class="msgContainer" style="display:none">
+                    <div class="alert alert-danger" role="alert">
+                        <span class="message"></span>
+                    </div>
+                </div>
+                
+
+<form action="/signal/advancedFilter/save" method="post" name="advancedFilterForm" autocomplete="off" id="advancedFilterForm" >
+
+    <input type="hidden" name="alertType" value="Single Case Alert"/>
+    <input type="hidden" name="filterId" id="filterId" value=""/>
+
+    <div class="form-group">
+        <label for="name">Filter Name<span
+                class="required-indicator">*</span></label>
+        <input type="text" class="form-control col-max-300" name="name" id="name">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" rows="5" name="description" id="description"></textarea>
+    </div>
+
+
+    <div class="form-group loading">
+        <i class="fa fa-refresh fa-spin"></i>
+    </div>
+
+    <div class="form-group doneLoading clearfix addContainerTopmost" id="addContainerWithSubmit">
+        <label>Filter Criteria<span class="required-indicator">*</span></label>
+        <script type="text/javascript" src="/signal/assets/app/pvs/query/to_add_container-b1b2fd25e47dbd84f82bc3c80acf5f8b.js" ></script>
+<div id="toAddContainer" class="toAddContainer">
+    <div id="errorMessageOperator" class="errorMessageOperator">Enter Valid Number</div>
+    <div class="row">
+    <div class="col-xs-3 expressionsNoPadFirst">
+        <select name="selectField" id="selectField" class="form-control expressionField">
+            <option value = "-1">Select Field</option>
+            
+                <option value="flags">Flags</option>
+            
+                <option value="priority.id">Priority</option>
+            
+                <option value="productName">Product Name</option>
+            
+                <option value="ptList">PT List</option>
+            
+                <option value="conComitList">All Conmeds</option>
+            
+                <option value="caseInitReceiptDate">Receipt Date</option>
+            
+                <option value="lockedDate">Locked Date</option>
+            
+                <option value="dueDate">Due In</option>
+            
+                <option value="disposition.id">Disposition</option>
+            
+                <option value="signal">Signal</option>
+            
+                <option value="listedness">Listedness</option>
+            
+                <option value="outcome">Outcome</option>
+            
+                <option value="serious">Serious</option>
+            
+                <option value="caseReportType">Report Type</option>
+            
+                <option value="country">Country</option>
+        
+2000
+    
+                <option value="reportersHcpFlag">HCP</option>
+            
+                <option value="death">Death</option>
+            
+                <option value="age">Age Group</option>
+            
+                <option value="gender">Gender</option>
+            
+                <option value="caseType">Case Type</option>
+            
+                <option value="completenessScore">Completeness Score</option>
+            
+                <option value="indNumber">Primary IND#</option>
+            
+                <option value="appTypeAndNum">Application#</option>
+            
+                <option value="compoundingFlag">Compounding Flag</option>
+            
+                <option value="medErrorPtList">Medication Error PTs</option>
+            
+                <option value="patientAge">Age</option>
+            
+                <option value="suspectProductList">Suspect Products</option>
+            
+                <option value="rechallenge">Positive Rechallenge</option>
+            
+                <option value="caseNumber">Case(f/u#)</option>
+            
+                <option value="assignedTo.id">Assigned To(User)</option>
+            
+                <option value="assignedToGroup.id">Assigned To(Group)</option>
+            
+                <option value="pt">PT</option>
+            
+                <option value="caseNarrative">Case Narrative</option>
+            
+                <option value="name">Alert Name</option>
+            
+                <option value="submitter">Submitter</option>
+            
+                <option value="tags">Categories</option>
+            
+                <option value="subTags">Sub Categories</option>
+            
+        </select>
+    </div>
+
+        <div class="col-xs-3 expressionsOperator">
+            <select name="selectOperator" id="selectOperator" class="form-control expressionOp" >
+<option value="">Select Operator</option>
+</select>
+        </div>
+
+        <div class="col-xs-3">
+            <div id="showValue" class="row expressionsNoPad showValue">
+                <input type="text" name="selectValue" id="selectValue" class="form-control expressionValueText" placeholder="Value" value="" />
+            </div>
+
+            <div id="showSelect" class="row expressionsNoPad">
+                <select name="selectSelect" id="selectSelect" class="form-control expressionValueSelect" multiple="true" >
+<option value="">Select Value</option>
+</select>
+            </div>
+
+            <div id="showSelectAuto" class="row expressionsNoPad">
+                <select name="selectSelectAuto" class="form-control expressionValueSelectAuto" multiple="true" id="selectSelectAuto" >
+</select>
+            </div>
+
+            <div id="showDate" class="row fuelux expressionsNoPad">
+                <div class="datepicker expressionValueDate" id="selectDate">
+                    <div class="input-group">
+                        <input class="form-control expressionValueDateInput" id="selectDateInput" name="selectDate"
+                               type="text"/>
+
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                <span class="sr-only">Toggle Calendar</span>
+                            </button>
+
+                            <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper"
+                                 role="menu">
+                                <div class="datepicker-calendar">
+                                    <div class="datepicker-calendar-header">
+                                        <button type="button" class="prev"><span
+                                                class="glyphicon glyphicon-chevron-left"></span><span
+                                                class="sr-only">Previous Month</span></button>
+                                        <button type="button" class="next"><span
+                                                class="glyphicon glyphicon-chevron-right"></span><span
+                                                class="sr-only">Next Month</span></button>
+                                        <button type="button" class="title">
+                                            <span class="month">
+                                                <span data-month="0">January</span>
+                                                <span data-month="1">February</span>
+                                                <span data-month="2">March</span>
+                                                <span data-month="3">April</span>
+                                                <span data-month="4">May</span>
+                                                <span data-month="5">June</span>
+                                                <span data-month="6">July</span>
+                                                <span data-month="7">August</span>
+                                                <span data-month="8">September</span>
+                                                <span data-month="9">October</span>
+                                                <span data-month="10">November</span>
+                                                <span data-month="11">December</span>
+                                            </span> <span class="year"></span>
+                                        </button>
+                                    </div>
+                                    <table class="datepicker-calendar-days">
+                                        <thead>
+                                        <tr>
+                                            <th>Su</th>
+                                            <th>Mo</th>
+                                            <th>Tu</th>
+                                            <th>We</th>
+                                            <th>Th</th>
+                                            <th>Fr</th>
+                                            <th>Sa</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <div class="datepicker-calendar-footer">
+                                        <button type="button" class="datepicker-today">Today</button>
+                                    </div>
+                                </div>
+
+                                <div class="datepicker-wheels" aria-hidden="true">
+                                    <div class="datepicker-wheels-month">
+                                        <h2 class="header">Month</h2>
+                                        <ul>
+                                            <li data-month="0"><button type="button">Jan</button></li>
+                                            <li data-month="1"><button type="button">Feb</button></li>
+                                            <li data-month="2"><button type="button">Mar</button></li>
+                                            <li data-month="3"><button type="button">Apr</button></li>
+                                            <li data-month="4"><button type="button">May</button></li>
+                                            <li data-month="5"><button type="button">Jun</button></li>
+                                            <li data-month="6"><button type="button">Jul</button></li>
+                                            <li data-month="7"><button type="button">Aug</button></li>
+                                            <li data-month="8"><button type="button">Sep</button></li>
+                                            <li data-month="9"><button type="button">Oct</button></li>
+                                            <li data-month="10"><button type="button">Nov</button></li>
+                                            <li data-month="11"><button type="button">Dec</button></li>
+                         
+cc3
+               </ul>
+                                    </div>
+
+                                    <div class="datepicker-wheels-year">
+                                        <h2 class="header">Year</h2>
+                                        <ul></ul>
+                                    </div>
+
+                                    <div class="datepicker-wheels-footer clearfix">
+                                        <button type="button" class="btn datepicker-wheels-back"><span
+                                                class="glyphicon glyphicon-arrow-left"></span><span
+                                                class="sr-only">Return to Calendar</span></button>
+                                        <button type="button"
+                                                class="btn datepicker-wheels-select">Select <span
+                                                class="sr-only">Month and Year</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row extraValues"></div>
+        </div>
+
+        <div class="col-xs-1 expressionsNoPad addExpressionButton hidden">
+            <input type="button" name="Add" id="addExpression" class="btn btn-primary" value="Add" />
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div hidden="hidden">
+        <input name="JSONQuery" id="queryJSON" value=""/>
+        <a href="http://jsonlint.com/" target="_blank">Prettify my JSON here!</a>
+
+        <div>has blanks?
+            <input name="hasBlanks" id="hasBlanksQuery" value=""/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="loading container">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+
+        <div id="builderAll" class="builderAll doneLoading p-lr-0">
+        </div>
+    </div>
+
+    <div class="col-xs-12 m-t-10">
+        <div style="text-align: right">
+            <input type="submit" class="btn btn-primary saveAdvancedFilters"
+                   value="Save" id="btnSubmit"/>
+            <button class="btn btn-primary filtersWithoutSaving">Filter w/o Saving</button>
+            <button class="btn btn-primary deleteAdvFilter hide">Delete</button>
+            <button class="button btn btn-default pv-btn-grey" data-dismiss="modal"
+                    id="cancel-bt">Cancel</button>
+        </div>
+    </div>
+</form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                <r:layoutResources/>
+            </div>
+        </div>
+        <!-- End content -->
+
+        
+        
+        
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+</div>
+<script type="text/javascript" src="/signal/assets/app/jquery.core-9088768891f7d43af5ab8c8d642e5301.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/jquery.app-9af4130ef9d8c98c078b99d2cddad130.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/common/rx_common-3bec52fd16a226d99e60fd80372c8c05.js" ></script>
+</body>
+</html>
+
+0
+

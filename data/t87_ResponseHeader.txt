@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:17:14 GMT
+ETag: "i18n/en-e70bd64c5a2fc2605d6d178574af37e5.json"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/json;charset=UTF-8
+Content-Length: 3106
+Date: Fri, 22 May 2020 05:38:45 GMT
+

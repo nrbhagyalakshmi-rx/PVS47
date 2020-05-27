@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:19:06 GMT
+ETag: "vendorUi/highcharts/highcharts-de65192df8733b7a60482497a875df4c.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 70978
+Date: Fri, 22 May 2020 05:40:15 GMT
+

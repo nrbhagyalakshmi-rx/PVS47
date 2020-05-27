@@ -1,0 +1,11 @@
+[t99]
+FileName1=t99_getProductByStatus.json
+URL1=http://10.100.22.24:8181/signal/dashboard/getProductByStatus?type=Aggregate%20Case%20Alert&_=1590125907425
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_94.xml
+RequestHeaderFile=t99_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t99_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

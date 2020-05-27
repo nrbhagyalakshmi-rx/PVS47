@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:19:16 GMT
+ETag: "vendorUi/spinner/spinner.min-6f6eab72fd2531bea7514cc0d9830665.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 1136
+Date: Fri, 22 May 2020 05:38:22 GMT
+

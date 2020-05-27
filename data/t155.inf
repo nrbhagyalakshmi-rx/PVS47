@@ -1,0 +1,9 @@
+[t155]
+SnapshotXmlFile=snapshot_148.xml
+FileName1=t155.jpg
+URL1=http://10.100.22.24:8181/signal/assets/pdf-icon.jpg
+Total=1
+RequestHeaderFile=t155_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t155_ResponseHeader.txt
+ContentType=image/jpeg

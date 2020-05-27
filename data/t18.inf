@@ -1,0 +1,11 @@
+[t18]
+FileName1=t18_materialdesignicons-2f254cfdb2b23bcf596ab766574b3675.css
+URL1=http://10.100.22.24:8181/signal/assets/mdi-fonts/css/materialdesignicons-2f254cfdb2b23bcf596ab766574b3675.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_16.xml
+RequestHeaderFile=t18_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t18_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

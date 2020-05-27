@@ -1,0 +1,1507 @@
+2000
+<!doctype html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/signal/assets/favicon-2ba00fd40faca3ac3c2e810a7412bceb.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/signal/assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/signal/assets/apple-touch-icon-retina.png">
+<link rel="stylesheet" href="/signal/assets/application-20282e3e3fad9c329f1728b037973a74.css"/>
+<link rel="stylesheet" href="/signal/assets/theme_gradient_blue-82b8663def72c9ceff32d61e0b4a5253.css"/>
+<link rel="stylesheet" href="/signal/assets/app/pvs/pvs_app_css-794a4a77a2a4bcc45fa913cd043a5ab3.css"/>
+<link rel="stylesheet" href="/signal/assets/app/pvs/pvs_508c-fd4a301235dfeff417d96bed64e8429d.css"/>
+<link rel="stylesheet" href="/signal/assets/mdi-fonts/css/materialdesignicons-2f254cfdb2b23bcf596ab766574b3675.css"/>
+
+<script type="text/javascript" src="/signal/assets/vendorUi/modernizr.min-23fa28ce275880746945a2305077eebc.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery-2.2.4-986b7af813adeaf9e589ef20bcc97bb0.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery.i18n-61406922e05804e4abe8c8360ec862fa.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/underscore/underscore.min-e6d41cd714673035a7f8a65c30f3dcb1.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery-ui/jquery-ui.min-b0582f2d27fdc676c34681e0c96aac0c.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bootstrap/bootstrap.min-3f6aa77f4768de267c35a96028599ce3.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/moment/moment-434aaa1704890766125108c94efbb50c.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/moment/momentlocales-bd0407faadf015b0c0b0d49b831aeb7b.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/moment/momentTimezones-with-data-c15ec3e27a3263556fdbb96b61f9206f.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/popover/popover.min-a48d28e289c6932042ffa0ab05e7bf68.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/fuelux/fuelux.min-d30fb133a2493fadc38faabf3f226bc4.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/select2/select2-911832dffdffb9e7bafb38412a68f445.js" ></script>
+<script type="text/javascript" src="/signal/assets/datatables/jquery.dataTables_custom-8dad82f79087bc7c28eeb9b403e756b8.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/dataTables.bootstrap-93e0b2f3576484b422f6e4a29b3e6037.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/dataTables.bootstrapPagination-d133da3f3570036f8532207affa78bd9.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/datetime-moment-3fa3fc8eaf60abe3fae2bae2fb4328b0.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatables/dataTables.fixedColumns.min-acc90a700b69150380759567188a8cd0.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/spinner/spinner.min-6f6eab72fd2531bea7514cc0d9830665.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/multiselect/jquery.multi-select2.0-c2649a518d094dac8d3e66aaba1e4501.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/wow/wow.min-237e66d720861f3cc99ee444887b7c32.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/mobile/fastclick-c74606809464116f3413064b0e200023.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/mobile/detect-fd56173b9f1574612026ca4bd0f9ce20.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.nicescroll-09e3ca9889499cfb15271ad8dc51f842.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.slimscroll-6a314b5f0344bf7ef8e1e0c948bb75f9.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.blockUI-7aa9ac8e34d97a945dbf467d99fda834.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery/jquery.scrollTo.min-240b8d54661c5e0500b96b9594d60b62.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/notifyjs/dist/notify.min-1dba61fec15a5d71814b2c2cb69f65bf.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/notifications/notify-metro-9a1cf25a956b601aedd486c779986df7.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/sweet-alert/sweet-alert.min-792598f1e6bac9b4f7cc6f060ae6b454.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/sweet-alert/rx-notify-db0528274130516c271389cccac65e17.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bootstrapUploader/bootstrap-uploader-265e387a3ec58973abdfae04a79862b2.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/waypoints/lib/jquery.waypoints.min-4471999ef1b83a94d41d3cebb887c349.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/counterup/jquery.counterup.min-86f52f47d4c325261bf7d36b09dcf216.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/handlebar/handlebars-v4.0.5-8ad4263f81c714ada4985affb687f12b.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bootstrap-switch/bootstrap-switch-732d14990dba7f4fff6b5b441177c905.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/jquery.ba-throttle-debounce-876f6988f0a240fd9c49f09c5d71b994.js" ></script>
+<script type="text/javascript" src="/signal/assets/common/jquery.core-2f63ea2ce21973031b9685e36eba0731.js" ></script>
+<script type="text/javascript" src="/signal/assets/application-b6b2fa3a918957eb49ac1c12c36b30ec.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/bower_components/webcomponentsjs/webcomponents-lite-c806470ac3182eedbb9de677fde922de.js" ></script>
+<script type="text/javascript" src="/signal/assets/bootstrap-multiselect/bootstrap-multiselect-7b500966794478e2792eea0659e0aa96.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/datatable/dataTables.buttons.min-99ef2a29fc5b51a6f8f392977c2e34b1.js" ></script>
+<script type="text/javascript" src="/signal/assets/datatables/buttons.bootstrap-acac51d5cf162bd14f44ad66a6f275f5.js" ></script>
+<script type="text/javascript" src="/signal/assets/vendorUi/waves/waves-2d20efe8b7228bbc963944ac22c9667c.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/rxTitleOptions-1279146f661735d9e94cde274342b25c.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/menu-e9f9c79de11e89cfb0d2f7ae1cd80554.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/pvs_app_widget-ec77f7e909db8bab59e572285b1c3389.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/userGroupSelect-7f7d244cad34902e9681267c696c1bed.js" ></script>
+
+<script>
+    
+    userLocale = "en";
+    moment.locale(userLocale);
+    userTimeZone = "UTC";
+    var loggedInUser =  "bhagya";
+    maxUploadLimit = "50000000";
+    userId = "7435"
+    
+</script>
+
+    <meta name="_csrf" content="72780e22-ffb7-4da0-bf90-01a65c33bfc7"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+    <meta name="_csrf_parameter" content="_csrf"/>
+
+    
+    <meta name="layout" content="main"/>
+    
+
+    <script type="text/javascript">
+
+            var signalListUrl = "\u002fsignal\u002fdashboard\u002fsignalList";
+            var eventsUrl = "\u002fsignal\u002fcalendar\u002fevents";
+            var topicListUrl = "\u002fsignal\u002fdashboard\u002ftopicList";
+            var alertUrl =  "\u002fsignal\u002fdashboard\u002falertList";
+            var actionListUrl = "\u002fsignal\u002fdashboard\u002factionList";
+            var aggDataUrl = "\u002fsi
+2000
+gnal\u002faggregateCaseAlert\u002fdetails";
+            var singleDataUrl = "\u002fsignal\u002fsingleCaseAlert\u002fdetails";
+            var dashboardWidgetConfigJSON = "\u007b\u0022pvWidgetChart-11\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-11\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:7\u002c\u0022height\u0022:6\u002c\u0022width\u0022:12\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022listAction\u0022\u002c\u0022type\u0022:\u0022pvDashReports\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Top 50 Actions\u0022\u007d\u002c\u0022pvWidgetChart-9\u0022:\u007b\u0022reportWidgetName\u0022:\u0022Qualitative Products By Status\u0022\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-9\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:37\u002c\u0022width\u0022:6\u002c\u0022height\u0022:7\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022qualitative-products-status\u0022\u002c\u0022type\u0022:\u0022pvDashChart\u0022\u007d\u002c\u0022visible\u0022:false\u007d\u002c\u0022pvWidgetChart-10\u0022:\u007b\u0022reportWidgetName\u0022:\u0022Quantitative Products By Status\u0022\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-10\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:43\u002c\u0022width\u0022:6\u002c\u0022height\u0022:7\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022quantitative-products-status\u0022\u002c\u0022type\u0022:\u0022pvDashChart\u0022\u007d\u002c\u0022visible\u0022:false\u007d\u002c\u0022pvWidgetChart-7\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-7\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:13\u002c\u0022height\u0022:6\u002c\u0022width\u0022:6\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022assignedSignalTable\u0022\u002c\u0022type\u0022:\u0022pvDashReports\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Assigned Signals\u0022\u007d\u002c\u0022pvWidgetChart-5\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-5\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:0\u002c\u0022height\u0022:6\u002c\u0022width\u0022:12\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022assignedTriggeredAlerts\u0022\u002c\u0022type\u0022:\u0022pvDashReports\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Top 50 Alerts\u0022\u007d\u002c\u0022pvWidgetChart-4\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-4\u0022\u002c\u0022x\u0022:6\u002c\u0022y\u0022:13\u002c\u0022height\u0022:6\u002c\u0022width\u0022:6\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022due-date-chart\u0022\u002c\u0022type\u0022:\u0022pvDashChart\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Alert By Due Date\u0022\u007d\u002c\u0022pvWidgetChart-6\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-6\u0022\u002c\u0022x\u0022:6\u002c\u0022y\u0022:28\u002c\u0022height\u0022:8\u002c\u0022width\u0022:6\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022calendar\u0022\u002c\u0022type\u0022:\u0022pvDashCalendar\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Calendar\u0022\u007d\u002c\u0022pvWidgetChart-1\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-1\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:28\u002c\u0022height\u0022:8\u002c\u0022width\u0022:6\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022adhoc-chart\u0022\u002c\u0022type\u0022:\u0022pvDashChart\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Ad-hoc Review By Status\u0022\u007d\u002c\u0022pvWidgetChart-2\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-2\u0022\u002c\u0022x\u0022:6\u002c\u0022y\u0022:21\u002c\u0022height\u0022:7\u002c\u0022width\u0022:6\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022case-status-chart\u0022\u002c\u0022type\u0022:\u0022pvDashChart\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Qualitative Review By Status\u0022\u007d\u002c\u0022pvWidgetChart-3\u0022:\u007b\u0022visible\u0022:true\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022pvWidgetChart-3\u0022\u002c\u0022x\u0022:0\u002c\u0022y\u0022:21\u002c\u0022height\u0022:7\u002c\u0022width\u0022:6\u007d\u002c\u0022content\u0022:\u007b\u0022id\u0022:\u0022aggregate-chart\u0022\u002c\u0022type\u0022:\u0022pvDashChart\u0022\u007d\u002c\u0022reportWidgetName\u0022:\u0022Quantitative Review By Status\u0022\u007d\u002c\u0022inbox\u0022:\u007b\u0022reportWidgetName\u0022:\u0022Inbox\u0022\u002c\u0022reportWidgetDetails\u0022:\u007b\u0022id\u0022:\u0022inbox\u0022\u007d\u002c\u0022visible\u0022:true\u007d\u002c\u0022isDirty\u0022:true\u007d";
+    
+</script>
+
+    <script type="text/javascript">
+
+    window.action_select_values = JSON.parse("\u007b\u0022types\u0022:\u005b\u007b\u0022id\u0022:6766\u002c\u0022value\u0022:\u0022AESM\u0022\u002c\u0022text\u0022:\u0022AESM\u0022\u007d\u002c\u007b\u0022id\u0022:7109\u002c\u0022value\u0022:\u0022Auto Alert\u0022\u002c\u0022text\u0022:\u0022Auto Alert\u0022\u007d\u002c\u007b\u0022id\u0022:7116\u002c\u0022value\u0022:\u0022Further Review\u0022\u002c\u0022text\u0022:\u0022Further Review\u0022\u007d\u005d\u002c\u0022configs\u0022:\u005b\u007b\u0022id\u0022:7123\u002c\u0022value\u0022:\u0022Meeting\u0022\u007d\u002c\u007b\u0022id\u0022:7132\u002c\u0022value\u0022:\u0022Additional investigations\u0022\u007d\u002c\u007b\u0022id\u0022:7141\u002c\u0022value\u0022:\u0022Change to RMP\u0022\u007d\u002c\u007b\u0022id\u0022:7150\u002c\u0022value\u0022:\u0022Changes to REMS\u0022\u007d\u002c\u007b\u0022id\u0022:7159\u002c\u0022value\u0022:\u0022Communication\u0022\u007d\u002c\u007b\u0022id\u0022:7168\u002c\u0022value\u0022:\u0022Exchange of Information\u0022\u007d\u002c\u007b\u0022id\u0022:7177\u002c\u0022value\u0022:\u0022Informed consent modification\u0022\u007d\u002c\u007b\u0022id\u0022:7186\u002c\u0022value\u0022:\u0022Migrated Action\u0022\u007d\u002c\u007b\u0022id\u0022:7195\u002c\u0022value\u0022:\u0022Other\u0022\u007d\u002c\u007b\u0022id\u0022:7204\u002c\u0022value\u0022:\u0022Periodic Review\u0022\u007d\u002c\u007b\u0022id\u0022:7213\u002c\u0022value\u0022:\u0022Post-Authorization study\u0022\u007d\u002c\u007b\u0022id\u0022:7222\u002c\u0022value\u0022:\u0022Proposition of Labeling update\u0022\u007d\u002c\u007b\u0022id\u0022:7231\u002c\u0022value\u0022:\u0022Reassessment\u0022\u007d\u002c\u007b\u0022id\u0022:7240\u002c\u0022value\u0022:\u0022Recall\u0022\u007d\u002c\u007b\u0022id\u0022:7249\u002c\u0022value\u0022:\u0022Review ICSRs\u0022\u007d\u002c\u007b\u0022id\u0022:7258\u002c\u0022value\u0022:\u0022Review literature\u0022\u007d\u002c\u007b\u0022id\u0022:7267\u002c\u0022value\u0022:\u0022Risk minimization measures\u0022\u007d\u002c\u007b\u0022id\u0022:7276\u002c\u0022value\u0022:\u0022Technical Evaluation\u0022\u007d\u005d\u002c\u0022allStatus\u0022:\u005b\u007b\u0022name\u0022:\u0022InProcess\u0022\u002c\u0022value\u0022:\u0022In Progress\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022Deleted\u0022\u002c\u0022value\u0022:\u0022Deleted\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022New\u0022\u002c\u0022value\u0022:\u0022New\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022Closed\u0022\u002c\u0022value\u0022:\u0022Closed\u0022\u007d\u002c\u007b\u0022name\u0022:\u0022ReOpened\u0022\u002c\u0022value\u0022:\u0022Re-opened\u0022\u007d\u005d\u007d")
+
+</script>
+
+    <script type="text/javascript" src="/signal/assets/app/pvs/actions/actions-c6db5fb63baee4c159b9e783821b2058.js" ></script>
+    <script type="text/javascript" src="/signal/assets/spring-websocket-867783f03d5a8005372950a4b8cac2a4.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/dashboard/dashboardWidget-24248f37a4de46fe75c68afd1bc9dca6.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/dashboard/dashboard-1b86cbebab89d1a42ae9eebe0fa883ad.js" ></script>
+    <script type="text/javascri
+2000
+pt" src="/signal/assets/vendorUi/highcharts/modules/no-data-to-display-fc44762af3aab44deb8317659be156a6.js" ></script>
+    <script type="text/javascript" src="/signal/assets/vendorUi/fullcalendar.min-eadac4139211e13292deb9473e638d45.js" ></script>
+    <script type="text/javascript" src="/signal/assets/vendorUi/gridstack/gridstack.min-8243969940fd3f8d9a2116948054084f.js" ></script>
+    <script type="text/javascript" src="/signal/assets/vendorUi/gridstack/gridstack.jQueryUI.min-4850183e36adcd62a4e2c741ae857fc4.js" ></script>
+    <link rel="stylesheet" href="/signal/assets/vendorUi/gridstack.min-82a5fabd01f65ac4b5e87078091be104.css"/>
+    <link rel="stylesheet" href="/signal/assets/workflowModal-8863a855e0d38b1c16a0b929c87a1eb2.css"/>
+    <link rel="stylesheet" href="/signal/assets/dashboard-7d6d721454def651262f344c8062d5e4.css"/>
+    <script type="text/javascript" src="/signal/assets/app/pvs/date-time/bootstrap-datetimepicker-5aa81b54c1dd973165b56d66567b57d6.js" ></script>
+    <link rel="stylesheet" href="/signal/assets/app/pvs/bootstrap-datetimepicker-c0f52e788c9b52855aeb720838b56db9.css"/>
+
+    <link rel="stylesheet" href="/signal/assets/vendorUi/fullcalendar.min-537e31219634a1a50bfc6c265c08a05f.css"/>
+    <link rel="stylesheet" media="print" href="/signal/assets/vendorUi/fullcalendar.print-b8f18e9775afba153b4abfbc5f9baaf6.css"/>
+
+    <r:layoutResources/>
+    
+    <script>
+        $.getJSON('/signal/assets/i18n/' + userLocale + '.json', function (data) {
+            $.i18n.load(data);
+
+        });
+        var resizefunc = [];
+        var lastVisitedUrl = localStorage.getItem('lastVisitedURL');
+        localStorage.setItem('lastVisitedURL', document.URL.split('?')[0]);
+    </script>
+
+</head>
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div id="wrapper" class="enlarged forced">
+    <!-- Top Bar Start -->
+    
+
+
+
+
+
+    <script type="text/javascript" src="/signal/assets/spring-websocket-867783f03d5a8005372950a4b8cac2a4.js" ></script>
+    <script type="text/javascript" src="/signal/assets/app/pvs/pushNotification-308cfd70b62333c52f5193fb7eaaafe6.js" ></script>
+
+<script type="text/javascript">
+
+    var notificationURL = "\u002fsignal\u002finboxLog\u002fforUser\u002f7435";
+    var notificationDeleteURL = "\u002fsignal\u002finboxLog\u002fdeleteNotificationById";
+    var notificationMarkAsReadURL = "\u002fsignal\u002finboxLog\u002fmarkAsRead";
+    var notificationDeleteByUserURL = "\u002fsignal\u002finboxLog\u002fdeleteNotificationsForUserId";
+    var notificationMarkAsReadByUserURL = "\u002fsignal\u002finboxLog\u002fmarkAsReadNotificationsForUserId";
+    var notificationDashboardURL = "\u002fsignal\u002finboxLog\u002findex";
+    var notificationChannel ="";
+    var notificationWSURL = "\u002fsignalnull";
+    var reportRedirectURL = "\u002fsignal\u002freport\u002fcriteria";
+    var filterDeleteUrl = "\u002fsignal\u002fadvancedFilter\u002fdelete";
+
+    var detailUrls = {};
+    detailUrls["sca_reportRedirectURL"] =  "\u002fsignal\u002fsingleCaseAlert\u002fdetails";
+    detailUrls["sca_adhoc_reportRedirectURL"] =  "\u002fsignal\u002fsingleCaseAlert\u002fadhocDetails";
+    detailUrls["aga_reportRedirectURL"] = "\u002fsignal\u002faggregateCaseAlert\u002fdetails";
+    detailUrls["aga_adhoc_reportRedirectURL"] = "\u002fsignal\u002faggregateCaseAlert\u002fadhocDetails";
+    detailUrls["evdas_reportRedirectURL"] = "\u002fsignal\u002fevdasAlert\u002fdetails";
+    detailUrls["evdas_adhoc_reportRedirectURL"] = "\u002fsignal\u002fevdasAlert\u002fadhocDetails";
+    detailUrls["LITERATURE_reportRedirectURL"] = "\u002fsignal\u002fliteratureAlert\u002fdetails";
+    detailUrls["error_url"]  = "\u002fsignal\u002fconfiguration\u002fexecutionStatus";
+
+    var socketURL = "\u002fsignal\u002fstomp";
+
+    $(document).ready(function () {
+        var isAdmin = true;
+        if(!isAdmin) {
+           $('.mega-dropdown-menu').width("100px");
+        }
+
+    });
+
+    $(document).on('click','.temp-redirect',function() {
+        window.location.href = notificationDashboardURL;
+    });
+
+</script>
+
+<div class="topbar">
+    <!-- LOGO -->
+    <div class="pull-left">
+        <button class="button-menu-mobile open-left waves-effect" accesskey="b" data-toggle="tooltip" title="Main Menu">
+            <i class="md md-menu"></i>
+        </button>
+        <span class="clearfix"></span>
+    </div>
+    <div class="left side-menu">
+        <div class="sidebar-inner slimscrollleft">
+            <div id="sidebar-menu">
+                <ul>
+                    <li><a href="/signal/" class="waves-effect waves-primary">
+                        <i class="md md-dashboard"></i><span>Dashboard</span>
+                    </a>
+                    </li>
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-settings-applications"></i><span>Alert Configuration</span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+
+                            <!-- Single Case Creation menu -->
+                                
+                                    
+                                        <li class="divider"></li>
+                                    
+                                    <li><a href="/signal/singleCaseAlert/create">
+                                        Qualitative Configuration</a></li>
+                                
+                            <!-- Aggregate Creation menu -->
+                                
+                                    <li><a href="/signal/aggregateCaseAlert/create">
+                                        Quantitative Configuration</a></li>
+                                
+                            <!-- Evdas Creation menu -->
+                                
+                                    
+
+                                        <li><a href="/signal/evdasAlert/create">
+                                            EVDAS Configuration</a>
+                                        </li>
+                                    
+                                
+                            <!-- Adhoc Creation menu -->
+                                
+                                    <li><a href="/signal/adHocAlert/create">
+                                        Ad-Hoc Configuration</a></li>
+                                
+
+                            <!-- Literature Alert Creation menu -->
+                                    
+                                        <li>
+                                            <a href="/signal/literatureAlert/create">
+                                                Literature Configuration
+                                            </a>
+                                        </li>
+                                    
+
+                            <!-- View alert menu option -->
+                                
+                                    <li><a href="/signal/configuration/index">
+                                        View Alerts</a></li>
+                                
+
+                            <!-- View execution status menu option -->
+                                
+                                    <li><a href="/signal/configuration/executionStatus">
+                                        View Execution Status</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-report-problem"></i><span>Triggered Alerts</span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                
+                                    <li><a href="/signal/singleCaseAlert/review">Qualitative Review</a></li>
+                                
+                                
+                                    <li><a href="/signal/aggregateCaseAler
+2000
+t/review">Quantitative Review</a></li>
+                                
+
+                                
+                                    
+                                        <li><a href="/signal/evdasAlert/review">EVDAS Review</a></li>
+                                    
+                                
+                                
+                                    <li><a href="/signal/adHocAlert/index">Ad-Hoc Review</a></li>
+                                
+                                
+                                    <li>
+                                        <a href="/signal/literatureAlert/details">
+                                            Literature Review
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
+                    
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-call-merge"></i><span>Signal Management<span class="menu-arrow"></span></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/signal/validatedSignal/index" class="waves-effect waves-primary">
+                                        Signal Summary
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/signal/productSummary/index">
+                                        Product Summary
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+
+                    
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-filter-list"></i>
+                                <span>Queries</span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                
+                                    <li>
+                                        <a href="https://pvr-perf.rxlogix.com/reports/query/load">
+                                            Load Queries
+                                        </a>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <a href="https://pvr-perf.rxlogix.com/reports/query/index">
+                                            Query Library
+                                        </a>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <a href="https://pvr-perf.rxlogix.com/reports/query/create">
+                                            New Query
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
+                    
+
+                    
+                        
+                            <li class="has_sub">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="md md-trending-up"></i><span>Data Analysis</span> <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="/signal/dataAnalysis/index">Analysis File Library</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/signal/dataAnalysis/create">New Analysis File</a></li>
+                                    <li class="divider"></li>
+                                    
+                                    
+                                        
+                                            <li><a href="/signal/dataAnalysis/view?fileName=PVA Code/PVA Reports/CASE REVIEW COMPLIANCE">
+                                            Productivity and Compliance</a></li>
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                    
+
+                    <li><a href="/signal/report/index" class="waves-effect waves-primary">
+                        <i class="md md-insert-chart"></i><span>Reporting</span>
+                    </a>
+                    </li>
+
+                    
+                        <li class="has_sub">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="md md-grid-on"></i><span>On Demand Run
+                            </span> <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="list-unstyled">
+                                
+                                    <li><a href="/signal/singleOnDemandAlert/adhocReview">Qualitative Review</a></li>
+                                
+                                
+                                    <li><a href="/signal/aggregateOnDemandAlert/adhocReview">Quantitative Review</a></li>
+                                
+                                
+                                    
+                                        <li>
+                                            <a href="/signal/evdasOnDemandAlert/adhocReview">
+                                                EVDAS Review
+                                            </a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    
+
+                    <li class="has_sub">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="md md-event"></i><span>Tasks & Calendar<span class="menu-arrow"></span></span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/signal/action/index" class="waves-effect waves-primary">
+                                    Action Items
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/signal/calendar/index" class="waves-effect waves-primary">
+                                    Calendar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="topbar-left">
+        <div class="pull-left logo">
+            <a href="/signal/"><img src="/signal/assets/pv-signal-logo-61161afba9a8a8e20ebe65b7f0973c2a.png" class="pvLogo"/></a>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="">
+                <ul class="nav navbar-nav hidden-xs pull-left">
+                    <li><a href="https://pvr-perf.rxlogix.com/reports" target="_blank" class="waves-effect">PV Reports</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    
+                        <li class="hidden-xs">
+                            <span>Welcome bhagya!</span>
+                        </li>
+                        <li id="menuNotification" class="hidden-xs dropdown mega-dropdown">
+
+                            <a href="#" data-target="#" class="dropdo
+2000
+wn-toggle waves-effect waves-light pv-head-noti-icon" data-toggle="dropdown" aria-expanded="true" accesskey="i">
+                                 <i class="glyphicon glyphicon-inbox" style="font-size: 24px; margin-top:19px;padding-top: 1px"></i>
+                            </a>
+                            <ul id="notificationContainer" class="dropdown-menu dropdown-menu-lg notification-menu">
+                                <li id="notificationHeader" class="notifi-title"></li>
+                                <li id="notificationRows" class="ajax"></li>
+                                <div class="text-right m-t-10">
+                                    <a href="/signal/inboxLog/index" class="btn btn-primary temp-redirect dpv-head-noti-icon box-inline" tabindex="0" accesskey="m" title="Open Inbox">Inbox</a>
+                                    <a href="javascript:void(0);" id="clearNotifications" class="btn btn-default box-inline" userId="7435" tabindex="0" title="Clear All" accesskey="e">Clear all</a>
+                                </div>
+                            </ul>
+
+                        </li>
+
+                        <li class="hidden-xs dropdown mega-dropdown">
+                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                               data-toggle="dropdown" aria-expanded="true" accesskey="t">
+                                <i class="md md-settings"></i></a>
+                            <ul class="dropdown-menu mega-dropdown-menu" role="menu">
+                                
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header"><i class="fa fa-user-circle fa-fw"></i> User Management</li>
+                                            <li id="userManagement"><a href="/signal/user/index">User Management</a></li>
+                                            <li id="roleManagement"><a href="/signal/role/index">Role Management</a></li>
+                                            <li id="groupManagement"><a href="/signal/group/index">Group Management</a></li>
+                                
+                                            <li id="menuPreference"><a href="/signal/preference/index">User Preferences</a></li>
+                                
+                                            <li class="dropdown-header"><i class="fa fa-sliders fa-fw"></i> Workflow Management</li>
+                                            <li id="menuWorkflowRule"><a href="/signal/workflowRule/index">Workflow Rule</a></li>
+                                            <li id="menuDisposition"><a href="/signal/disposition/list">Disposition</a></li>
+                                            <li id="menuPriority"><a href="/signal/priority/list">Priority</a> </li>
+                                            <li id="menuPriority"><a href="/signal/justification/index">Justification</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header"><i class="fa fa-tasks fa-fw"></i> Business Configuration</li>
+                                            <li id="menuBusinessConfig">
+                                                <a href="/signal/businessConfiguration/index">
+                                                    Business Rule
+                                                </a>
+                                            </li>
+                                            <li id="safetyGroupManagement">
+                                                <a href="/signal/safetyGroup/index">
+                                                    Safety Lead Config
+                                                </a>
+                                            </li>
+                                            <li id="alertStopList">
+                                                <a href="/signal/alertStopList/index">
+                                                    Alert Stop List
+                                                </a>
+                                            </li>
+                                            <li id="emergingSafetyIssues">
+                                                <a href="/signal/emergingIssue/index">
+                                                    Important Events
+                                                </a>
+                                            </li>
+                                            
+                                            <li id="productGrouping">
+                                                <a href="/signal/productGroup/index">
+                                                    Product Grouping
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-header"><i class="fa fa-file-text-o fa-fw"></i> Action Template</li>
+                                            <li id="menuActionTemplate">
+                                                <a href="/signal/actionTemplate/index">
+                                                    Action Template
+                                                </a>
+                                            </li>
+                                            <li id="menuActionType">
+                                                <a href="/signal/actionType/list">
+                                                    Action Type
+                                                </a>
+                                            </li>
+                                            <li id="menuActionConfig">
+                                                <a href="/signal/actionConfiguration/list">
+                                                    Action Configuration
+                                                </a>
+                                            </li>
+                                            <li id="productIngredientsMapping">
+                                                <a href="/signal/productIngredientsMapping/index">
+                                                    Product/Ingredients Mapping
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header"><i class="fa fa-gear fa-fw"></i> System Configuration</li>
+                                            
+                                            <li id="auditLog">
+                                                <a href="/signal/auditLogEvent/index">
+                                                    Audit Log
+                                                </a>
+                                            </li>
+                                            
+                                                
+                                                    <li id="evdasDataUpload">
+                                                        <a href="/signal/evdasData/index">EVDAS Data Upload</a>
+                                                    </li>
+                                                
+                                            
+                                            <li id="dmsConfigurationLink">
+                                                <a href="/signal/controlPanel/index">DMS Configuration</a>
+                                            </li>
+                                            
+                                            
+                                                <li id="substanceFrequencyViewer">
+                                                    <a href="/signal/substanceFrequency/index">Substance Frequency Viewer</a>
+                        
+2000
+                        </li>
+                                            
+
+
+                                            
+
+                                            
+                                            
+                                                    <li id="mailNotifiaction">
+                                                        <a href="/signal/emailNotification/edit">Email Configuration</a>
+                                                    </li>
+                                            
+                                            
+                                                <li class="dropdown-header"><i class="fa fa-wrench fa-fw"></i> System Management</li>
+                                                <li><a href="/signal/monitoring">Monitoring</a></li>
+                                                <li><a href="/signal/quartz">Jobs Monitoring</a></li>
+                                            
+                                            
+                                                <a href="/signal/logout/index" id="MI-logout" title="Logout" tabindex="0" accesskey="q">
+                                                    <div tabindex="0" class="logout">
+                                                        <i class="fa fa-power-off fa-fw"></i>
+                                                        Logout
+                                                    </div>
+                                                </a>
+                                            
+                                        </ul>
+                                    </li>
+                            </ul>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .mega-dropdown-menu{
+        width:650px;
+        padding: 5px 0px;
+        box-shadow: darkcyan;
+        border-bottom : 4px solid #ccc;
+        border-radius: 2px;
+    }
+    .mega-dropdown-menu > li > ul {
+        padding: 0px;
+        margin: 0;
+    }
+
+    .mega-dropdown-menu > li > ul > li {
+        list-style: none;
+        padding-left: 8px;
+        border-bottom: 1px dotted #eee;
+    }
+    .mega-dropdown-menu > li > ul > li:last-child {
+        list-style: none;
+        padding-left: 8px;
+        border-bottom: 0px dotted #eee;
+    }
+    .mega-dropdown-menu > li > ul > li > a,
+    .mega-dropdown-menu > li > ul > li > span {
+        display: block;
+        padding: 7px 10px;
+        clear: both;
+        font-weight: 500;
+        line-height: 1.428571429;
+        color: #656565;
+        white-space: normal;
+        font-size: 13px;
+    }
+    .mega-dropdown-menu > li ul > li > a:hover,
+    .mega-dropdown-menu > li ul > li > a:focus{
+        text-decoration: none;
+        color: #444;
+        background-color: #eee;
+    }
+    .mega-dropdown-menu .dropdown-header{
+        color: #099ddd;
+        font-size: 13.5px;
+        font-weight: bold;
+    }
+    .mega-dropdown-menu .logout{
+        color: #428bca;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+</style>
+
+    
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    
+    <!-- Top Bar End -->
+
+    <!-- Left Sidebar Start -->
+    
+
+
+
+
+
+
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div id="mainContent" class="content">
+            <div class="container">
+                
+<div class="pv-dashboard">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="fixed-page-head">
+                    <div class="page-head-lt">
+                        <h5>Dashboard</h5>
+                    </div>
+                    <div class="pull-right nav-right page-head-rt text-right ic-md open">
+                        <span>
+                            <a href="#" class="pv-ic pv-dash-inbox-icon hide" title="Show My Inbox">
+                                <i class="md md-inbox"></i>
+                            </a>
+                        </span>
+                        <span id="pvi-dash-topMinWidget">
+                            <a href="#" class="btn btn-no-bg right-bar-toggle" data-backdrop="true"
+                               style="display: none;">
+                                <i class="md md-add"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="rx-widgets">
+        <div id="inbox" class="sidebarDashboard col-sm-12 pv-dashWidget" style="display:none;">
+            <div class="panel panel-default chart-panel">
+                <div class="panel-heading panel-title pv-sec-heading">
+                    <div class="rxmain-container-header-label">
+                        <label>My Inbox</label>
+
+                        <div class="pull-right">
+                            <a tabindex="0" href="#" class="close-widget-inbox" title="Hide Widget"><i class="md md-close"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body pv-sec-bg">
+                    
+
+                            <div id="my-single" class="col-sm-2">
+                                <div class="widget-simple-chart text-center card-box pv-inner-shadow-box">
+                                    <h5 class="text-muted">Qualitative Review</h5>
+
+                                    <h1 class="text-blue p-t-0"><a
+                                            href="/signal/singleCaseAlert/details?callingScreen=dashboard"
+                                            onclick="return checkCount(this)" class="text-blue"><span class="counter">0</span></a></h1>
+                                </div>
+                            </div>
+
+                    
+                    
+
+                            <div id="my-aggregate" class="col-sm-2">
+                                <div class="widget-simple-chart text-center card-box pv-inner-shadow-box">
+                                    <h5 class="text-muted">Quantitative Review</h5>
+                                    <h1 class="text-red p-t-0">
+                                        <a href="/signal/aggregateCaseAlert/details?callingScreen=dashboard" onclick="return checkCount(this)" class="text-red">
+                                            <span class="counter">0</span>
+                                        </a>
+                                    </h1>
+                                </div>
+                            </div>
+
+                    
+                    
+                            <div id="my-adhoc" class="col-sm-2">
+                                <div class="widget-simple-chart text-center card-box pv-inner-shadow-box">
+                                    <h5 class="text-muted">Ad hoc Review</h5>
+
+                                    <h1 class="text-success p-t-0"><a
+                                            href="/signal/adHocAlert/index?callingScreen=dashboard"
+                                            onclick="return checkCount(this)" class="text-success"><span class="counter">0</span></a></h1>
+                                </div>
+                            </div>
+
+                    
+
+                    
+                        
+                            <div id="evdasReview" class="col-sm-2">
+                                <div class="widget-simple-chart text-center card-box pv-inner-shadow-box">
+                                    <h5 class="text-muted">EVDAS Review</h5>
+
+                                    <h1 class="text-pink p-t-0"><a
+                                            href="/signal/evdasAlert/details?callingScreen=dashboard"
+                                            onclick="return checkCount(this)" class="text-pink"><span
+                                                class="counter">0</span></a></h1>
+           
+2000
+                     </div>
+                            </div>
+                        
+                    
+                    
+
+                        <div id="signals" class="col-sm-2">
+                            <div class="widget-simple-chart text-center card-box pv-inner-shadow-box">
+                                <h5 class="text-muted">Signals</h5>
+
+                                <h1 class="text-purple p-t-0"><a
+                                        href="/signal/validatedSignal/index?callingScreen=dashboard"
+                                        onclick="return checkCount(this)" class="text-purple"><span
+                                            class="counter">0</span></a></h1>
+                            </div>
+                        </div>
+
+                    
+                    <div id="actionItems" class="col-sm-2">
+                        <div class="widget-simple-chart text-center card-box pv-inner-shadow-box">
+                            <h5 class="text-muted">Action Items</h5>
+
+                            <h1 class="text-orange p-t-0"><a href="/signal/action/list" class="text-orange" onclick="return checkCount(this)"><span
+                                    class="counter">0</span></a></h1>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="mainDashboard" class="mainDashboard col-sm-12 grid-stack">
+        </div>
+    </div>
+</div>
+
+<!-- Right Sidebar -->
+<div class="side-bar right-bar pv-dashboard-config-panel">
+    <div class="nicescroll p-0">
+        <div class="col-sm-12 p-0">
+            <div class="panel-group" id="accordionDashConfig">
+                <div class="panel panel-default hide" id="pvDashChart">
+                    <div class="panel-heading panel-sub-heading">
+                        <h5 class="panel-title"> <a data-toggle="collapse" href="#collapseChart">Charts <i class="fa fa-bar-chart pull-right" aria-hidden="true"></i></a> </h5>
+                    </div>
+                    <div id="collapseChart" class="panel-collapse collapse in">
+                        <ul class="list-group">
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default hide" id="pvDashReports">
+                    <div class="panel-heading panel-sub-heading">
+                        <h5 class="panel-title"> <a data-toggle="collapse" href="#collapseReport">Reports <i class="fa fa-file-text pull-right" aria-hidden="true"></i></a> </h5>
+                    </div>
+                    <div id="collapseReport" class="panel-collapse collapse in">
+                        <ul class="list-group">
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default hide" id="pvDashCalendar">
+                    <div class="panel-heading panel-sub-heading">
+                        <h5 class="panel-title"> <a href="#collapseCalendar" data-target-widget="pvWidgetCalendar-1">Calender <i class="fa fa-calendar pull-right" aria-hidden="true"></i></a></h5>
+                    </div>
+                    <div id="collapseCalendar" class="panel-collapse collapse in">
+                        <ul class="list-group">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Right-bar -->
+
+<div class="modal fade" id="action-edit-modal" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="">Edit Action</h4>
+            </div>
+
+            <div class="modal-body clearfix">
+                <div id="action-editor-container">
+                </div>
+            </div>
+            <input type="hidden" id="actionMeetingId" value=""
+                   class="action-meeting-id"/>
+            <div class="modal-footer">
+                <div class="buttons ">
+                    <button class="button  btn btn-primary" id="update-bt">Update</button>
+                    <button class="button btn btn-default " id="cancel-bt">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/signal/assets/app/pvs/calendar-4d078ca93abd6a53a6f9c1bf8f79cd54.js" ></script>
+<div class="modal fade" id="meetingMinutesModal" tabindex="-1" role="dialog" aria-labelledby="productDictionaryLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="createModalLabel">Add Minutes</h4>
+            </div>
+
+            <div class="modal-body clearfix">
+                
+                
+                <form action="/signal/meeting/save" method="post" name="meetingModalForm" id="meetingModalForm" >
+                    <input type="hidden" name="create-url" value="/signal/meeting/save" id="create-url" />
+                    <input type="hidden" name="appType" id="appType" value="Signal Management" />
+                    <input type="hidden" name="alertId" id="alertId" value="" />
+                    
+<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="version" value="" id="version" />
+<input type="hidden" name="alertId" value="" class="alertId" id="alertId" />
+<input type="hidden" name="findMeetingTimesUrl" value="/signal/meeting/findMeetingTimes" id="findMeetingTimesUrl" />
+<style>
+.input-group-addon {
+    border-radius: 26px;
+    border: 1px solid #eeeeee;
+}
+
+.selectTimeSlot {
+    float: right;
+}
+
+.meeting-slot-container {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    border-radius: 5px;
+}
+
+.modal-footer {
+    background: #ffffff;
+}
+</style>
+<script>
+
+    try {
+        $('.timepicker1').timepicker({
+            showMeridian: false
+        });
+
+        $("#due-date-picker-meeting-minutes").datepicker('setDate', new Date());
+
+        $("#isRecurringMeeting").on("click", function () {
+            var meetingDate = $("#meetingDate").val();
+            var meetingTime = $("#meetingTime").val();
+            var prefTimezone = $("#timezoneFromServer").val();
+            var momentDate;
+            if (meetingDate) {
+                momentDate = moment(meetingDate + ' ' + meetingTime).format("YYYY-MM-DDTHH:mm:ss.sTZD");
+            } else {
+                momentDate = (new Date()).toISOString();
+            }
+            var timeZoneData = null;
+            if (typeof prefTimezone != "undefined" && prefTimezone != null) {
+                timeZoneData = prefTimezone.split(",");
+            }
+
+            if (timeZoneData) {
+                var name = timeZoneData[0].split(":")[1].trim();
+                var offset = timeZoneData[1].substring(8).trim();
+                $('#myScheduler').scheduler('value', {
+                    startDateTime: momentDate,
+                    timeZone: {
+                        name: name,
+                        offset: offset
+                    }
+                })
+            }
+        });
+    } catch (err) {
+
+    }
+
+
+</script>
+
+<div class="col-lg-12">
+    <div class="row form-group">
+        <div class="col-lg-4">
+            <label>
+                Meeting Title
+                <span class="required-indicator">*</span>
+            </label>
+            <input type="text" name="meetingTitle" id="meetingTitle" class="form-control clear-field">
+        </div>
+
+        <div class="col-lg-4">
+            <label>
+                Meeting Owner
+                <span class="required-indicator">*</span>
+            </label>
+            <select class="form-control clear-field" name="meetingOwner" id="meetingOwner" >
+<option value="7435" >bhag
+2000
+ya</option>
+<option value="240" >PVS Admin</option>
+<option value="8018" >Shiva.Prasad</option>
+<option value="272" >Signal Dev</option>
+<option value="302" >System</option>
+</select>
+        </div>
+
+        <div class="col-lg-4">
+            <label>
+                Meeting Attendees
+                <span class="required-indicator">*</span>
+            </label>
+            <select name="meetingAttendees" id="meetingAttendees-meeting-minutes" multiple="true" class="form-control select2-active clear-field meetingAttendees" >
+<option value="7435" >bhagya</option>
+<option value="240" >PVS Admin</option>
+<option value="8018" >Shiva.Prasad</option>
+<option value="272" >Signal Dev</option>
+<option value="302" >System</option>
+</select>
+        </div>
+
+    </div>
+
+    <div class="row form-group">
+
+        <div class="col-lg-4">
+            <label>
+                Date
+                <span class="required-indicator">*</span>
+            </label>
+
+            <div class="fuelux">
+                <div class="datepicker form-group" data-initialize="datepicker" id="due-date-picker-meeting-minutes">
+                    <div class="input-group">
+                        <input placeholder="Meeting Date" name="dueDate" readonly
+                               class="form-control input-sm meetingDate clear-field" id="meetingDate" type="text"
+                               data-date=""
+                               value=""/>
+                        <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <label>
+                Start Time
+                <span class="required-indicator">*</span>
+            </label>
+
+            <div class="input-group bootstrap-timepicker timepicker">
+                <input placeholder="MeetingTime" id="meetingTime" readonly
+                       class="timepicker1 meetingTime form-control clear-field" type="text">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <label>
+                Duration
+                <span class="required-indicator">*</span>
+            </label>
+            <select name="duration" id="duration" class="form-control clear-field">
+                <option value="5">5 min</option>
+                <option value="10">10 min</option>
+                <option value="15">15 min</option>
+                <option value="30">30 min</option>
+                <option value="45">45 min</option>
+                <option value="60">1 hour</option>
+                <option value="90">1.5 hour</option>
+                <option value="120">2 hour</option>
+                <option value="180">3 hour</option>
+                <option value="240">4 hour</option>
+                <option value="300">5 hour</option>
+                <option value="360">6 hour</option>
+                <option value="420">7 hour</option>
+                <option value="480">8 hour</option>
+                <option value="540">9 hour</option>
+                <option value="600">10 hour</option>
+                <option value="660">11 hour</option>
+                <option value="720">12 hour</option>
+                <option value="780">13 hour</option>
+                <option value="840">14 hour</option>
+                <option value="900">15 hour</option>
+                <option value="960">16 hour</option>
+                <option value="1020">17 hour</option>
+                <option value="1080">18 hour</option>
+                <option value="1140">19 hour</option>
+                <option value="1200">20 hour</option>
+                <option value="1260">21 hour</option>
+                <option value="1320">22 hour</option>
+                <option value="1380">23 hour</option>
+                <option value="1440">24 hour</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row recurrence-checkbox-container">
+        <div class="col-md-6">
+            <label><input type="checkbox" id="isRecurringMeeting" class
+2000
+="isRecurringMeeting" name="isRecurringMeeting"
+                          value="true"/>Recurrence
+            </label>
+        </div>
+        
+    </div>
+
+    <div class="meetingSuggestionContainer collapse" style="margin: 20px">
+        <div class="row form-group">
+    <div class="col-lg-4">
+        <label>
+            Start Date
+            <span class="required-indicator">*</span>
+        </label>
+        <div class="fuelux">
+            <div class="datepicker form-group" data-initialize="datepicker" id="fmt-start-date-picker-meeting-minutes">
+                <div class="input-group">
+                    <input name="fmtStartDate"
+                           class="form-control input-sm" id="fmtStartDate-meeting-minutes" type="text"
+                           data-date=""
+                           value=""/>
+                    <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <label>
+            End Date
+            <span class="required-indicator">*</span>
+        </label>
+        <div class="fuelux">
+            <div class="datepicker form-group" data-initialize="datepicker" id="fmt-start-date-picker-meeting-minutes">
+                <div class="input-group">
+                    <input name="fmtEndDate"
+                           class="form-control input-sm" id="fmtEndDate-meeting-minutes" type="text"
+                           data-date=""
+                           value=""/>
+                    <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Monthh</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</but
+120c
+ton></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <a class="findMeetingTimes btn btn-primary user-action" data-text="meeting-minutes" style="float:right;">Search</a>
+    </div>
+
+</div>
+
+<div class="time-slot-container">
+</div>
+    </div>
+
+    <div class="collapse schedular-container schedular-container-meeting-minutes">
+    </div>
+
+    <div class="row">
+        
+            <div class="col-lg-12 form-group meetingMinutes">
+                <label>
+                    Meeting Minutes
+                </label>
+                <textarea style="height: 150px" class="col-lg-4 form-control meetingMinutes" name="meetingMinutes" id="meetingMinutes" ></textarea>
+            </div>
+        
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12 form-group">
+            <label>
+                Agenda
+            </label>
+            <textarea style="height: 150px" class="col-lg-4 form-control clear-field" name="meetingAgenda" id="meetingAgenda" ></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 form-group">
+                <label for="attachments">
+                    Add Attachments
+                </label>
+
+                <div class="rxmain-container attachment">
+                    <div class="rxmain-container-inner">
+
+                        <div class="">
+                            <div class="container-fluid attachments">
+    
+        
+        
+    
+
+    
+
+    
+        
+    
+    
+        
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <input multiple class="multi" type="file" name="attachments" id="attachments"/>
+        </div>
+    </div>
+    
+
+        
+        
+                
+        
+
+        
+            
+                
+                        
+            
+        
+    
+    <div class="attachment-body">
+
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="buttons ">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary id-element update-meeting" data-id="">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <r:layoutResources/>
+            </div>
+        </div>
+        <!-- End content -->
+
+        
+        
+        
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+</div>
+<script type="text/javascript" src="/signal/assets/app/jquery.core-9088768891f7d43af5ab8c8d642e5301.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/jquery.app-9af4130ef9d8c98c078b99d2cddad130.js" ></script>
+<script type="text/javascript" src="/signal/assets/app/pvs/common/rx_common-3bec52fd16a226d99e60fd80372c8c05.js" ></script>
+</body>
+</html>
+
+0
+

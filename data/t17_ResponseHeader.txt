@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:16:26 GMT
+ETag: "workflowModal-8863a855e0d38b1c16a0b929c87a1eb2.css"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: text/css;charset=UTF-8
+Content-Length: 106
+Date: Fri, 22 May 2020 05:38:12 GMT
+

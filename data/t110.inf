@@ -1,0 +1,11 @@
+[t110]
+FileName1=t110_materialdesignicons-webfont-d1bdfb3838e2f78edf1ede85f56eabc9.html
+URL1=http://10.100.22.24:8181/signal/assets/mdi-fonts/fonts/materialdesignicons-webfont-d1bdfb3838e2f78edf1ede85f56eabc9.woff2?v=3.2.89
+Total=1
+ContentType=font/woff2
+SnapshotXmlFile=snapshot_105.xml
+RequestHeaderFile=t110_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t110_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

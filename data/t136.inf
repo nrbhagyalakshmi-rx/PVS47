@@ -1,0 +1,11 @@
+[t136]
+FileName1=t136_updatedFixedColumn-4180034da606560f8555366463a750ac.css
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/updatedFixedColumn-4180034da606560f8555366463a750ac.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_130.xml
+RequestHeaderFile=t136_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t136_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

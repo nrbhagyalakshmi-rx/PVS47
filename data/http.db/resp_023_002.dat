@@ -1,0 +1,4 @@
+3c5
+[{"id":6637,"defaultPriority":false,"description":null,"display":true,"displayName":"Urgent","iconClass":"mdi mdi-alpha-u-circle red-1","priorityOrder":1,"reviewPeriod":15,"value":"Urgent"},{"id":6647,"defaultPriority":false,"description":null,"display":true,"displayName":"High","iconClass":"mdi mdi-alpha-h-circle yellow-1","priorityOrder":2,"reviewPeriod":30,"value":"High"},{"id":6657,"defaultPriority":false,"description":null,"display":true,"displayName":"Medium","iconClass":"mdi mdi-alpha-m-circle blue-1","priorityOrder":3,"reviewPeriod":90,"value":"Medium"},{"id":6667,"defaultPriority":false,"description":null,"display":true,"displayName":"Low","iconClass":"mdi mdi-alpha-l-circle green-1","priorityOrder":4,"reviewPeriod":135,"value":"Low"},{"id":6677,"defaultPriority":true,"description":null,"display":true,"displayName":"To be Prioritized","iconClass":"mdi mdi-alpha-t-circle grey-1","priorityOrder":5,"reviewPeriod":30,"value":"To be Prioritized"}]
+0
+

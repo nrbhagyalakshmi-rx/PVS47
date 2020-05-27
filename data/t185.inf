@@ -1,0 +1,11 @@
+[t185]
+FileName1=t185_searchUserGroupList.json
+URL1=http://10.100.22.24:8181/signal/user/searchUserGroupList?term=bha&max=10&lang=en
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_178.xml
+RequestHeaderFile=t185_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t185_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

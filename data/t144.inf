@@ -1,0 +1,11 @@
+[t144]
+FileName1=t144_highcharts-de65192df8733b7a60482497a875df4c.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/highcharts/highcharts-de65192df8733b7a60482497a875df4c.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_138.xml
+RequestHeaderFile=t144_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t144_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t60]
+FileName1=t60_dataTables.buttons.min-99ef2a29fc5b51a6f8f392977c2e34b1.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/datatable/dataTables.buttons.min-99ef2a29fc5b51a6f8f392977c2e34b1.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_58.xml
+RequestHeaderFile=t60_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t60_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

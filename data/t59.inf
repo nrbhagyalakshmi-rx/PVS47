@@ -1,0 +1,11 @@
+[t59]
+FileName1=t59_buttons.bootstrap-acac51d5cf162bd14f44ad66a6f275f5.html
+URL1=http://10.100.22.24:8181/signal/assets/datatables/buttons.bootstrap-acac51d5cf162bd14f44ad66a6f275f5.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_57.xml
+RequestHeaderFile=t59_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t59_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t19]
+FileName1=t19_dashboard-7d6d721454def651262f344c8062d5e4.css
+URL1=http://10.100.22.24:8181/signal/assets/dashboard-7d6d721454def651262f344c8062d5e4.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_17.xml
+RequestHeaderFile=t19_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t19_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

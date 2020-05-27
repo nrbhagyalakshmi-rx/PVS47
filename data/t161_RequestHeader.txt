@@ -1,0 +1,15 @@
+GET /signal/stomp/844/8vkn221i/websocket HTTP/1.1
+Host: 10.100.22.24:8181
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
+Upgrade: websocket
+Origin: http://10.100.22.24:8181
+Sec-WebSocket-Version: 13
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Cookie: SESSION=8fa6a791-391e-4d42-b036-1c5067ac6d8e
+Sec-WebSocket-Key: PGxxaah+5Krdsb0bP28ReA==
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+

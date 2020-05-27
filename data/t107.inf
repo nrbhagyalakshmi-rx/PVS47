@@ -1,0 +1,11 @@
+[t107]
+FileName1=t107_actionList.json
+URL1=http://10.100.22.24:8181/signal/dashboard/actionList?_=1590125907429
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_102.xml
+RequestHeaderFile=t107_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t107_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

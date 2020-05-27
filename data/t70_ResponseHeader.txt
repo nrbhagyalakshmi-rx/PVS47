@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:19:20 GMT
+ETag: "vendorUi/waves/waves-2d20efe8b7228bbc963944ac22c9667c.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 20241
+Date: Fri, 22 May 2020 05:38:28 GMT
+

@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:18:06 GMT
+ETag: "app/pvs/disposition/disposition-change-90ca5b153d45318b5626d8de75310b64.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 4840
+Date: Fri, 22 May 2020 05:40:16 GMT
+

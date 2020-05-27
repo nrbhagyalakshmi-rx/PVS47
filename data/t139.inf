@@ -1,0 +1,11 @@
+[t139]
+FileName1=t139_colReorder.dataTables.min-6c9c3520f346057281532b7b491bad4b.css
+URL1=http://10.100.22.24:8181/signal/assets/colReorder.dataTables.min-6c9c3520f346057281532b7b491bad4b.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_133.xml
+RequestHeaderFile=t139_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t139_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t40]
+FileName1=t40_jquery.dataTables_custom-8dad82f79087bc7c28eeb9b403e756b8.html
+URL1=http://10.100.22.24:8181/signal/assets/datatables/jquery.dataTables_custom-8dad82f79087bc7c28eeb9b403e756b8.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_38.xml
+RequestHeaderFile=t40_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t40_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

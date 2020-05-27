@@ -1,0 +1,1 @@
+$(document).ready(function(){var b=!1;$(window).keydown(function(a){13==a.keyCode&&b&&a.preventDefault()});$("#productModal, #eventModal, #studyModal, #createActionModal").on("shown.bs.modal",function(a){b=!0;console.log("True")});$("#productModal, #eventModal, #studyModal, #createActionModal").on("hidden.bs.modal",function(a){b=!1;console.log("False")})});

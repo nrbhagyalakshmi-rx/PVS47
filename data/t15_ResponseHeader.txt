@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:19:04 GMT
+ETag: "vendorUi/gridstack.min-82a5fabd01f65ac4b5e87078091be104.css"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: text/css;charset=UTF-8
+Content-Length: 2218
+Date: Fri, 22 May 2020 05:38:12 GMT
+

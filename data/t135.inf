@@ -1,0 +1,11 @@
+[t135]
+FileName1=t135_businessConfiguration-731e96c2d56f6817b3602b4a92b3886f.css
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/businessConfiguration-731e96c2d56f6817b3602b4a92b3886f.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_129.xml
+RequestHeaderFile=t135_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t135_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

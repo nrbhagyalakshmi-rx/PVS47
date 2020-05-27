@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:17:54 GMT
+ETag: "app/pvs/configuration/deliveryOption-7f47fbed88efc00747809850e2dc4aa4.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 477
+Date: Fri, 22 May 2020 05:39:39 GMT
+

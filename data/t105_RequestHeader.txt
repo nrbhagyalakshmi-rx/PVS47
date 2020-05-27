@@ -1,0 +1,11 @@
+GET /signal/dashboard/signalList?_=1590125907428 HTTP/1.1
+Host: 10.100.22.24:8181
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
+X-Requested-With: XMLHttpRequest
+Referer: http://10.100.22.24:8181/signal/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Cookie: SESSION=8fa6a791-391e-4d42-b036-1c5067ac6d8e
+

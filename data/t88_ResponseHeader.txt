@@ -1,0 +1,9 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:17:48 GMT
+ETag: "app/pvs/hbs-templates/dashboard_widget-3c71f9343ac71bc0f54f99cdaae5af96.hbs"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Length: 1246
+Date: Fri, 22 May 2020 05:38:45 GMT
+

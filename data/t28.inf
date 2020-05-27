@@ -1,0 +1,11 @@
+[t28]
+FileName1=t28_popover.min-a48d28e289c6932042ffa0ab05e7bf68.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/popover/popover.min-a48d28e289c6932042ffa0ab05e7bf68.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_26.xml
+RequestHeaderFile=t28_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t28_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

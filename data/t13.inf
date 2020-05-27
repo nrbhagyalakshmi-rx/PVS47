@@ -1,0 +1,11 @@
+[t13]
+FileName1=t13_pvs_508c-fd4a301235dfeff417d96bed64e8429d.css
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/pvs_508c-fd4a301235dfeff417d96bed64e8429d.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_11.xml
+RequestHeaderFile=t13_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t13_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

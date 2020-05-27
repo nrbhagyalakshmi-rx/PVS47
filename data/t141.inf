@@ -1,0 +1,11 @@
+[t141]
+FileName1=t141_datatable.colsReorder.min-f60fbf698f1fa675a29d5b361968020a.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/datatables/datatable.colsReorder.min-f60fbf698f1fa675a29d5b361968020a.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_135.xml
+RequestHeaderFile=t141_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t141_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

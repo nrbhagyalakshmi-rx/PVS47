@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:16:48 GMT
+ETag: "datatables/buttons.bootstrap-acac51d5cf162bd14f44ad66a6f275f5.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 412
+Date: Fri, 22 May 2020 05:38:28 GMT
+

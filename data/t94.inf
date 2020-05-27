@@ -1,0 +1,11 @@
+[t94]
+FileName1=t94_ahaByStatus.json
+URL1=http://10.100.22.24:8181/signal/dashboard/ahaByStatus?_=1590125907422
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_90.xml
+RequestHeaderFile=t94_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t94_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

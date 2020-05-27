@@ -1,0 +1,11 @@
+[t69]
+FileName1=t69_dashboardWidget-24248f37a4de46fe75c68afd1bc9dca6.html
+URL1=http://10.100.22.24:8181/signal/assets/app/pvs/dashboard/dashboardWidget-24248f37a4de46fe75c68afd1bc9dca6.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_67.xml
+RequestHeaderFile=t69_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t69_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

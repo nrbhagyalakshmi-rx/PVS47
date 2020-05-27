@@ -1,0 +1,11 @@
+[t36]
+FileName1=t36_dataTables.fixedColumns.min-acc90a700b69150380759567188a8cd0.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/datatables/dataTables.fixedColumns.min-acc90a700b69150380759567188a8cd0.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_34.xml
+RequestHeaderFile=t36_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t36_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

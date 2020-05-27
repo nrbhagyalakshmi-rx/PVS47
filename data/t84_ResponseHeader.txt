@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:17:42 GMT
+ETag: "app/pvs/common/rx_common-3bec52fd16a226d99e60fd80372c8c05.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 2423
+Date: Fri, 22 May 2020 05:38:45 GMT
+

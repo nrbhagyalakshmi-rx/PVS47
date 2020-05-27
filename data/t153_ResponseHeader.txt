@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:18:00 GMT
+ETag: "app/pvs/alerts_review/single_case_alert_details-50076305d9a840e6a3de6bf721a5516a.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 39730
+Date: Fri, 22 May 2020 05:40:16 GMT
+

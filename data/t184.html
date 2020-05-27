@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="/signal/assets/login-23162286b278bf1e48cb0201c9e9a644.css"/>
+        <link rel="stylesheet" href="/signal/assets/application-20282e3e3fad9c329f1728b037973a74.css"/>
+        <script type="text/javascript" src="/signal/assets/application-b6b2fa3a918957eb49ac1c12c36b30ec.js" ></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div id="loginStyle">
+                <form action='/signal/login/authenticate' method='POST' id="loginForm" role="form" autocomplete="off">
+                    <input type="hidden" name="_csrf" value="6d899bc2-0f68-4387-81b9-a90e2cd2e872"/>
+                    <div id="loginTable">
+                        <div id="loginHeader">
+                            <div class="pvLogo">
+                                <img src="/signal/assets/pv-signal-logo-61161afba9a8a8e20ebe65b7f0973c2a.png" id="loginLogo"/>
+                            </div>
+                            <div class="header-lbl">
+                                Log in
+                                
+                            </div>
+                        </div>
+
+                        <div id="loginUserContainer">
+                            <input type="text" name="username" id="username" class="loginFieldUser" placeholder="Username" required autofocus>
+                        </div>
+
+                        <div id="loginPassContainer">
+                            <input type="password" name="password" id="password" class="loginFieldPass" placeholder="Password" required>
+                        </div>
+
+                        <div id="loginFooter">
+                            <button id="loginSubmit" type="submit">Log in</button>
+                        </div>
+
+                    </div>
+
+                    <div class="margin20Top">
+                        
+
+
+
+
+
+
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            setInterval(function() {window.location.reload(true)}, 60000 * 15);
+            (function() {
+                document.forms['loginForm'].elements['j_username'].focus();
+                localStorage.removeItem("dashboardWidgetsConfig");
+                document.forms['loginForm'].elements['username'].focus();
+
+            })();
+        </script>
+    </body>
+</html>

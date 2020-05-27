@@ -1,0 +1,11 @@
+[t81]
+FileName1=t81.json
+URL1=https://update.googleapis.com/service/update2/json?cup2key=9:3053439548&cup2hreq=43577f0e828f1c105aceeadfebce0d8b703e95db0f35a05eb322138513577d0f
+Total=1
+RequestHeaderFile=t81_RequestHeader.txt
+RequestBodyFile=t81_RequestBody.txt
+ResponseHeaderFile=t81_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_79.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

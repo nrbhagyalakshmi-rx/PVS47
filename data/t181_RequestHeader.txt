@@ -1,0 +1,11 @@
+GET /signal/singleCaseAlert/changeAssignedToGroup?assignedToValue=User_8018&selectedId=%5B184%2C183%2C182%2C180%2C181%2C179%2C178%2C177%2C176%2C175%2C174%2C173%2C172%2C170%2C171%2C169%2C168%2C167%2C166%2C165%2C164%2C163%2C162%2C161%2C160%2C159%2C158%2C157%2C156%2C155%2C154%2C153%2C152%2C151%2C150%2C149%2C148%2C147%2C146%2C145%2C144%2C143%2C142%2C141%2C140%2C139%2C138%2C137%2C136%2C135%5D HTTP/1.1
+Host: 10.100.22.24:8181
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
+X-Requested-With: XMLHttpRequest
+Referer: http://10.100.22.24:8181/signal/singleCaseAlert/details?callingScreen=review&configId=15
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Cookie: SESSION=8fa6a791-391e-4d42-b036-1c5067ac6d8e
+

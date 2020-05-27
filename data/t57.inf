@@ -1,0 +1,11 @@
+[t57]
+FileName1=t57_bootstrap-switch-732d14990dba7f4fff6b5b441177c905.html
+URL1=http://10.100.22.24:8181/signal/assets/vendorUi/bootstrap-switch/bootstrap-switch-732d14990dba7f4fff6b5b441177c905.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_55.xml
+RequestHeaderFile=t57_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t57_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

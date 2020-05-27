@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Last-Modified: Thu, 21 May 2020 08:17:12 GMT
+ETag: "application-b6b2fa3a918957eb49ac1c12c36b30ec.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 8786
+Date: Fri, 22 May 2020 05:36:40 GMT
+
